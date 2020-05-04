@@ -1,0 +1,16 @@
+@startuml
+
+class AgeComparator{}
+class Compagnie{}
+Class EmbaucheComparator{}
+Class Employe{}
+Class PrenomComparateur{}
+Class SalaireComparateur{}
+class Comparator<T>{}
+
+AgeComparator -up-> Comparator
+EmbaucheComparator -up-> Comparator
+PrenomComparateur -up-> Comparator
+SalaireComparateur -up-> Comparator
+
+@enduml

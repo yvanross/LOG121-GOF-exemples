@@ -1,0 +1,28 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-TestStrategie<log121>",
+            "request": "launch",
+            "mainClass": "PatronStrategieComparator.TestStrategie",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-App<log121>",
+            "request": "launch",
+            "mainClass": "log121.App",
+            "projectName": "log121"
+        }
+    ]
+}
