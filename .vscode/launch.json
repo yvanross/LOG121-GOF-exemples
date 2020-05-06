@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - AnimalExample",
+            "request": "launch",
+            "mainClass": "PatronStrategieComparator.Animal.AnimalExample",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - CarExample",
+            "request": "launch",
+            "mainClass": "PatronStrategieComparator.CarBrake.CarExample",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - StrategyPattern",
+            "request": "launch",
+            "mainClass": "PatronStrategieComparator.Billing.StrategyPattern",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - FormLayoutTester",
+            "request": "launch",
+            "mainClass": "PatronStrategieComparator.LayoutManager.FormLayoutTester",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - FormLayoutTester",
+            "request": "launch",
+            "mainClass": "PatronStrategieComparator.layoutManager.FormLayoutTester",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
             "name": "Debug (Launch) - Current File",
             "request": "launch",
             "mainClass": "${file}"

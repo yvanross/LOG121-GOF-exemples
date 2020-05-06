@@ -16,5 +16,9 @@ public class TestStrategie {
 		compagnie.setComparatorStrategy(new PrenomComparateur());
 		System.out.println(compagnie.toString());
 		
+		System.out.println("Utilisation de la Strategie 'EmbaucheComparator'");
+		compagnie.setComparatorStrategy(new EmbaucheComparator());
+		System.out.println(compagnie.toString());
+		
 	}
 }

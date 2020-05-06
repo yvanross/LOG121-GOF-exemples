@@ -1,16 +1,16 @@
-package PatronStrategieComparator;
+package PatronStrategieComparator.Comparator;
 
 import java.time.LocalDate;
 //import java.util.Comparator;
 
-public class Employe {
+public class Employe2 {
 	private String nom;
 	private String prenom;
 	private LocalDate dateNaissance;
 	private LocalDate dateEmbauche;
 	private double salaire;
 	
-	public Employe(String nom, String prenom, LocalDate dateNaissance, LocalDate dateEmbauche, double salaire) {
+	public Employe2(String nom, String prenom, LocalDate dateNaissance, LocalDate dateEmbauche, double salaire) {
 		this.nom = nom;
 		this.prenom = prenom;
 		this.dateNaissance = dateNaissance;

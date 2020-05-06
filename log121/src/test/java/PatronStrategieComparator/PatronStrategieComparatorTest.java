@@ -27,6 +27,13 @@ public class PatronStrategieComparatorTest {
 		assertTrue(salaireComparator instanceof java.util.Comparator);
 		assertEquals(-1,salaireComparator.compare(employe1, employe2));
 		assertEquals(1,salaireComparator.compare(employe2, employe1));
+		
+		//NomComparator nomCompartor = new NomComparator();
+		//assertTrue(nomCompartor instanceof java.util.Comparator);
+		//assertEquals(-1,nomCompartor.compare(employe1, employe2));
+		//assertEquals(1,nomCompartor.compare(employe2, employe1));
+
+		
 	}
 	
 
@@ -34,7 +41,8 @@ public class PatronStrategieComparatorTest {
     public void testCompagnieComparator() {
 		Compagnie compagnie = new Compagnie(new AgeComparator());
 		String result = compagnie.toString();
-		//System.out.println(result);
+		System.out.println(result);
+		
 		assertTrue(result.indexOf("150000") < result.indexOf("42000"));
 		compagnie.setComparatorStrategy(new SalaireComparator());
 		result = compagnie.toString();
