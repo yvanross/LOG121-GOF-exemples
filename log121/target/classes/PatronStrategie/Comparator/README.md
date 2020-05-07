@@ -5,7 +5,6 @@
 
 - list3
 
-adfa
 
 ![class](https://www.plantuml.com/plantuml/svg/0/PP1B2eGm343tEOKNy0OY3cNsmim5CXeSeJ_ITZ4CtjrI52tPlZoIHuOGaMCo6c3I64BpM4Wvuv4nElvl1oreiIjbeWfvcW-cwLlBvyXhzxlKaSawSugKBlE56bUcUdIxMFPsxpvJgCAQDlcslqaWUwGZGgGYYwG30zavlsm7 "class")
 
