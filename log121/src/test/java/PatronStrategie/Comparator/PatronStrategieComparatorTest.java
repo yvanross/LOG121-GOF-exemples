@@ -36,12 +36,12 @@ public class PatronStrategieComparatorTest {
 
 		
 	}
-	Compagnie compagnie;
+	Compagny compagnie;
 	
 	
 	@Before 
 	public void initCompagny(){
-		compagnie  = new Compagnie(new ComparatorAge());
+		compagnie  = new Compagny(new ComparatorAge());
 		compagnie.add_employe(new Employe("Gendron", "Yves",     LocalDate.of(1990, 10, 18), LocalDate.of(2015,  2, 28),  40000.0));
 		compagnie.add_employe(new Employe("Beaupre", "Remi",     LocalDate.of(1991,  3, 24), LocalDate.of(2014,  5, 10),  45000.0));
 		compagnie.add_employe(new Employe("Chahby", "Yacine",    LocalDate.of(1967,  1, 11), LocalDate.of(1990,  1,  1), 150000.0));
@@ -59,6 +59,7 @@ public class PatronStrategieComparatorTest {
 		System.out.println(result);
 		
 		assertTrue(result.indexOf("150000") < result.indexOf("42000"));
+
 		compagnie.setComparatorStrategy(new ComparatorSalaire());
 		result = compagnie.toString();
 		assertTrue(result.indexOf("42000") < result.indexOf("150000"));

@@ -7,13 +7,13 @@ import java.util.Comparator;
 //import java.util.Iterator;
 import java.util.List;
 
-public class Compagnie {
+public class Compagny {
 	
 	List<Employe> liste;
 	Comparator<Employe> comparateur;	// comparateur est une interface. C'est la "strategie" utilisée par Compagnie.
 
 	// Le constructeur recoit la Stratégie en paramètre
-	public Compagnie(Comparator<Employe> comparateur) {
+	public Compagny(Comparator<Employe> comparateur) {
 		setComparatorStrategy(comparateur);
 		liste = new ArrayList<Employe>();
 		

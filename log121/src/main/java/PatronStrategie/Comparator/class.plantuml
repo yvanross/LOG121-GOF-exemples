@@ -6,11 +6,12 @@ Class EmbaucheComparator{}
 Class Employe{}
 Class PrenomComparateur{}
 Class SalaireComparateur{}
-class Comparator<T>{}
+class Comparator<Employe>{}
 
 AgeComparator -up-> Comparator
 EmbaucheComparator -up-> Comparator
 PrenomComparateur -up-> Comparator
 SalaireComparateur -up-> Comparator
+Compagnie "1" -- "*" Employe : emploie
 
 @enduml
