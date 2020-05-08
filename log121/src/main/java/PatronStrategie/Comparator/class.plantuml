@@ -1,4 +1,4 @@
-@startuml
+@startuml Patron Statégie Comparateur
 
 class AgeComparator{}
 class Compagnie{}

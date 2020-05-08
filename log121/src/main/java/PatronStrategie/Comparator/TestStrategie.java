@@ -29,6 +29,10 @@ public class TestStrategie {
 		System.out.println("Utilisation de la Strategie 'EmbaucheComparator'");
 		compagnie.setComparatorStrategy(new ComparatorEmbauche());
 		System.out.println(compagnie.toString());
+
+		System.out.println("Utilisation de la Strategie 'ComparatorNomInvese'");
+		compagnie.setComparatorStrategy(new ComparatorNomInverse());
+		System.out.println(compagnie.toString());
 		
 	}
 }
