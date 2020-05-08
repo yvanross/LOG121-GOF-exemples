@@ -6,12 +6,13 @@ Class EmbaucheComparator{}
 Class Employe{}
 Class PrenomComparateur{}
 Class SalaireComparateur{}
-class Comparator<Employe>{}
+Interface Comparator<Employe>{}
 
-AgeComparator -up-> Comparator
-EmbaucheComparator -up-> Comparator
-PrenomComparateur -up-> Comparator
-SalaireComparateur -up-> Comparator
-Compagnie "1" -- "*" Employe : emploie
+AgeComparator .up-> Comparator
+EmbaucheComparator .up-> Comparator
+PrenomComparateur .up-> Comparator
+SalaireComparateur .up-> Comparator
+Compagnie "1" --> "*" Employe : emploie
+Compagnie  *-right- "1" Comparator
 
 @enduml
