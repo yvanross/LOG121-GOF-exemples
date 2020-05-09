@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - MVCTempConvert",
+            "request": "launch",
+            "mainClass": "MVC.Temperature.MVCTempConvert",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestExemple",
+            "request": "launch",
+            "mainClass": "PatronObservateur.TextView.TestExemple",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - TestStrategie",
             "request": "launch",
             "mainClass": "PatronStrategie.Comparator.TestStrategie",
