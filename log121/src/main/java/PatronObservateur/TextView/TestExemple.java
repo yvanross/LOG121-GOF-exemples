@@ -34,6 +34,7 @@ public class TestExemple extends WindowAdapter{
 	public static void main(String[] args) {
 		
 		TestExemple mvc = new TestExemple();
+		System.out.println(mvc.toString());
 	}
 	
 	public void windowClosing(WindowEvent e) {

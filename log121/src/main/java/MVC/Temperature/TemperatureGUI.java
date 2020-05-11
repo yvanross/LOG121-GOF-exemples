@@ -14,7 +14,7 @@ import java.awt.TextField;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-
+@SuppressWarnings({ "deprecation"})
 abstract class TemperatureGUI implements java.util.Observer
 {	
 	private String label;
@@ -28,7 +28,7 @@ abstract class TemperatureGUI implements java.util.Observer
 	{	
 		this.label = label;
 		this.model = model;
-		temperatureFrame = new Frame(label);
+		temperatureFrame = new Frame(this.label);
 		temperatureFrame.add("North", new Label(label));
 		temperatureFrame.add("Center", display);
 		Panel buttons = new Panel();

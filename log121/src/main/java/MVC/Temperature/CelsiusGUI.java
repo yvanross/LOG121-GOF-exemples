@@ -10,6 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Observable;
 
+@SuppressWarnings({"deprecation"})
 public class CelsiusGUI extends TemperatureGUI
 {	
 	public CelsiusGUI(TemperatureModel model, int h, int v)
@@ -26,7 +27,7 @@ public class CelsiusGUI extends TemperatureGUI
 		setDisplay("" + model().getC());
 	}
 	
-	class UpListener implements ActionListener
+class UpListener implements ActionListener
 	{	
 		public void actionPerformed(ActionEvent e)
 		{	

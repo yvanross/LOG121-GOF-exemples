@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Demo",
+            "request": "launch",
+            "mainClass": "MVC.swing.Demo",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - MVCTempConvert",
             "request": "launch",
             "mainClass": "MVC.Temperature.MVCTempConvert",

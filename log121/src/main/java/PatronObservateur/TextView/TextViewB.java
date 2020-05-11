@@ -18,7 +18,7 @@ import java.util.Observable;
 import java.util.Observer;
 
 import javax.swing.*;
-
+@SuppressWarnings({ "deprecation"})
 public class TextViewB extends JFrame implements  Observer, ActionListener{
 	
 	private JTextField editableText;
@@ -36,7 +36,7 @@ public class TextViewB extends JFrame implements  Observer, ActionListener{
 		aPanel.setLayout(new BorderLayout());
 		aPanel.setBackground(Color.cyan);
 		
-		editableText = new JTextField();//("allo"); 
+		editableText = new JTextField();
 		editableText.addActionListener(this);
 		//editableText.add
 		

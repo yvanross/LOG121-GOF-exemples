@@ -10,6 +10,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Observable;
 
+@SuppressWarnings({ "deprecation"})
+
 class FarenheitGUI extends TemperatureGUI
 {	
 	public FarenheitGUI(TemperatureModel model, int h, int v)

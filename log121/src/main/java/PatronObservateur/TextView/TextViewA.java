@@ -13,11 +13,12 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 import java.util.Observable;
 import java.util.Observer;
 
 import javax.swing.*;
-
+@SuppressWarnings({ "deprecation"})
 public class TextViewA extends JFrame implements  Observer, ActionListener{
 	
 	private JTextField editableText;
@@ -35,16 +36,22 @@ public class TextViewA extends JFrame implements  Observer, ActionListener{
 		aPanel.setLayout(new BorderLayout());
 		
 		//Image im = new Image()
-		JImagePanel violon1 = new JImagePanel("src/violine.jpg");
-		JImagePanel violon2 = new JImagePanel("src/violine.jpg");
-		JImagePanel violon3 = new JImagePanel("src/violine.jpg");
-		JImagePanel violon4 = new JImagePanel("src/violine.jpg");
+
+		String userDirectory = new File("").getAbsolutePath();
+		// System.out.println(userDirectory);
+		String violon = userDirectory + "/log121/target/classes/PatronObservateur/TextView/violine.jpg";
+		System.out.println(violon);
+
+		JImagePanel violon1 = new JImagePanel(violon);
+		JImagePanel violon2 = new JImagePanel(violon);
+		JImagePanel violon3 = new JImagePanel(violon);
+		JImagePanel violon4 = new JImagePanel(violon);
 		aPanel.add(violon1, BorderLayout.NORTH);
 		aPanel.add(violon2, BorderLayout.EAST);
 		aPanel.add(violon3, BorderLayout.SOUTH);
 		aPanel.add(violon4, BorderLayout.WEST);
 		
-		editableText = new JTextField();//("allo"); 
+		editableText = new JTextField();
 		editableText.addActionListener(this);
 		//editableText.add
 		

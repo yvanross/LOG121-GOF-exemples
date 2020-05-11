@@ -12,7 +12,7 @@ import java.awt.event.AdjustmentEvent;
 import java.awt.event.AdjustmentListener;
 import java.util.Observable;
 import java.util.Observer;
-
+@SuppressWarnings({ "deprecation"})
 public class SliderGUI implements Observer
 {	
 	private Scrollbar tempControl = new Scrollbar(Scrollbar.HORIZONTAL, 0, 10, -50, 160);

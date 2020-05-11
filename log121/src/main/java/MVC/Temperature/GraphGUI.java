@@ -12,9 +12,10 @@ import java.awt.Graphics;
 import java.awt.Panel;
 import java.util.Observable;
 import java.util.Observer;
-
+@SuppressWarnings({ "deprecation"})
 public class GraphGUI extends Frame implements Observer
 {	
+	private static final long serialVersionUID=12345678;
 	private TemperatureModel model;
 	private Canvas gauges;
 	private TemperatureGauge _farenheit;

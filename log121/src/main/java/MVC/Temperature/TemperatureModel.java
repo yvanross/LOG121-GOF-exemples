@@ -5,6 +5,7 @@ package MVC.Temperature;
  * https://csis.pace.edu/~bergin/mvc/mvcgui.html
  * Joseph Bergin, Pace University, jbergin@pace.edu
  */
+@SuppressWarnings({ "deprecation"})
 
 public class TemperatureModel extends java.util.Observable
 {	

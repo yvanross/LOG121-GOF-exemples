@@ -12,11 +12,12 @@ import java.awt.Graphics;
 
 class TemperatureCanvas extends Canvas
 {	
+	private static final long serialVersionUID=1234;
 	private TemperatureGauge _farenheit;
 	private static final int width = 20;
 	private static final int top = 20;
 	private static final int left = 100;
-	private static final int right = 250;
+	// private static final int right = 250;
 	private static final int height = 200;
 
 	public TemperatureCanvas(TemperatureGauge farenheit)

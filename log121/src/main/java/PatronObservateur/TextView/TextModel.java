@@ -9,6 +9,7 @@
 
 package PatronObservateur.TextView; 
 import java.util.Observable;
+@SuppressWarnings({ "deprecation"})
 
 public class TextModel extends Observable{
 	
@@ -19,7 +20,7 @@ public class TextModel extends Observable{
 
 	//@Override
 	public synchronized String getState() {
-		// TODO Auto-generated method stub
+		TODO Auto-generated method stub
 		return  text;
 	}
 
