@@ -8,6 +8,13 @@
             "type": "java",
             "name": "CodeLens (Launch) - Demo",
             "request": "launch",
+            "mainClass": "PatronIterateur.Collection.Demo",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Demo",
+            "request": "launch",
             "mainClass": "MVC.swing.Demo",
             "projectName": "log121"
         },
