@@ -23,8 +23,15 @@ public class PizzaTest {
         pizza = new TomatoSauce(pizza);
         assertEquals(4.85,pizza.getCost(),0.001);
         assertEquals("Thin dough, mozzarella, tomato sauce", pizza.getDescription());
-            
-        
     }
 
+
+    @Test
+    public void pizza3cheeses(){
+        Pizza pizza = new ThreeCheesePizza();
+        assertEquals(10.5, pizza.getCost(),0.001);
+
+        pizza = new Mozzarella(pizza);
+        assertEquals(11,pizza.getCost(),0.001);;
+    }
 }
