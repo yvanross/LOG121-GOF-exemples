@@ -1,4 +1,5 @@
 # Patron Itérateur
+reference: http://www.newthinktank.com/2012/10/iterator-design-pattern-tutorial/
 
 ```plantuml
 @startuml
