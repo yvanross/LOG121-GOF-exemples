@@ -37,6 +37,8 @@ public class RepasTest
        assertEquals(4.0, patate.getCost(),0.001);
        assertEquals("Patates du lac St-Jean, avec sauce brune", patate.getDescription());
 
+// + 1.25
+//Total 17.75
 
 
        // A faire. Faire fonctionner ce test. Ajouter du fromage à la patate au cout de 1.25$ pour faire une poutine et
