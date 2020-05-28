@@ -46,5 +46,7 @@ public class RepasTest
         //et valider le total avec  assertEquals(xx,repas.getTotal());
         // assertEquals(xx,repas.getTotal());
 
+        // Faire le diagramme de séquence de ce test et ajouter le dans Patate/README.me
+
     }
 }
