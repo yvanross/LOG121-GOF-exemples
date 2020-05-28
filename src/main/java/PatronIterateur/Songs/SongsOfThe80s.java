@@ -4,7 +4,7 @@ import java.util.Iterator;
 
 public class SongsOfThe80s implements SongIterator{
 	// Create an array of SongInfo Objects
-	SongInfo[] bestSongs;
+	private SongInfo[] bestSongs;
 	// Used to increment to the next position in the array
 	int arrayValue = 0;
 	

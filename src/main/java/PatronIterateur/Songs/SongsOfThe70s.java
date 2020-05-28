@@ -5,7 +5,7 @@ import java.util.Iterator;
 public class SongsOfThe70s implements SongIterator{
 	
 	// ArrayList holds SongInfo objects
-	ArrayList<SongInfo> bestSongs;
+	private	ArrayList<SongInfo> bestSongs;
 	
 	public SongsOfThe70s() {
 		bestSongs = new ArrayList<SongInfo>();

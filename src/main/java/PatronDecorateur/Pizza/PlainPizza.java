@@ -1,11 +1,13 @@
 package PatronDecorateur.Pizza;
 
+import PatronDecorateur.Repas.IIngredient;
+
 // Implements the Pizza interface with only the required
 // methods from the interface
 
 // Every Pizza made will start as a PlainPizza
 
-public class PlainPizza implements Pizza {
+public class PlainPizza implements IIngredient {
  
 	public String getDescription() {
 		

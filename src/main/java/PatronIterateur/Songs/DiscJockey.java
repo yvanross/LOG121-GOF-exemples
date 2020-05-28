@@ -24,11 +24,9 @@ public class DiscJockey {
 		songs80s = newSongs80s;
 		songs90s = newSongs90s;
 		
-	}
-	*/
+	}*/
 	
 	// NEW WAY Initialize the iterators	
-	
 	public DiscJockey(SongIterator newSongs70s, SongIterator newSongs80s, SongIterator newSongs90s) {
 		
 		iter70sSongs = newSongs70s;

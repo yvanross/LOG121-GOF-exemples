@@ -6,7 +6,7 @@ public class SongsOfThe90s implements SongIterator{
 	
 	// Create a Hashtable with an int as a key and SongInfo
 	// Objects 
-	Hashtable<Integer, SongInfo> bestSongs = new Hashtable<Integer, SongInfo>();
+	private Hashtable<Integer, SongInfo> bestSongs = new Hashtable<Integer, SongInfo>();
 	
 	// Will increment the Hashtable key
 	int hashKey = 0;

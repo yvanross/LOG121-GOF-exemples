@@ -1,8 +1,8 @@
-package PatronDecorateur.Pizza;
+package PatronDecorateur.Repas;
 
 // Blueprint for classes that will have decorators
 
-public interface Pizza {
+public interface IIngredient {
 	
 	public String getDescription();
 	

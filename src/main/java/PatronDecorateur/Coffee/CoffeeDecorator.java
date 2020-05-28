@@ -1,6 +1,9 @@
 package PatronDecorateur.Coffee;
+
+import PatronDecorateur.Repas.IIngredient;
+
 // Abstract decorator class - note that it implements Coffee interface
-public abstract class CoffeeDecorator implements Coffee {
+public abstract class CoffeeDecorator implements IIngredient {
     private final Coffee decoratedCoffee;
 
     public CoffeeDecorator(Coffee c) {
@@ -13,7 +16,7 @@ public abstract class CoffeeDecorator implements Coffee {
     }
 
     @Override
-    public String getIngredients() {
-        return decoratedCoffee.getIngredients();
+    public String getDescription() {
+        return decoratedCoffee.getDescription();
     }
 }

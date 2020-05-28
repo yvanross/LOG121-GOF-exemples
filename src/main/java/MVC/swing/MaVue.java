@@ -50,7 +50,7 @@ public class MaVue extends JFrame implements Observer {
 	public MaVue(MonModele monModele) {
 		
 		super("Exemple MVC " + compteurFenetre++);
-		this.monModele = monModele;
+		// this.monModele = monModele;
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 150);

@@ -1,28 +1,24 @@
 package PatronDecorateur.Pizza;
 
-public class TomatoSauce extends ToppingDecorator {
+import PatronDecorateur.Repas.IIngredient;
+import PatronDecorateur.Repas.Ingredient;
 
-	public TomatoSauce(Pizza newPizza) {
-		super(newPizza);
-		
+public class TomatoSauce extends Ingredient {
+
+	public TomatoSauce(IIngredient newPizza, Double cost, String description) {
+		super(newPizza, cost, description);
 		System.out.println("Adding Sauce");
 	}
 	
 	// Returns the result of calling getDescription() for
 	// PlainPizza, Mozzarella and then TomatoSauce
-	
 	public String getDescription(){
-		
-		return tempPizza.getDescription() + ", tomato sauce";
-		
+		return super.getDescription() + ", " + this.getDescription();
 	}
 	
 	public double getCost(){
-		
-		System.out.println("Cost of Sauce: " + .35);
-		
-		return tempPizza.getCost() + .35;
-		
+		System.out.println("Cost of Sauce: " + this.getCost());
+		return super.getCost() + this.getCost();
 	}
 	
 }

@@ -1,30 +1,28 @@
 package PatronDecorateur.Pizza;
 
-public class Mozzarella extends ToppingDecorator {
+import PatronDecorateur.Repas.IIngredient;
+import PatronDecorateur.Repas.Ingredient;
 
-	public Mozzarella(Pizza newPizza) {
-		
-		super(newPizza);
-		
-		System.out.println("Adding Dough");
-		
-		System.out.println("Adding Moz");
+public class Mozzarella extends Ingredient {
+
+	public Mozzarella(IIngredient newPizza, Double cost, String description) {
+		super(newPizza, cost, description);
+		System.out.println("Adding Mozarella");
 	}
 	
 	// Returns the result of calling getDescription() for
 	// PlainPizza and adds " mozzarella" to it
 	
 	public String getDescription(){
-		
-		return tempPizza.getDescription() + ", mozzarella";
+		return super.getDescription() + ", " + this.getDescription();
 		
 	}
 	
 	public double getCost(){
 		
-		System.out.println("Cost of Moz: " + .50);
+		System.out.println("Cost of Moz: " + this.getCost());
 		
-		return tempPizza.getCost() + .50;
+		return super.getCost() + this.getCost();
 		
 	}
 	

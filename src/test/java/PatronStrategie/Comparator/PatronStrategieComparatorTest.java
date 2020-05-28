@@ -88,8 +88,11 @@ public class PatronStrategieComparatorTest {
 		compagnie.add_employe(new Employe("Michaud", "Eve3",      LocalDate.of(1988, 12, 31), LocalDate.of(2016, 12,  1),  56000.0));
 		compagnie.add_employe(new Employe("Michaud", "Eve1",      LocalDate.of(1988, 12, 31), LocalDate.of(2016, 12,  1),  54000.0));
 		System.out.println(compagnie.toString());
+		
 		compagnie.setComparatorStrategy(new ComparatorNomSalaire());
-		System.out.println(result=  compagnie.toString());
+		
+		result = compagnie.toString();
+		System.out.println(result);
 		assertTrue(result.indexOf("Hector") < result.indexOf("Eve1"));
 		assertTrue(result.indexOf("Eve1") < result.indexOf("Eve2"));
 		assertTrue(result.indexOf("Eve2") < result.indexOf("Eve3"));

@@ -1,19 +1,22 @@
 package PatronDecorateur.Coffee;
 
+import PatronDecorateur.Repas.IIngredient;
+import PatronDecorateur.Repas.Ingredient;
+
 // Decorator WithSprinkles mixes sprinkles onto coffee.
 // Note it extends CoffeeDecorator.
-class WithSprinkles extends CoffeeDecorator {
-    public WithSprinkles(Coffee c) {
-        super(c);
+public class WithSprinkles extends Ingredient {
+    public WithSprinkles(IIngredient ingredient,Double cost, String description) {
+        super(ingredient,cost,description);
     }
 
     @Override
     public double getCost() {
-        return super.getCost() + 0.2;
+        return super.getCost() + this.getCost();
     }
 
     @Override
-    public String getIngredients() {
-        return super.getIngredients() + ", Sprinkles";
+    public String getDescription() {
+        return super.getDescription() + ", " + this.getDescription();
     }
 }
