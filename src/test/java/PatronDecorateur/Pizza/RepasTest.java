@@ -31,10 +31,20 @@ public class RepasTest
 
        IIngredient patate = new Patate(3.55, "Patates du lac St-Jean");
        assertEquals(3.55, patate.getCost(),0.001);
-       assertEquals("Patages du lac St-Jean", patate.getDescription());
+       assertEquals("Patates du lac St-Jean", patate.getDescription());
 
        patate = new Sauce(patate,0.45,"avec sauce brune");
        assertEquals(4.0, patate.getCost(),0.001);
-       assertEquals("Patages du lac St-Jean avec sauce brune", patate.getDescription());
+       assertEquals("Patates du lac St-Jean, avec sauce brune", patate.getDescription());
+
+
+
+       // A faire. Faire fonctionner ce test. Ajouter du fromage à la patate au cout de 1.25$ pour faire une poutine et
+       // mettre les éléments dans une liste pour calculer le total en utilisant un itérateur.
+
+       //Faire un classe Repas avec la méthode Double calculerTotal(Iterateur<T>)
+        //et valider le total avec  assertEquals(xx,repas.getTotal());
+        // assertEquals(xx,repas.getTotal());
+
     }
 }
