@@ -12,11 +12,11 @@ public class WithSprinkles extends Ingredient {
 
     @Override
     public double getCost() {
-        return super.getCost() + this.getCost();
+        return getiIngredient().getCost() + super.getCost();
     }
 
     @Override
     public String getDescription() {
-        return super.getDescription() + ", " + this.getDescription();
+        return getiIngredient().getDescription() + ", " + super.getDescription();
     }
 }

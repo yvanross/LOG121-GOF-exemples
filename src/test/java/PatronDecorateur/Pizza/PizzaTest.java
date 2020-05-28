@@ -18,9 +18,11 @@ public class PizzaTest {
         assertEquals(4.0,pizza.getCost(),0.001);
         assertEquals("Thin dough", pizza.getDescription());
 
+        pizza = new Mozzarella(pizza, 0.5, "mozzarella");
         assertEquals(4.5,pizza.getCost(),0.001);
         assertEquals("Thin dough, mozzarella", pizza.getDescription());
 
+        pizza = new TomatoSauce(pizza, 0.35, "tomato sauce");
         assertEquals(4.85,pizza.getCost(),0.001);
         assertEquals("Thin dough, mozzarella, tomato sauce", pizza.getDescription());
     }

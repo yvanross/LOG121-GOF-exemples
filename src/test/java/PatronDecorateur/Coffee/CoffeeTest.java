@@ -13,11 +13,11 @@ public class CoffeeTest {
 
     @Test
     public void coffeeTest() {
-        IIngredient c = (IIngredient) new SimpleCoffee(1.0, "Coffe");
+        IIngredient c = (IIngredient) new SimpleCoffee(1.0, "Coffee");
         assertEquals(1.0,c.getCost(),0.001);
         assertEquals("Coffee",c.getDescription());
 
-        c = new WithMilk(c, 0.5, "Milk");
+        c = (IIngredient) new WithMilk(c, 0.5, "Milk");
         assertEquals(1.5,c.getCost(),0.001);
         assertEquals("Coffee, Milk",c.getDescription());
 

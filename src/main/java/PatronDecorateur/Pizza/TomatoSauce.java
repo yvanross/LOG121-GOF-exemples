@@ -13,12 +13,12 @@ public class TomatoSauce extends Ingredient {
 	// Returns the result of calling getDescription() for
 	// PlainPizza, Mozzarella and then TomatoSauce
 	public String getDescription(){
-		return super.getDescription() + ", " + this.getDescription();
+		return getiIngredient().getDescription() + ", " + super.getDescription();
 	}
 	
 	public double getCost(){
-		System.out.println("Cost of Sauce: " + this.getCost());
-		return super.getCost() + this.getCost();
+		System.out.println("Cost of Sauce: " + super.getCost());
+		return getiIngredient().getCost() + super.getCost();
 	}
 	
 }

@@ -25,7 +25,7 @@ public class RepasTest
         assertEquals(1.0,coffe.getCost(),0.001);
         assertEquals("Coffee",coffe.getDescription());
 
-        coffe = new WithMilk(coffe,0.5,"Milk");
+        coffe = (IIngredient) new WithMilk(coffe,0.5,"Milk");
         assertEquals(1.5,coffe.getCost(),0.001);
         assertEquals("Coffee, Milk",coffe.getDescription());
 

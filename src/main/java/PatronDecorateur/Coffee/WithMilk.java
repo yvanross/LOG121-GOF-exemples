@@ -10,11 +10,11 @@ public class WithMilk extends Ingredient {
 
     @Override
     public double getCost() { // Overriding methods defined in the abstract superclass
-        return super.getCost() + this.getCost();
+        return getiIngredient().getCost() + super.getCost();
     }
 
     @Override
     public String getDescription() {
-        return super.getDescription() + ", " + this.getDescription();
+        return getiIngredient().getDescription() + ", " + super.getDescription();
     }
 }

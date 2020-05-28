@@ -14,15 +14,15 @@ public class Mozzarella extends Ingredient {
 	// PlainPizza and adds " mozzarella" to it
 	
 	public String getDescription(){
-		return super.getDescription() + ", " + this.getDescription();
+		return getiIngredient().getDescription() + ", " + super.getDescription();
 		
 	}
 	
 	public double getCost(){
 		
-		System.out.println("Cost of Moz: " + this.getCost());
+		System.out.println("Cost of Moz: " + super.getCost());
 		
-		return super.getCost() + this.getCost();
+		return getiIngredient().getCost() + super.getCost();
 		
 	}
 	

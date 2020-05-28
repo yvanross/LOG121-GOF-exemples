@@ -19,6 +19,10 @@ public abstract class Ingredient implements IIngredient {
 		this.description = description;
 	}
 	
+	public IIngredient getiIngredient() {
+		return iIngredient;
+	}
+
 	public String getDescription() {
 		return this.description;
 	}

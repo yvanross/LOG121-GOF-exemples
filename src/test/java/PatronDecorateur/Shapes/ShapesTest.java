@@ -15,7 +15,7 @@ public class ShapesTest extends OutStream {
         circle.draw();
         
         System.out.println("\nCircle of red border");
-        Shape redCircle = new RedShapeDecorator(new Circle());
+        Shape redCircle = new RedShapeDecorator(circle);
         redCircle.draw();
         
         System.out.println("Rectangle with normal border");
