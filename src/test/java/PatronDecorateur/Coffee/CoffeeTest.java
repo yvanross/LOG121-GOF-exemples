@@ -17,12 +17,17 @@ public class CoffeeTest {
         assertEquals(1.0,c.getCost(),0.001);
         assertEquals("Coffee",c.getDescription());
 
-        c = (IIngredient) new WithMilk(c, 0.5, "Milk");
+        c = (IIngredient) new WithMilk(c, 0.5,"Milk");
         assertEquals(1.5,c.getCost(),0.001);
         assertEquals("Coffee, Milk",c.getDescription());
 
         c = new WithSprinkles(c, 0.2, "Sprinkles");
         assertEquals(1.7,c.getCost(),0.001);
         assertEquals("Coffee, Milk, Sprinkles",c.getDescription());
+
+        c = new WithSprinkles(new WithMilk(new SimpleCoffee(1.0, "Coffee"),0.5, "Milk"), 0.2, "Sprinkles");
+        assertEquals(1.7,c.getCost(),0.001);
+        assertEquals("Coffee, Milk, Sprinkles",c.getDescription());
+
     }
 }
