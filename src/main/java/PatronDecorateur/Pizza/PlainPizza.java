@@ -15,7 +15,7 @@ public class PlainPizza implements IIngredient {
 	
 	}
 
-	public double getCost() {
+	public Double getCost() {
 
 		System.out.println("Cost of Dough: " + 4.00);
 		

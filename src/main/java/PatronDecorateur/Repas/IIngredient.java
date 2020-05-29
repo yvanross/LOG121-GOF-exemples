@@ -6,6 +6,6 @@ public interface IIngredient {
 	
 	public String getDescription();
 	
-	public double getCost();
+	public Double getCost();
 	
 }

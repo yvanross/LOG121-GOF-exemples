@@ -13,7 +13,7 @@ public class SimpleCoffee implements IIngredient {
     }
 
     @Override
-    public double getCost() {
+    public Double getCost() {
         return this.cost;
     }
 

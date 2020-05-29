@@ -32,7 +32,7 @@ public class ThreeCheesePizza implements IIngredient {
 		cost = newCost;
 	}
 
-	public double getCost() {
+	public Double getCost() {
 		return cost;
 	}
 }

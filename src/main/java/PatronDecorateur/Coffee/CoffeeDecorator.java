@@ -11,7 +11,7 @@ public abstract class CoffeeDecorator implements IIngredient {
     }
 
     @Override
-    public double getCost() { // Implementing methods of the interface
+    public Double getCost() { // Implementing methods of the interface
         return decoratedCoffee.getCost();
     }
 

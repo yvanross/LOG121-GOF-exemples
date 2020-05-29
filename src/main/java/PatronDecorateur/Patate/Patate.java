@@ -11,7 +11,7 @@ public class Patate implements IIngredient {
     this.description = description;
   }
 
-  public double getCost() {
+  public Double getCost() {
     return cost;
   }
 

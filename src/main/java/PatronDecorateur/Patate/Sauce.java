@@ -1,9 +1,9 @@
 package PatronDecorateur.Patate;
 
 import PatronDecorateur.Repas.IIngredient;
-import PatronDecorateur.Repas.Ingredient;
+import PatronDecorateur.Repas.DecorateurIngredient;
 
-public class Sauce extends Ingredient {
+public class Sauce extends DecorateurIngredient {
 
   public Sauce(IIngredient ingredient, double cost, String description) {
     super(ingredient,cost,description);
@@ -17,7 +17,7 @@ public class Sauce extends Ingredient {
   }
   
   @Override
-  public double getCost() {
+  public Double getCost() {
     return getiIngredient().getCost() + super.getCost();
   }
 

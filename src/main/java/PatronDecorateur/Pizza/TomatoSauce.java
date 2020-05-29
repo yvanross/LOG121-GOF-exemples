@@ -1,9 +1,9 @@
 package PatronDecorateur.Pizza;
 
 import PatronDecorateur.Repas.IIngredient;
-import PatronDecorateur.Repas.Ingredient;
+import PatronDecorateur.Repas.DecorateurIngredient;
 
-public class TomatoSauce extends Ingredient {
+public class TomatoSauce extends DecorateurIngredient {
 
 	public TomatoSauce(IIngredient newPizza, Double cost, String description) {
 		super(newPizza, cost, description);
@@ -16,7 +16,7 @@ public class TomatoSauce extends Ingredient {
 		return getiIngredient().getDescription() + ", " + super.getDescription();
 	}
 	
-	public double getCost(){
+	public Double getCost(){
 		System.out.println("Cost of Sauce: " + super.getCost());
 		return getiIngredient().getCost() + super.getCost();
 	}

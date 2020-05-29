@@ -1,9 +1,9 @@
 package PatronDecorateur.Pizza;
 
 import PatronDecorateur.Repas.IIngredient;
-import PatronDecorateur.Repas.Ingredient;
+import PatronDecorateur.Repas.DecorateurIngredient;
 
-public class Mozzarella extends Ingredient {
+public class Mozzarella extends DecorateurIngredient {
 
 	public Mozzarella(IIngredient newPizza, Double cost, String description) {
 		super(newPizza, cost, description);
@@ -18,7 +18,7 @@ public class Mozzarella extends Ingredient {
 		
 	}
 	
-	public double getCost(){
+	public Double getCost(){
 		
 		System.out.println("Cost of Moz: " + super.getCost());
 		
