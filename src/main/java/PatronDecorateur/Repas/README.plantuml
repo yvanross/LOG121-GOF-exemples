@@ -1,7 +1,0 @@
-skinparam style strictuml
-participant ":Repas:" as repas
-participant ":Pizza" as pizza
-participant ":Coffe" as coffee
-
-repas -> pizza: hello
-
