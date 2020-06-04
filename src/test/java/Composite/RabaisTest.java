@@ -2,6 +2,8 @@ package Composite;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 import org.junit.Test;
 import Composite.rabais.CompositeBestForCustomer;
@@ -51,10 +53,22 @@ public class RabaisTest {
   }
 
   @Test
+  public void strategiePourcentageRemiseAssertParamValid(){
+    Repas repas = new Repas();
+    try{
+    StrategiePourcentageRemise strategiePourcentageRemise = new StrategiePourcentageRemise(repas, 0.5);
+    } catch(AssertionError error){
+      assertTrue(false);
+    }
+  } 
+  
+  @Test
   public void strategiePourcentageRemiseAssertParamPositive(){
     Repas repas = new Repas();
     try{
     StrategiePourcentageRemise strategiePourcentageRemise = new StrategiePourcentageRemise(repas, 10.0);
+   fail(); // should never be called
+
     } catch(AssertionError error){
       assertEquals("Parameter should be smaller or equal to 1",error.getMessage());
     }
@@ -65,6 +79,7 @@ public class RabaisTest {
     Repas repas = new Repas();
     try{
     StrategiePourcentageRemise strategiePourcentageRemise = new StrategiePourcentageRemise(repas, -1.0);
+    fail(); // should never be called
     } catch(AssertionError error){
       assertEquals("Parameter should be greater or equal to 0",error.getMessage());
     }
