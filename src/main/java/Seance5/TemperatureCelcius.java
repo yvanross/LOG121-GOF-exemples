@@ -1,4 +1,4 @@
-package Proxy;
+package Seance5;
 
 public class TemperatureCelcius implements ITemperatureToDecorate {
   ITemperatureToDecorate temperatureToDecorate = null;

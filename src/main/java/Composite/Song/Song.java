@@ -20,7 +20,7 @@ public class Song extends SongComponent {
 	
 	public void displaySongInfo(){
 		
-		System.out.println(getSongName() + " was recorded by " +
+		System.out.println("  Song: " + getSongName() + " was recorded by " +
 				getBandName() + " in " + getReleaseYear());
 		
 	}

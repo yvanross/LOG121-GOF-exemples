@@ -1,4 +1,4 @@
-package Proxy;
+package Seance5;
 
 public class ProxyTemperature implements ITemperature {
   Double recorded_fahrenheit = null;

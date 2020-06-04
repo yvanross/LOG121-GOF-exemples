@@ -1,9 +1,14 @@
-package Proxy;
+package Seance5;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 import java.lang.reflect.*;
 import org.junit.Test;
+
+import Seance5.ITemperature;
+import Seance5.Temperature;
+
 import static org.mockito.Mockito.*;
 
 public class TemperatureProxyTest {
@@ -17,7 +22,7 @@ public class TemperatureProxyTest {
 
     final Double expected = (fahrenheit - 32) * 5 / 9;
     final Double celcius = proxyTemperature.celcius();
-    assertTrue((expected-celcius) >0.001);
+    assertNotEquals(expected,celcius,0.0001);
   }
 
   @Test
@@ -42,6 +47,14 @@ public class TemperatureProxyTest {
   }
 
   @Test
+  /**
+   * How to test private method
+   * @throws NoSuchMethodException
+   * @throws SecurityException
+   * @throws IllegalAccessException
+   * @throws IllegalArgumentException
+   * @throws InvocationTargetException
+   */
   public void fahrenheit2celciusTest() throws NoSuchMethodException, SecurityException, IllegalAccessException,
       IllegalArgumentException, InvocationTargetException {
     Temperature temperature = new Temperature();

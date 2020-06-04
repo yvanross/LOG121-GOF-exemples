@@ -1,6 +1,7 @@
 package Composite;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
 import Composite.rabais.CompositeBestForCustomer;
@@ -26,6 +27,9 @@ public class RabaisTest {
     StrategieRemiseAPartirDe strategieRemiseAPartirDe = new StrategieRemiseAPartirDe(repas,1.0,3.0);
     assertEquals(3.0,strategieRemiseAPartirDe.getCost(),0.001);
 
+    StrategieRemiseAPartirDe strategieRemiseAPartirDe5 = new StrategieRemiseAPartirDe(repas,1.0,5.0);
+    assertEquals(4.0,strategieRemiseAPartirDe5.getCost(),0.001);
+
     CompositeBestForCustomer compositeBestForCustomer = new CompositeBestForCustomer();
     compositeBestForCustomer.add(strategiePourcentageRemise);
     compositeBestForCustomer.add(strategieRemiseAPartirDe);
@@ -41,6 +45,30 @@ public class RabaisTest {
     compositeBestForCustomer2.add(strategieRemiseAPartirDe);
     assertEquals(3.0,compositeBestForCustomer2.getCost(),0.001);
 
+    StrategieMinimumCost strategieMinimumCost = new StrategieMinimumCost(strategiePourcentageRemise,strategieRemiseAPartirDe);
+    assertEquals(3,strategieMinimumCost.getCost(),0.001);
+
   }
+
+  @Test
+  public void strategiePourcentageRemiseAssertParamPositive(){
+    Repas repas = new Repas();
+    try{
+    StrategiePourcentageRemise strategiePourcentageRemise = new StrategiePourcentageRemise(repas, 10.0);
+    } catch(AssertionError error){
+      assertEquals("Parameter should be smaller or equal to 1",error.getMessage());
+    }
+  }
+
+  @Test
+  public void strategiePourcentageRemiseAssertParamNegative(){
+    Repas repas = new Repas();
+    try{
+    StrategiePourcentageRemise strategiePourcentageRemise = new StrategiePourcentageRemise(repas, -1.0);
+    } catch(AssertionError error){
+      assertEquals("Parameter should be greater or equal to 0",error.getMessage());
+    }
+  }  
+
   
 }

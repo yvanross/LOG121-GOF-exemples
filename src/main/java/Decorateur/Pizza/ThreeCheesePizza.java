@@ -19,20 +19,13 @@ public class ThreeCheesePizza implements IIngredient {
 		this.cost = cost;
 		this.description = description;
 	}
-	
-	public void setDescription(String newDescription) {
-		description = newDescription;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setCost(double newCost) {
-		cost = newCost;
-	}
 
 	public Double getCost() {
 		return cost;
+	}
+
+	@Override
+	public String getDescription() {
+		return description;
 	}
 }

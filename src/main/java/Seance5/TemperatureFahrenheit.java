@@ -1,4 +1,4 @@
-package Proxy;
+package Seance5;
 
 public class TemperatureFahrenheit implements ITemperatureToDecorate {
 

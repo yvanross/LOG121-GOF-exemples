@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - SongListGenerator",
+            "request": "launch",
+            "mainClass": "Composite.Song.SongListGenerator",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - CompositeDemo",
             "request": "launch",
             "mainClass": "Composite.CompositeDemo",

@@ -8,8 +8,8 @@ public class StrategiePourcentageRemise implements IRabais {
   private Double pourcentageRemise = 0.0;
 
   public StrategiePourcentageRemise(IRabais rabais, Double pourcentageRemise){
-    assert(pourcentageRemise >= 0);
-    assert(pourcentageRemise <= 1);
+    assert(pourcentageRemise >= 0): "Parameter should be greater or equal to 0";
+    assert(pourcentageRemise <= 1) : "Parameter should be smaller or equal to 1";
     this.pourcentageRemise = pourcentageRemise;
     this.rabais = rabais;
   }

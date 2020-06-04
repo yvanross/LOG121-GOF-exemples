@@ -1,4 +1,4 @@
-package Proxy;
+package Seance5;
 // import java.util.Random;
 
 public class Temperature implements ITemperature{
