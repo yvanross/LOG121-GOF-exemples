@@ -1,6 +1,5 @@
 package Strategie.Rabais;
 
-import Decorateur.Repas.Repas;
 
 public class StrategieRemiseAPartirDe implements IRabais {
 

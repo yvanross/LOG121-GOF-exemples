@@ -23,8 +23,9 @@ import javax.swing.JTextArea;
  * @author Vincent Lacasse
  *
  */
-public class Test extends JFrame {
-
+@SuppressWarnings({"serial"})
+public class Demo extends JFrame {
+	
 	private JButton btnChoisir;
 	private JButton btnFermer;
 	private JTextArea txtResultat;
@@ -36,7 +37,7 @@ public class Test extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Test frame = new Test();
+					Demo frame = new Demo();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -48,7 +49,7 @@ public class Test extends JFrame {
 	/**
 	 * Construire l'écran et assigner une action aux deux boutons
 	 */
-	public Test() {
+	public Demo() {
 		buildScreen();
 		btnChoisir.setAction(new ActionChoisir());
 		btnFermer.setAction(new ActionFermer());

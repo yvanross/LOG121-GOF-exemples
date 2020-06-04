@@ -8,7 +8,7 @@ public class SongGroup extends SongComponent {
 	// Contains any Songs or SongGroups that are added
 	// to this ArrayList
 	
-	ArrayList songComponents = new ArrayList();
+	ArrayList<SongComponent> songComponents = new ArrayList<SongComponent>();
 	
 	String groupName;
 	String groupDescription;
@@ -49,7 +49,7 @@ public class SongGroup extends SongComponent {
 		// Cycles through and prints any Songs or SongGroups added
 		// to this SongGroups ArrayList songComponents
 		
-		Iterator songIterator = songComponents.iterator();
+		Iterator<SongComponent> songIterator = songComponents.iterator();
 		
 		while(songIterator.hasNext()) { 
 			

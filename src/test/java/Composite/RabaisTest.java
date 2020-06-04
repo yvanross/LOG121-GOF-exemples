@@ -1,7 +1,6 @@
 package Composite;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
@@ -55,18 +54,22 @@ public class RabaisTest {
   @Test
   public void strategiePourcentageRemiseAssertParamValid(){
     Repas repas = new Repas();
-    try{
-    StrategiePourcentageRemise strategiePourcentageRemise = new StrategiePourcentageRemise(repas, 0.5);
-    } catch(AssertionError error){
-      assertTrue(false);
-    }
+    new StrategiePourcentageRemise(repas, 0.5);
+   assertTrue(true);
   } 
   
+  @Test(expected=AssertionError.class)
+  public void strategiePourcentageRemiseAssertParamPositive2(){
+    Repas repas = new Repas();
+    new StrategiePourcentageRemise(repas, 10.0);
+    fail(); // should never be called
+  }
+
   @Test
-  public void strategiePourcentageRemiseAssertParamPositive(){
+    public void strategiePourcentageRemiseAssertParamPositive(){
     Repas repas = new Repas();
     try{
-    StrategiePourcentageRemise strategiePourcentageRemise = new StrategiePourcentageRemise(repas, 10.0);
+     new StrategiePourcentageRemise(repas, 10.0);
    fail(); // should never be called
 
     } catch(AssertionError error){
@@ -78,7 +81,7 @@ public class RabaisTest {
   public void strategiePourcentageRemiseAssertParamNegative(){
     Repas repas = new Repas();
     try{
-    StrategiePourcentageRemise strategiePourcentageRemise = new StrategiePourcentageRemise(repas, -1.0);
+    new StrategiePourcentageRemise(repas, -1.0);
     fail(); // should never be called
     } catch(AssertionError error){
       assertEquals("Parameter should be greater or equal to 0",error.getMessage());

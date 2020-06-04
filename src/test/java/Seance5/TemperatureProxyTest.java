@@ -2,12 +2,8 @@ package Seance5;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
-import static org.junit.Assert.assertTrue;
 import java.lang.reflect.*;
 import org.junit.Test;
-
-import Seance5.ITemperature;
-import Seance5.Temperature;
 
 import static org.mockito.Mockito.*;
 
@@ -43,7 +39,10 @@ public class TemperatureProxyTest {
 
     // use mock in test....
     assertEquals(80.1,mockedTemperature.fahrenheit(),0.001);
+    assertEquals(80.1,mockedTemperature.fahrenheit(),0.001);
     assertEquals(26.666666,mockedTemperature.celcius(),0.01);
+    verify(mockedTemperature, times(2)).fahrenheit();
+
   }
 
   @Test

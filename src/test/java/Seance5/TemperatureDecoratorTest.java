@@ -9,9 +9,6 @@ import static org.mockito.Mockito.when;
 
 import org.junit.Test;
 
-import Seance5.ITemperatureToDecorate;
-import Seance5.TemperatureCelcius;
-import Seance5.TemperatureFahrenheit;
 
 public class TemperatureDecoratorTest {
 
