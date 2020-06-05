@@ -1,4 +1,4 @@
- ```plantuml
+```plantuml
 @startuml
 skinparam style strictuml
 interface Graphic {
@@ -11,7 +11,7 @@ class CompositeGraphic implements Graphic{
       print(): void 
 
 }
-CompositeGraphic *-- Graphic : composed of 
+CompositeGraphic *-- "1..*" Graphic : composed of 
 @enduml
 ```
 
@@ -20,9 +20,9 @@ CompositeGraphic *-- Graphic : composed of
 skinparam style strictuml
 participant CompositeDemo as m
 participant "ellipse1:Ellipse" as e1
-participant "ellipse1:Ellipse" as e2
-participant "ellipse1:Ellipse" as e3
-participant "ellipse1:Ellipse" as e4
+participant "ellipse2:Ellipse" as e2
+participant "ellipse3:Ellipse" as e3
+participant "ellipse4:Ellipse" as e4
 participant "graphic2:CompositeGraphic"  as g2 <<Graphic>>
 participant "graphic2:CompositeGraphic"  as g3 <<Graphic>>
 participant "graphic2:CompositeGraphic"  as g1 <<Graphic>>

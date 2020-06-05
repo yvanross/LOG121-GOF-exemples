@@ -48,6 +48,9 @@ public class RabaisTest {
 
     CompositeMinimumCost strategieMinimumCost = new CompositeMinimumCost(strategiePourcentageRemise,strategieRemiseAPartirDe);
     assertEquals(3,strategieMinimumCost.getCost(),0.001);
+   
+    CompositeMinimumCost strategieMinimumCost2 = new CompositeMinimumCost(compositeBestForCustomer,compositeBestForStore);
+    assertEquals(3,strategieMinimumCost2.getCost(),0.001);
 
   }
 
@@ -70,8 +73,7 @@ public class RabaisTest {
     Repas repas = new Repas();
     try{
      new StrategiePourcentageRemise(repas, 10.0);
-   fail(); // should never be called
-
+     fail(); // should never be called
     } catch(AssertionError error){
       assertEquals("Parameter should be smaller or equal to 1",error.getMessage());
     }
