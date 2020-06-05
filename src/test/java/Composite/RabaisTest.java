@@ -7,7 +7,7 @@ import static org.junit.Assert.fail;
 import org.junit.Test;
 import Composite.rabais.CompositeBestForCustomer;
 import Composite.rabais.CompositeBestForStore;
-import Composite.rabais.StrategieMinimumCost;
+import Composite.rabais.CompositeMinimumCost;
 import Decorateur.Pizza.PlainPizza;
 import Decorateur.Repas.Repas;
 import Strategie.Rabais.StrategiePourcentageRemise;
@@ -46,7 +46,7 @@ public class RabaisTest {
     compositeBestForCustomer2.add(strategieRemiseAPartirDe);
     assertEquals(3.0,compositeBestForCustomer2.getCost(),0.001);
 
-    StrategieMinimumCost strategieMinimumCost = new StrategieMinimumCost(strategiePourcentageRemise,strategieRemiseAPartirDe);
+    CompositeMinimumCost strategieMinimumCost = new CompositeMinimumCost(strategiePourcentageRemise,strategieRemiseAPartirDe);
     assertEquals(3,strategieMinimumCost.getCost(),0.001);
 
   }

@@ -1,4 +1,4 @@
-package Seance5;
+package TestSeance5;
 
 public interface ITemperature {
   public Double fahrenheit();

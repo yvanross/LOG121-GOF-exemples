@@ -1,9 +1,10 @@
-package Seance5;
+package TestSeance5;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 import java.lang.reflect.*;
 import org.junit.Test;
+
 
 import static org.mockito.Mockito.*;
 

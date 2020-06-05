@@ -1,4 +1,4 @@
-package Seance5;
+package TestSeance5;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
@@ -8,6 +8,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import org.junit.Test;
+
 
 
 public class TemperatureDecoratorTest {

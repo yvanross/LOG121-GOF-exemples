@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - CompositeDemo",
+            "request": "launch",
+            "mainClass": "Composite.Graphic.CompositeDemo",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Test",
             "request": "launch",
             "mainClass": "Composite.Repertoire.Test",
