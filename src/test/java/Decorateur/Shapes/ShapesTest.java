@@ -1,5 +1,6 @@
 package Decorateur.Shapes;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -14,7 +15,7 @@ public class ShapesTest extends OutStream {
         Shape circle = new Circle();
         circle.draw();
         
-        System.out.println("\nCircle of red border");
+        System.out.println(System.lineSeparator()+"Circle of red border");
         Shape redCircle = new RedShapeDecorator(circle);
         redCircle.draw();
         
@@ -22,37 +23,36 @@ public class ShapesTest extends OutStream {
         Rectangle rectangle = new Rectangle();
         rectangle.draw();
 
-        System.out.println("\nRectangle of red border");
+        System.out.println(System.lineSeparator()+"Rectangle of red border");
         Shape redRectangle = new RedShapeDecorator(rectangle);
         redRectangle.draw();
 
-        // assertEquals("Circle with normal border\n"+
-        // "Shape: Circle\n"+
-        // "\n"+
-        // "Circle of red border\n"+
-        // "Shape: Circle\n"+
-        // "Border Color: Red\n"+
-        // "\n"+
-        // "Rectangle with normal border\n"+
-        // "Shape: Rectangle\n"+
-        // "\n"+
-        // "Rectangle of red border\n"+
-        // "Shape: Rectangle\n"+
-        // "Border Color: Red\n\n",getOutput());
+        assertEquals("Circle with normal border"+ System.lineSeparator()+
+        "Shape: Circle"+ System.lineSeparator()+
+        ""+ System.lineSeparator()+
+        "Circle of red border"+ System.lineSeparator()+
+        "Shape: Circle"+ System.lineSeparator()+
+        "Border Color: Red"+ System.lineSeparator()+
+        ""+ System.lineSeparator()+
+        "Rectangle with normal border"+ System.lineSeparator()+
+        "Shape: Rectangle"+ System.lineSeparator()+
+        ""+ System.lineSeparator()+
+        "Rectangle of red border"+ System.lineSeparator()+
+        "Shape: Rectangle"+ System.lineSeparator()+
+        "Border Color: Red"+System.lineSeparator()+System.lineSeparator(),getOutput());
 
-        // // pour test sur windows
-        // assertEquals("Circle with normal border\r\n" +
-        // "Shape: Circle\r\n" +
-        // "\nCircle of red border\r\n" +
-        // "Shape: Circle\r\n" +
-        // "Border Color: Red\n\r\n" +
-        // "Rectangle with normal border\r\n" +
-        // "Shape: Rectangle\r\n" +
-        // "\nRectangle of red border\r\n" +
-        // "Shape: Rectangle\r\n" +
-        // "Border Color: Red\n\r\n",getOutput());
-        // }
-        assertTrue(true);
+        // pour test sur windows
+        assertEquals("Circle with normal border" + System.lineSeparator() +
+        "Shape: Circle" + System.lineSeparator() +
+        System.lineSeparator() +"Circle of red border" + System.lineSeparator() +
+        "Shape: Circle" + System.lineSeparator() +
+        "Border Color: Red"+ System.lineSeparator() + System.lineSeparator() +
+        "Rectangle with normal border" + System.lineSeparator() +
+        "Shape: Rectangle" + System.lineSeparator() +
+        System.lineSeparator() + "Rectangle of red border" + System.lineSeparator() +
+        "Shape: Rectangle" + System.lineSeparator() +
+        "Border Color: Red" +System.lineSeparator() + System.lineSeparator(),getOutput());
+        
     }
 
 }

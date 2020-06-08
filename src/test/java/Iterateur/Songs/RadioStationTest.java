@@ -35,19 +35,19 @@ public class RadioStationTest extends OutStream {
 		
 		DiscJockey madMike = new DiscJockey(songs70s, songs80s, songs90s);
 		madMike.showTheSongs2();
-		assertEquals("NEW WAY WITH ITERATOR\n\n"+
-		"Songs of the 70s\n\n"+
-		"Imagine;John Lennon;1971\n"+
-		"American Pie;Don McLean;1971\n"+
-		"I Will Survive;Gloria Gaynor;1979\n"+
-		"Songs of the 80s\n\n"+
-		"Roam;B 52s;1989\n"+
-		"Cruel Summer;Bananarama;1984\n"+
-		"Head Over Heels;Tears For Fears;1985\n"+
-		"Songs of the 90s\n\n"+
-		"Walk on the Ocean;Toad The Wet Sprocket;1991\n"+
-		"Creep;Radiohead;1993\n"+
-		"Losing My Religion;REM;1991\n",getOutput());
+		assertEquals("NEW WAY WITH ITERATOR"+System.lineSeparator()+System.lineSeparator() +
+		"Songs of the 70s"+System.lineSeparator()+System.lineSeparator() +
+		"Imagine;John Lennon;1971" + System.lineSeparator() +
+		"American Pie;Don McLean;1971" + System.lineSeparator() +
+		"I Will Survive;Gloria Gaynor;1979" + System.lineSeparator() +
+		"Songs of the 80s"+System.lineSeparator()+System.lineSeparator() +
+		"Roam;B 52s;1989" + System.lineSeparator() +
+		"Cruel Summer;Bananarama;1984" + System.lineSeparator() +
+		"Head Over Heels;Tears For Fears;1985" + System.lineSeparator() +
+		"Songs of the 90s"+System.lineSeparator()+System.lineSeparator() +
+		"Walk on the Ocean;Toad The Wet Sprocket;1991" + System.lineSeparator() +
+		"Creep;Radiohead;1993" + System.lineSeparator() +
+		"Losing My Religion;REM;1991" + System.lineSeparator(),getOutput());
 	}
 	
 }

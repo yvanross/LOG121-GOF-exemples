@@ -29,9 +29,9 @@ public class CollectionTest {
 		maCollection.ajouter("contient un ensemble");
 		maCollection.ajouter("de String.");
 		MonClient.imprimer(maCollection);
-		assertEquals("Cette collection\n"+
-		"contient un ensemble\n"+
-		"de String.\n", outContent.toString());
+		assertEquals("Cette collection" + System.lineSeparator()+
+		"contient un ensemble" + System.lineSeparator()+
+		"de String." + System.lineSeparator(), outContent.toString());
 	}
 
 	@Test
@@ -41,7 +41,7 @@ public class CollectionTest {
 		uneAutreCollection.ajouter("Cette collection");
 		uneAutreCollection.ajouter("contient aussi plusieurs String.");
 		MonClient.imprimer(uneAutreCollection);
-		assertEquals("\nCette collection\n"+
-		"contient aussi plusieurs String.\n", outContent.toString());
+		assertEquals(System.lineSeparator() + "Cette collection" + System.lineSeparator()+
+		"contient aussi plusieurs String." + System.lineSeparator(), outContent.toString());
 	}
 }

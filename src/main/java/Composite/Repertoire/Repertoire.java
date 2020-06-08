@@ -34,7 +34,7 @@ public class Repertoire extends Noeud {
 		Iterator<Noeud> i = enfants.iterator();
 
 		// ajouter le nom du répertoire
-		sb.append(addSpace() + "R: " + nom.toString() + "\n");
+		sb.append(addSpace() + "R: " + nom.toString() + System.lineSeparator());
 		
 		niveau++;
 		

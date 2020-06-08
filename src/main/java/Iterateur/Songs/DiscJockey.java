@@ -44,13 +44,13 @@ public class DiscJockey {
 		ArrayList<SongInfo> aL70sSongs = songs70s.getBestSongs();
 		// Iterator<SongInfo> iterator = aL70sSongs.iterator();
 		
-		System.out.println("Songs of the 70s\n");
+		System.out.println("Songs of the 70s" + System.lineSeparator());
 		
 		for(int i=0; i < aL70sSongs.size(); i++){
 			SongInfo bestSongs = (SongInfo) aL70sSongs.get(i);
 			System.out.println(bestSongs.getSongName());
 			System.out.println(bestSongs.getBandName());
-			System.out.println(bestSongs.getYearReleased() + "\n");
+			System.out.println(bestSongs.getYearReleased() + System.lineSeparator());
 		}
 		
 		SongInfo[] array80sSongs = songs80s.getBestSongs();
@@ -58,11 +58,11 @@ public class DiscJockey {
 			SongInfo bestSongs = array80sSongs[j];
 			System.out.println(bestSongs.getSongName());
 			System.out.println(bestSongs.getBandName());
-			System.out.println(bestSongs.getYearReleased() + "\n");
+			System.out.println(bestSongs.getYearReleased() + System.lineSeparator());
 		}
 		
 		Hashtable<Integer, SongInfo> ht90sSongs = songs90s.getBestSongs();
-		System.out.println("Songs of the 90s\n");
+		System.out.println("Songs of the 90s" + System.lineSeparator());
 		for (Enumeration<Integer> e = ht90sSongs.keys(); e.hasMoreElements();){
 			SongInfo bestSongs = ht90sSongs.get(e.nextElement());
 			System.out.println(bestSongs.toString());
@@ -75,19 +75,19 @@ public class DiscJockey {
 	
 	public void showTheSongs2(){
 		
-		System.out.println("NEW WAY WITH ITERATOR\n");
+		System.out.println("NEW WAY WITH ITERATOR" + System.lineSeparator());
 		
 		Iterator<SongInfo> Songs70s = iter70sSongs.createIterator();
 		Iterator<SongInfo> Songs80s = iter80sSongs.createIterator();
 		Iterator<SongInfo> Songs90s = iter90sSongs.createIterator();
 		
-		System.out.println("Songs of the 70s\n");
+		System.out.println("Songs of the 70s" + System.lineSeparator());
 		printTheSongs(Songs70s);
 		
-		System.out.println("Songs of the 80s\n");
+		System.out.println("Songs of the 80s" + System.lineSeparator());
 		printTheSongs(Songs80s);
 		
-		System.out.println("Songs of the 90s\n");
+		System.out.println("Songs of the 90s" + System.lineSeparator());
 		printTheSongs(Songs90s);
 		
 	}

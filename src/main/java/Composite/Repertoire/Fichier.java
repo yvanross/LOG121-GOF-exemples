@@ -9,6 +9,6 @@ public class Fichier extends Noeud {
 	}
 	
 	public String toString() {
-		return addSpace() + "F: " + nom.toString() + "\n";
+		return addSpace() + "F: " + nom.toString() + System.lineSeparator();
 	}
 }
