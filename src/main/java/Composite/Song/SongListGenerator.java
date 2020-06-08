@@ -41,7 +41,6 @@ public class SongListGenerator {
 		DiscJockey crazyLarry = new DiscJockey(everySong);
 		
 		crazyLarry.getSongList();
-			
 	}
 	
 }

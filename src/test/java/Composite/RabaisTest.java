@@ -16,7 +16,7 @@ import Strategie.Rabais.StrategieRemiseAPartirDe;
 public class RabaisTest {
 
   @Test
-  public void strategiePourcentageRemise(){
+  public void RabaisTest(){
 
     Repas repas = new Repas();
     repas.add(new PlainPizza());

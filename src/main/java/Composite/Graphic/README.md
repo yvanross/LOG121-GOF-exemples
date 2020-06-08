@@ -24,8 +24,8 @@ participant "ellipse2:Ellipse" as e2
 participant "ellipse3:Ellipse" as e3
 participant "ellipse4:Ellipse" as e4
 participant "graphic2:CompositeGraphic"  as g2 <<Graphic>>
-participant "graphic2:CompositeGraphic"  as g3 <<Graphic>>
-participant "graphic2:CompositeGraphic"  as g1 <<Graphic>>
+participant "graphic3:CompositeGraphic"  as g3 <<Graphic>>
+participant "graphic1:CompositeGraphic"  as g1 <<Graphic>>
 ->m: main()
 m-->e1**: create
 m-->e2**: create

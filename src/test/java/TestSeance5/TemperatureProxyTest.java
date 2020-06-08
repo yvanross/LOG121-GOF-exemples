@@ -12,8 +12,8 @@ public class TemperatureProxyTest {
   
   @Test
   public void TemperatureFahrenheit(){
-    final Temperature temperature = new Temperature();
-    final ProxyTemperature proxyTemperature = new ProxyTemperature(temperature);
+    final ITemperature temperature = new Temperature();
+    final ITemperature proxyTemperature = new ProxyTemperature(temperature);
     final Double fahrenheit = proxyTemperature.fahrenheit();
     assertEquals(fahrenheit, proxyTemperature.fahrenheit());
 
