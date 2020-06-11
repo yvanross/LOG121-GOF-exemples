@@ -20,7 +20,7 @@ class Document {
      * @param length The number of characters to delete.
      */
     void deleteCommand(final int position, final int length) {
-        System.out.println("deleteCokmmand Called on document");
+        System.out.println("deleteCommand Called on document");
     } // deleteCommand(int, int)
 
     void undoCommand(){

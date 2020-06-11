@@ -1,4 +1,4 @@
-package Iterateur.Collection;
+package Iterateur;
 
 import static org.junit.Assert.assertEquals;
 import java.io.ByteArrayOutputStream;
@@ -6,6 +6,10 @@ import java.io.PrintStream;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import Iterateur.Collection.MaCollection;
+import Iterateur.Collection.MonClient;
+import Iterateur.Collection.UneAutreCollection;
 
 // Should use Test.Java.Utils.OutStrem to clean up this test code.
 public class CollectionTest {

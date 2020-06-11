@@ -1,5 +1,5 @@
-
-Commandes pour Switch light on/off
+# Patron Commande pour Switch light on/off
+https://en.wikipedia.org/wiki/Command_pattern#Java
 
 ```plantuml
 @startuml

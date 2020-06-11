@@ -1,4 +1,4 @@
-package Decorateur.Pizza;
+package Decorateur;
 
 import static org.junit.Assert.assertEquals;
 
@@ -7,6 +7,8 @@ import Decorateur.Coffee.SimpleCoffee;
 import Decorateur.Coffee.WithMilk;
 import Decorateur.Patate.Patate;
 import Decorateur.Patate.Sauce;
+import Decorateur.Pizza.Mozzarella;
+import Decorateur.Pizza.ThreeCheesePizza;
 import Decorateur.Repas.IIngredient;
 import Decorateur.Repas.Repas;
 

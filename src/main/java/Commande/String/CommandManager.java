@@ -10,8 +10,8 @@ class CommandManager {
     // The maximum number of command to keep in the history
     private final int maxHistoryLength = 100;
 
-    private final LinkedList history = new LinkedList();
-    private final LinkedList redoList = new LinkedList();
+    private final LinkedList<AbstractCommand> history =  new LinkedList<AbstractCommand>();
+    private final LinkedList<AbstractCommand> redoList = new LinkedList<AbstractCommand>();
 
     /**
      * Invoke a command and add it to the history,

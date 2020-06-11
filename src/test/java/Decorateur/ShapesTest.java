@@ -1,8 +1,13 @@
-package Decorateur.Shapes;
+package Decorateur;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
+
+import Decorateur.Shapes.Circle;
+import Decorateur.Shapes.RedShapeDecorator;
+import Decorateur.Shapes.Shape;
+import Decorateur.Shapes.Rectangle;
 
 import Utils.OutStream;
 
@@ -16,11 +21,14 @@ public class ShapesTest extends OutStream {
         
         System.out.println(System.lineSeparator()+"Circle of red border");
         Shape redCircle = new RedShapeDecorator(circle);
+        
         redCircle.draw();
         
         System.out.println("Rectangle with normal border");
         Rectangle rectangle = new Rectangle();
+        
         rectangle.draw();
+        
 
         System.out.println(System.lineSeparator()+"Rectangle of red border");
         Shape redRectangle = new RedShapeDecorator(rectangle);

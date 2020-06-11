@@ -1,4 +1,4 @@
-package Iterateur.Songs;
+package Iterateur;
 
 import static org.junit.Assert.assertEquals;
 //import java.io.ByteArrayOutputStream;
@@ -7,6 +7,12 @@ import Utils.OutStream;
 //import org.junit.After;
 //import org.junit.Before;
 import org.junit.Test;
+
+import Iterateur.Songs.DiscJockey;
+import Iterateur.Songs.SongIterator;
+import Iterateur.Songs.SongsOfThe70s;
+import Iterateur.Songs.SongsOfThe80s;
+import Iterateur.Songs.SongsOfThe90s;
 
 public class RadioStationTest extends OutStream {
    
@@ -33,7 +39,7 @@ public class RadioStationTest extends OutStream {
 		SongsOfThe80s songs80s = new SongsOfThe80s();
 		SongIterator songs90s = new SongsOfThe90s();
 		
-		DiscJockey madMike = new DiscJockey(songs70s, songs80s, songs90s);
+		DiscJockey madMike = new DiscJockey(songs70s, (SongIterator)songs80s, songs90s);
 		madMike.showTheSongs2();
 		assertEquals("NEW WAY WITH ITERATOR"+System.lineSeparator()+System.lineSeparator() +
 		"Songs of the 70s"+System.lineSeparator()+System.lineSeparator() +

@@ -1,4 +1,9 @@
-package Decorateur.Coffee;
+package Decorateur;
+
+import Decorateur.Coffee.Coffee;
+import Decorateur.Coffee.SimpleCoffee;
+import Decorateur.Coffee.WithMilk;
+import Decorateur.Coffee.WithSprinkles;
 
 import static org.junit.Assert.assertEquals;
 

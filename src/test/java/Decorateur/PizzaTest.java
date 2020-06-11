@@ -1,9 +1,13 @@
-package Decorateur.Pizza;
+package Decorateur;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+import Decorateur.Pizza.Mozzarella;
+import Decorateur.Pizza.PlainPizza;
+import Decorateur.Pizza.ThreeCheesePizza;
+import Decorateur.Pizza.TomatoSauce;
 import Decorateur.Repas.IIngredient;
 
 public class PizzaTest {
