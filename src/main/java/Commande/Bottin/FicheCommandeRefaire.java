@@ -1,20 +1,19 @@
 package Commande.Bottin;
 
-public class FicheCommandeRefaire implements Commande, Refaire {
+
+public class FicheCommandeRefaire extends AbstractCommand {
+
+	private GestionnaireDeCommandes gdc = null; 
+
+	public FicheCommandeRefaire(GestionnaireDeCommandes gdc) {
+		this.gdc = gdc;
+	}
 
 	@Override
 	public boolean faire() {
+		gdc.refaire();
 		return false;
 	}
 
-	@Override
-	public void defaire() {
-System.out.println("FicheCommandeRefaire::defaire");
-	}
-
-	@Override
-	public void refaire() {
-		System.out.println("FicheCommandeRefaire::refaire");		
-	}
 
 }

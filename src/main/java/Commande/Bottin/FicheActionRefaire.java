@@ -19,7 +19,7 @@ public class FicheActionRefaire extends BottinAbstractAction implements Observer
 	}
 
 	public void actionPerformed(ActionEvent e) {
-		gdc.faireCommande(new FicheCommandeRefaire());
+		gdc.faireCommande(new FicheCommandeRefaire(gdc));
 	}
 
 	public void update(Observable o, Object arg) {

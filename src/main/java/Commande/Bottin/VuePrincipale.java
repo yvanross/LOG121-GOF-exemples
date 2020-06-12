@@ -46,6 +46,7 @@ public class VuePrincipale extends JFrame implements ListSelectionListener, List
 	private Action fermerAction;
 	private Action defaireAction; 
 	private Action refaireAction;
+	private Action refaireActionAll;
 
 	/**
 	 * Create the frame.
@@ -65,6 +66,7 @@ public class VuePrincipale extends JFrame implements ListSelectionListener, List
 		fermerAction   = new FicheActionFermer  (bottin, this, "Fermer",   null, "Sauvegarder le bottin et fermer l'application", new Integer(KeyEvent.VK_F));
 		defaireAction  = new FicheActionDefaire (bottin, this, "Défaire",  null, "Défaire la denière action", new Integer(KeyEvent.VK_Z));
 		refaireAction  = new FicheActionRefaire (bottin, this, "Refaire",  null, "Refaire la dernière action détaite", new Integer(KeyEvent.VK_Y));
+		refaireActionAll  = new FicheActionRefaireAll (bottin, this, "Refaire All",  null, "Refaire toutes les action détaite", new Integer(KeyEvent.VK_Y));
 
 		/*
 		 * Creer le menu et associer les actions
@@ -79,10 +81,12 @@ public class VuePrincipale extends JFrame implements ListSelectionListener, List
         JMenuItem fermerItem    = new JMenuItem(fermerAction);
         JMenuItem defaireItem   = new JMenuItem(defaireAction);
         JMenuItem refaireItem   = new JMenuItem(refaireAction);
+        JMenuItem refaireItemAll   = new JMenuItem(refaireActionAll);
         
         fichierMenu.add(fermerItem);
         editerMenu.add(defaireItem);
         editerMenu.add(refaireItem);
+        editerMenu.add(refaireItemAll);
         editerMenu.add(voirItem);
         editerMenu.add(ajouterItem);
         editerMenu.add(editerItem);

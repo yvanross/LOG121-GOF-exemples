@@ -28,21 +28,11 @@ public class GestionnaireDeCommandes extends Observable {
 		defaireStatut = peutDefaire();
 		refaireStatut = peutRefaire();
 		
-        if (commande instanceof Defaire) {
-            defaire();
-        } 
-        else if (commande instanceof Refaire) {
-            refaire();
-        }
-        else {
+       
         	if (commande.faire()) {
         		histoire.addFirst(commande);
         	} 
-        	else {
-        		histoire.clear();
-        	} 
-        	aRefaire.clear();
-        }
+        
         
         if (defaireStatut ^ peutDefaire() || refaireStatut ^ peutRefaire()) {
         	setChanged();
@@ -50,10 +40,15 @@ public class GestionnaireDeCommandes extends Observable {
         }
 	}
 	
-	/*
+    void refaireAll() {
+        while(peutRefaire()) { 
+           refaire();
+        } 
+    } 	
+    /*
      * Defaire la commande la plus récente
      */
-    private void defaire() {
+    void defaire() {
         if (histoire.size() > 0) { 
         	Commande commandeADefaire = histoire.removeFirst();
         	commandeADefaire.defaire();
@@ -64,7 +59,7 @@ public class GestionnaireDeCommandes extends Observable {
     /*
      * Refaire la dernire commande qui a été "defaite"
      */
-    private void refaire() {
+    void refaire() {
         if (aRefaire.size() > 0) { 
             Commande commandeARefaire = aRefaire.removeFirst();
             commandeARefaire.refaire();

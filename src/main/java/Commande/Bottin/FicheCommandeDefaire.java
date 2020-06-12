@@ -1,21 +1,17 @@
 package Commande.Bottin;
 
-public class FicheCommandeDefaire implements Commande, Defaire {
+public class FicheCommandeDefaire extends AbstractCommand {
+
+	private GestionnaireDeCommandes gdc = null;
+
+	public FicheCommandeDefaire(GestionnaireDeCommandes gdc) {
+		this.gdc = gdc;
+	}
 
 	@Override
 	public boolean faire() {
+		gdc.defaire();
 		return false;
-	}
-
-	@Override
-	public void defaire() {
-		System.out.print("defaire");
-	}
-
-	@Override
-	public void refaire() {
-	 System.out.println("refaire");
-		
 	}
 
 }

@@ -6,11 +6,11 @@ import java.util.Observer;
 
 import javax.swing.Icon;
 
-@SuppressWarnings({"deprecation"})
-public class FicheActionDefaire extends BottinAbstractAction implements Observer {
-	private final static long serialVersionUID = 435243523L;
+@SuppressWarnings({ "deprecation"})
+public class FicheActionRefaireAll extends BottinAbstractAction implements Observer {
+	private final static long serialVersionUID = 324124124L;
 	
-	public FicheActionDefaire(Bottin bottin, 
+	public FicheActionRefaireAll(Bottin bottin, 
 			VuePrincipale vue, String texte, Icon icon, 
 			String description, Integer mnemonic) {
 		super(bottin, vue, texte, icon, description, mnemonic);
@@ -19,11 +19,10 @@ public class FicheActionDefaire extends BottinAbstractAction implements Observer
 	}
 
 	public void actionPerformed(ActionEvent e) {
-		gdc.faireCommande(new FicheCommandeDefaire(gdc));
-	}
-	
-	public void update(Observable o, Object arg) { 
-		setEnabled(gdc.peutDefaire());
+		gdc.faireCommande(new FicheCommandeRefaireAll(gdc));
 	}
 
+	public void update(Observable o, Object arg) {
+		setEnabled(gdc.peutRefaire());
+	}
 }
