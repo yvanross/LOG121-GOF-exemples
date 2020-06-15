@@ -60,6 +60,11 @@ public class ShapesTest extends OutStream {
         "Shape: Rectangle" + System.lineSeparator() +
         "Border Color: Red" +System.lineSeparator() + System.lineSeparator(),getOutput());
         
+        System.out.println("This is a test");
+        restoreStream();
+        System.out.println("-----------");
+        System.out.println(getOutput());
+    
     }
 
 }
