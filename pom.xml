@@ -23,6 +23,12 @@
             <version>3.3.3</version>
             <scope>test</scope>
         </dependency>
+    
+      <dependency>
+        <groupId>net.reini</groupId>
+        <artifactId>junit-compat</artifactId>
+        <version>1.5</version>
+      </dependency>
     </dependencies>
     <build>
         <pluginManagement>
