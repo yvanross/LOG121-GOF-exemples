@@ -6,8 +6,10 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
+import Decorateur.Shapes.Rectangle;
 import Decorateur.Shapes.Circle;
 import Decorateur.Shapes.Shape;
+import Decorateur.Shapes.Square;
 import Factory.Shape.ShapeFactory;
 import Utils.OutStream;
 
@@ -37,6 +39,8 @@ public class ShapeFactoryTest extends OutStream {
 
     // get an object of Rectangle and call its draw method.
     Shape shape2 = shapeFactory.getShape("RECTANGLE");
+        assertTrue(shape2 instanceof Rectangle);
+        assertTrue(shape2 instanceof Shape);
 
     // call draw method of Rectangle
     shape2.draw();
@@ -50,6 +54,8 @@ public class ShapeFactoryTest extends OutStream {
   public void squareTest() {
     // get an object of Square and call its draw method.
     Shape shape3 = shapeFactory.getShape("SQUARE");
+    assertTrue(shape3 instanceof Square);
+    assertTrue(shape3 instanceof Shape);
 
     // call draw method of square
     shape3.draw();

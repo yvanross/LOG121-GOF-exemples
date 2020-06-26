@@ -9,7 +9,7 @@ class Memento {
 class Originator {
   setState(String state): void
   getState(): State
-  saveStatToMememto(): void
+  saveStatToMememto(): Memento
   getStateFromMemento(Memento memento): void
 }
 

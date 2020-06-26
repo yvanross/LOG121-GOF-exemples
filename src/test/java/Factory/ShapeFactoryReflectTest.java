@@ -8,8 +8,10 @@ import java.lang.reflect.InvocationTargetException;
 import org.junit.Before;
 import org.junit.Test;
 
+import Decorateur.Shapes.Rectangle;
 import Decorateur.Shapes.Circle;
 import Decorateur.Shapes.Shape;
+import Decorateur.Shapes.Square;
 import Factory.Shape.ShapeFactoryReflect;
 import Utils.OutStream;
 
@@ -26,7 +28,7 @@ public class ShapeFactoryReflectTest extends OutStream {
       InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
   
     // get an object of Circle and call its draw method.
-    Shape shape1 = shapeFactory.getShape("Circle");
+    Shape shape1 = shapeFactory.getShape("Decorateur.Shapes.Circle");
 
     // // call draw method of Circle
     assertTrue(shape1 instanceof Circle);
@@ -42,10 +44,11 @@ public class ShapeFactoryReflectTest extends OutStream {
 
     // get an object of Rectangle and call its draw method.
     Shape shape2 = shapeFactory.getShape("Decorateur.Shapes.Rectangle");
+    assertTrue(shape2 instanceof Rectangle);
 
     // call draw method of Rectangle
     shape2.draw();
-    // assertEquals("Shape: Circle"+System.lineSeparator(), getOutput());
+    assertEquals("Shape: Rectangle"+System.lineSeparator(), getOutput());
  
   }
 
@@ -54,10 +57,11 @@ public class ShapeFactoryReflectTest extends OutStream {
       InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
     // get an object of Square and call its draw method.
     Shape shape3 = shapeFactory.getShape("Decorateur.Shapes.Square");
+    assertTrue(shape3 instanceof Square);
 
     // call draw method of square
     shape3.draw();
-    // assertEquals("Inside Square::draw() method."+System.lineSeparator(), getOutput());
+    assertEquals("Inside Square::draw() method."+System.lineSeparator(), getOutput());
 
   }
 }

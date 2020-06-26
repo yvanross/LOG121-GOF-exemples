@@ -13,7 +13,7 @@ public class ShapeFactoryReflect {
 
   public Shape getShape(final String name) throws ClassNotFoundException, NoSuchMethodException, SecurityException,
       InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
-    final Class<?> shapeClass = Class.forName("Decorateur.Shapes.Circle");
+    final Class<?> shapeClass = Class.forName(name);
     final Constructor<?> constructor = shapeClass.getConstructor();
     final Shape shape = (Shape) constructor.newInstance();
     return shape;
