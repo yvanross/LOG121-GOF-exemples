@@ -17,23 +17,29 @@ Mediator "1" -up-> "*" Consumer: observers
 skinparam style strictuml
 participant MediatorDemo 
 participant Mediator
-participant ":Map<String,Storage" as MSS
+participant ":Map<String,Storage>" as MSS
 participant "bob:Storage" as Bob
 participant "alice:Storage" as Alice
-participant "observers[i]:List<Consumer<String>>" as LC
+participant "observers[i]:Map<String,Runnable>" as Observers
 
 MediatorDemo -> Mediator**: create()
 Mediator -> MSS**: create()
-Mediator -> LC**: create()
+Mediator -> Observers**: create()
 MediatorDemo -> Mediator: setValue("bob",20)
 activate Mediator
-Mediator -> MSS: bob = computeIfAbsent("bob")
+Mediator -> MSS: bob = containsKey("bob")
+alt "bob = null"
+  MSS -> Bob**: create()
+end
 Mediator -> Bob: setValue(this,"bob", 20)
 deactivate Mediator
 
 MediatorDemo -> Mediator: setValue("alice",24)
 activate Mediator
-Mediator -> MSS: alice = computeIfAbsent("alice")
+Mediator -> MSS: alice = containsKeyu("alice")
+alt "alice == null"
+  MSS -> Alice**: Create()
+end
 Mediator -> Alice: setValue(this,"alice", 24)
 deactivate Mediator
 
@@ -46,38 +52,30 @@ Mediator -> System.out: println("age for alice: 24")
 end
 deactivate Mediator
 
-MediatorDemo -> Mediator: addObserver("bob",anonymousDisplayFunction()) 
-Mediator -> LC: add({observer.run})
+MediatorDemo -> Runnable**: runnable = Create()
+MediatorDemo -> Mediator: addObserver("bob",runnable) 
+Mediator -> Observers: put("bop", runnable))
 
 MediatorDemo->Mediator: setValue("bob", 21);
 activate Mediator
 
-Mediator -> Mediator: bob =  getStorate(storagename)
-activate Mediator
+Mediator -> MSS: bob =  containsKeys("bob")
 Mediator -> Bob: setValue(this,"bob", 21)
-
-deactivate Mediator
 activate Bob
-
 Bob -> Mediator: notifyObservers("bob")
 deactivate Bob
-loop 
-Mediator --> LC: accept()
-
-end
+Mediator -> Observers: bool contain = containsKey("bob")
+alt "bob != null"
+Mediator -> Observers: runnable = get("bob")
+Mediator -> Runnable: run()
+activate Runnable
+Mediator <- Runnable: age = getValue("bob")
+deactivate Runnable
 activate Mediator
-Mediator -> Mediator: anonymousDisplayFunction("bob")
-activate Mediator
-Mediator -> Mediator: age = getValue("bob")
-activate Mediator
-Mediator -> LC: bob = get("bob")
+Mediator -> MSS: Bob = get("bob")
 Mediator -> Bob: age = getValue()
-deactivate Mediator
-Mediator -> System.out: printtln("new age for bob:" + age)
-activate MediatorDemo
-
-deactivate MediatorDemo
-
+Mediator -> System.out: println("new age for bob: " + age)
+end
 
 
 @enduml
