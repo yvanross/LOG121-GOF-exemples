@@ -57,6 +57,7 @@ public class VuePrincipale extends JFrame implements ListSelectionListener, List
 		
 		/*
 		 *  Creer les "Action"
+		 * 
 		 */
 		voirAction     = new FicheActionVoir    (bottin, this, "Voir",     null, "Voir une fiche", new Integer(KeyEvent.VK_V));
 		ajouterAction  = new FicheActionAjouter (bottin, this, "Ajouter",  null, "Ajouter une fiche", new Integer(KeyEvent.VK_A));

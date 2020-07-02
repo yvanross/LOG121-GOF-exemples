@@ -64,9 +64,9 @@ public class TestMemento extends JFrame{
 	   
 	   // Add the buttons & ButtonListeners to the panel
 	   
-	   ButtonListener saveListener = new ButtonListener();
-	   ButtonListener undoListener = new ButtonListener();
-	   ButtonListener redoListener = new ButtonListener();
+	  //  ButtonListener saveListener = new ButtonListener();
+	  //  ButtonListener undoListener = new ButtonListener();
+	  //  ButtonListener redoListener = new ButtonListener();
 		 
 		 ButtonListener buttonListener = new ButtonListener();
 

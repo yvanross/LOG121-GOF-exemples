@@ -1,0 +1,29 @@
+# Patron Mediateur
+
+```plantuml
+@startuml
+class BtnBook extends JButton implements Command 
+class BtnSearch extends JButton implements Command
+class BtnView extends JButton implements Command
+interface Command {
+    void execute();
+}
+class LblDisplay extends JLabel
+
+interface Mediator {
+    void book();
+    void view();
+    void search();
+    void registerView(BtnView v);
+    void registerSearch(BtnSearch s);
+    void registerBook(BtnBook b);
+    void registerDisplay(LblDisplay d);
+}
+class ParticipantMediator implements Mediator
+ParticipantMediator -up-> BtnBook
+ParticipantMediator -up-> BtnSearch
+ParticipantMediator -up-> BtnView
+ParticipantMediator -up-> LblDisplay
+ 
+@enduml
+```

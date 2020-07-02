@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - MediatorDemo",
+            "request": "launch",
+            "mainClass": "Mediateur.Storage.MediatorDemo",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestStockMediator",
+            "request": "launch",
+            "mainClass": "Mediateur.DerekBanas.TestStockMediator",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MediatorDemo",
+            "request": "launch",
+            "mainClass": "Mediateur.Participant.MediatorDemo",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - CarExample",
+            "request": "launch",
+            "mainClass": "Strategie.CarBrake.CarExample",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - OK",
+            "request": "launch",
+            "mainClass": "Adaptateur.Customer.OK",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - TestMemento",
             "request": "launch",
             "mainClass": "Memento.DerekBanas.TestMemento",
