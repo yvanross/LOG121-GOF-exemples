@@ -11,11 +11,11 @@ class Mediator<T> {
 
     public void setValue(String storageName, T value) {
         Storage<T> storage;
-        if (!this.storageMap.containsKey(storageName)){
+        if (this.storageMap.containsKey(storageName)){
+            storage = this.storageMap.get(storageName);
+        } else {
             storage = new Storage<>();
             this.storageMap.put(storageName, storage);
-        } else {
-            storage = this.storageMap.get(storageName);
         }
 
         storage.setValue(this, storageName, value);

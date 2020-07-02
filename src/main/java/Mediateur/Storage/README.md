@@ -20,6 +20,7 @@ participant Mediator
 participant ":Map<String,Storage>" as MSS
 participant "bob:Storage" as Bob
 participant "alice:Storage" as Alice
+participant Runnable
 participant "observers[i]:Map<String,Runnable>" as Observers
 
 MediatorDemo -> Mediator**: create()
@@ -78,11 +79,10 @@ Mediator -> Observers: runnable = get("bob")
 Mediator -> Runnable: run()
 activate Runnable
 Mediator <- Runnable: age = getValue("bob")
-deactivate Runnable
 activate Mediator
 Mediator -> MSS: Bob = get("bob")
 Mediator -> Bob: age = getValue()
-Mediator -> System.out: println("new age for bob: " + age)
+Runnable -> System.out: println("new age for bob: " + age)
 end
 end
 
