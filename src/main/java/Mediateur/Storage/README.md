@@ -29,9 +29,10 @@ MediatorDemo -> Mediator: setValue("bob",20)
 activate Mediator
 Mediator -> MSS: contain = containsKey("bob")
 alt "contain == true"
-  MSS -> Bob**: create()
+Mediator -> MSS: bob = get("bob")
 else contain = false
-Mediator -> MSS: put("bob", new Storage())
+  Mediator -> Bob**: bob = create()
+Mediator -> MSS: put("bob", bob)
 end
 Mediator -> Bob: setValue(this,"bob", 20)
 deactivate Mediator
@@ -40,9 +41,10 @@ MediatorDemo -> Mediator: setValue("alice",24)
 activate Mediator
 Mediator -> MSS: contain = containsKey("alice")
 alt "contain == true"
-  MSS -> Alice**: Create()
+Mediator -> MSS: alice = get("alice")
   else "contain == false"
-  Mediator -> MSS: put("alice", new Storage())
+  Mediator -> Alice**: alice = Create()
+  Mediator -> MSS: put("alice", alice)
 end
 Mediator -> Alice: setValue(this,"alice", 24)
 deactivate Mediator
