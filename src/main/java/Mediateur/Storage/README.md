@@ -27,18 +27,22 @@ Mediator -> MSS**: create()
 Mediator -> Observers**: create()
 MediatorDemo -> Mediator: setValue("bob",20)
 activate Mediator
-Mediator -> MSS: bob = containsKey("bob")
-alt "bob = null"
+Mediator -> MSS: contain = containsKey("bob")
+alt "contain == true"
   MSS -> Bob**: create()
+else contain = false
+Mediator -> MSS: put("bob", new Storage())
 end
 Mediator -> Bob: setValue(this,"bob", 20)
 deactivate Mediator
 
 MediatorDemo -> Mediator: setValue("alice",24)
 activate Mediator
-Mediator -> MSS: alice = containsKeyu("alice")
-alt "alice == null"
+Mediator -> MSS: contain = containsKey("alice")
+alt "contain == true"
   MSS -> Alice**: Create()
+  else "contain == false"
+  Mediator -> MSS: put("alice", new Storage())
 end
 Mediator -> Alice: setValue(this,"alice", 24)
 deactivate Mediator
@@ -59,7 +63,9 @@ Mediator -> Observers: put("bop", runnable))
 MediatorDemo->Mediator: setValue("bob", 21);
 activate Mediator
 
-Mediator -> MSS: bob =  containsKeys("bob")
+Mediator -> MSS: contains =  containsKeys("bob")
+alt contains
+Mediator -> MSS: bob = get("bob")
 Mediator -> Bob: setValue(this,"bob", 21)
 activate Bob
 Bob -> Mediator: notifyObservers("bob")
@@ -75,6 +81,7 @@ activate Mediator
 Mediator -> MSS: Bob = get("bob")
 Mediator -> Bob: age = getValue()
 Mediator -> System.out: println("new age for bob: " + age)
+end
 end
 
 
