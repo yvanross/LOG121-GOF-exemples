@@ -13,8 +13,8 @@ public class ChatMessageTest extends OutStream {
 
     Mediator group = new Group();
     Collegue user1 = new User("User1",group);
-    Collegue user2 = new User("User2",group);
-    Collegue user3 = new User("User3",group);
+    new User("User2",group);
+    new User("User3",group);
 
     user1.sendMessage("allo mon coco");
 

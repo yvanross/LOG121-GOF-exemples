@@ -1,0 +1,27 @@
+package ChaineResponsabilite.Mail;
+
+/**
+ * Exemple du parton Chain of Responsibility
+ * @author Vincent Lacasse
+ *
+ */
+
+public class Demo {
+
+	public static void main(String[] args) {
+		
+		Handler handler1 = new SpamHandler();
+		Handler handler2 = new FanHandler();
+		Handler handler3 = new ComplaintHandler();
+		Handler handler4 = new NewLocationHandler();
+		Handler handler5 = new NormalHandler();
+
+		handler1.setProchain(handler2);
+		handler2.setProchain(handler3);
+		handler3.setProchain(handler4);
+		handler4.setProchain(handler5);
+		
+		Analyser analyser = new Analyser(handler1);
+		analyser.analyser();
+	}	
+}

@@ -6,6 +6,55 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - TestBankAccount",
+            "request": "launch",
+            "mainClass": "Facade.Bank.TestBankAccount",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MessageDemo",
+            "request": "launch",
+            "mainClass": "Facade.Message.MessageDemo",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - FacadePatternDemo",
+            "request": "launch",
+            "mainClass": "Facade.FacadePatternDemo",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestCalcChain",
+            "request": "launch",
+            "mainClass": "ChaineResponsabilite.Numbers.TestCalcChain",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Demo",
+            "request": "launch",
+            "mainClass": "ChaineResponsabilite.Mail.Demo",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Logger",
+            "request": "launch",
+            "mainClass": "ChaineResponsabilite.Logger2.Logger",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ChainPatternDemo",
+            "request": "launch",
+            "mainClass": "ChaineResponsabilite.Logger.ChainPatternDemo",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - MediatorDemo",
             "request": "launch",
             "mainClass": "Mediateur.Storage.MediatorDemo",

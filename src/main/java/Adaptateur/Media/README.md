@@ -1,0 +1,33 @@
+# Media player adaptateurt
+
+```plantuml
+@startuml
+skinparam style strictuml
+
+
+interface IMediaPlayer {
+  play(): void
+}
+
+class AudioPlayer implements IMediaPlayer {
+  play():void
+}
+
+interface IAdvancedMediaPlayer {
+  playVlc(): void
+  playMp4(): void
+}
+
+Class VLCPlayer implements IAdvancedMediaPlayer
+Class Mp4Player implements IAdvancedMediaPlayer
+
+class MediaAdapter implements IMediaPlayer {
+  MediaAdapter(IAdvancedMediaPlay): void
+  play():void
+}
+
+MediaAdapter -> IAdvancedMediaPlayer
+AudioPlayer -> MediaAdapter
+AdapterPatternDemo -> AudioPlayer
+@enduml
+```
