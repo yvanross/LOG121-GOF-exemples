@@ -11,10 +11,6 @@ Helwan Mandé
 ```plantuml
 @startuml
 
-
-
-
-
         class Bottin {
             {static} + NOM_FICHIER : String
             + Bottin()
@@ -44,7 +40,7 @@ Helwan Mandé
 
         interface Commande {
             {abstract} + defaire()
-            {abstract} + faire()
+            {abstract} + faire(commande: Commande)
             {abstract} + refaire()
         }
 
@@ -83,7 +79,7 @@ Helwan Mandé
 
 
 
-        class FicheActionDefaire {
+        class FicheActionDefaire extends BottinAbstractAction implements Observer  {
             {static} - serialVersionUID : long
             + FicheActionDefaire()
             + actionPerformed()
@@ -114,7 +110,7 @@ Helwan Mandé
 
 
 
-        class FicheActionRefaire {
+       class FicheActionRefaire extends BottinAbstractAction implements Observer {
             {static} - serialVersionUID : long
             + FicheActionRefaire()
             + actionPerformed()
@@ -292,17 +288,13 @@ Helwan Mandé
 
 
 
-
-
-
-
-FicheActionAjouter--|>BottinAbstractAction
-FicheActionDefaire--|>BottinAbstractAction
-FicheActionDetruire--|>BottinAbstractAction
-FicheActionEditer--|>BottinAbstractAction
-FicheActionFermer--|>BottinAbstractAction
-FicheActionRefaire--|>BottinAbstractAction
-FicheActionVoir--|>BottinAbstractAction
+FicheActionAjouter-up-|>BottinAbstractAction
+FicheActionDefaire-up-|>BottinAbstractAction
+FicheActionDetruire-up-|>BottinAbstractAction
+FicheActionEditer-up-|>BottinAbstractAction
+FicheActionFermer-up-|>BottinAbstractAction
+FicheActionRefaire-up-|>BottinAbstractAction
+FicheActionVoir-up-|>BottinAbstractAction
 
 Commande --> Bottin: invoke command on
 
@@ -329,6 +321,16 @@ BottinDemo -->VuePrincipale
 BottinDemo-->Bottin
 
 Bottin -->GestionnaireDeCommandes
+
+
+        FicheActionAjouter --> FicheCommandeAjouter
+        FicheActionDefaire --> FicheCommandeDefaire
+        FicheActionDetruire --> FicheCommandeDetruire
+        FicheActionEditer --> FicheCommandeEditer
+        FicheActionFermer --> FicheCommandeFermer
+        FicheActionRefaire --> FicheCommandeRefaire
+        FicheActionVoir --> FicheCommandeVoir
+
 
 @enduml
 ```

@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - TestExemple",
+            "request": "launch",
+            "mainClass": "Observateur.TextView.TestExemple",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - TestBankAccount",
             "request": "launch",
             "mainClass": "Facade.Bank.TestBankAccount",
