@@ -24,6 +24,7 @@ public class FactureTest {
     assertEquals(17.0, items.getTotal(),0.001);
    
     facture.addItem(items);
+    
     Taxe tps = new Taxe(items,"tps", 9.975);
     assertEquals(1.6957, tps.getTotal(),0.001);
 
