@@ -5,7 +5,7 @@ https://www.tutorialspoint.com/design_pattern/chain_of_responsibility_pattern.ht
 ```plantuml
 @startuml
 skinparam style strict
-
+ 
 abstract class AbstractLogger {
   -level: int
   +setNextLogger(AbstractLogger): void

@@ -35,7 +35,7 @@ public class ShapeFactoryReflectTest extends OutStream {
     assertTrue(shape1 instanceof Shape);
 
     shape1.draw();
-    assertEquals("Shape: Circle"+System.lineSeparator(), getOutput());
+    assertEquals("Shape: draw Circle"+System.lineSeparator(), getOutput());
   }
 
   @Test
@@ -48,7 +48,7 @@ public class ShapeFactoryReflectTest extends OutStream {
 
     // call draw method of Rectangle
     shape2.draw();
-    assertEquals("Shape: Rectangle"+System.lineSeparator(), getOutput());
+    assertEquals("Shape: draw Rectangle"+System.lineSeparator(), getOutput());
  
   }
 
@@ -61,7 +61,7 @@ public class ShapeFactoryReflectTest extends OutStream {
 
     // call draw method of square
     shape3.draw();
-    assertEquals("Inside Square::draw() method."+System.lineSeparator(), getOutput());
+    assertEquals("Shape: draw Square"+System.lineSeparator(), getOutput());
 
   }
 }

@@ -21,7 +21,9 @@ Message --> MessageBody
 MessageBody --> Attachment
 }
 
-class MessageCreator
+class MessageCreator {
+  MessageCreator(String to, String from, String subject, int type)
+}
 MessageCreator --> RichText
 MessageCreator --> attachments
 MessageCreator -down-> MessageBody

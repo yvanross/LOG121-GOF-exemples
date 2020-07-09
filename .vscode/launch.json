@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - FacadePatternDemo",
+            "request": "launch",
+            "mainClass": "Facade.Shapes.FacadePatternDemo",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - TestExemple",
             "request": "launch",
             "mainClass": "Observateur.TextView.TestExemple",

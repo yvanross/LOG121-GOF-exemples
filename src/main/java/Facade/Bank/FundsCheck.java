@@ -2,7 +2,7 @@ package Facade.Bank;
 
 public class FundsCheck {
 	
-	private double cashInAccount = 1000.00;
+	private double cashInAccount = 0;
 	
 	public double getCashInAccount() { return cashInAccount; }
 	

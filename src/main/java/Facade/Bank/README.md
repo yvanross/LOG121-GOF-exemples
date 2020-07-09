@@ -15,7 +15,8 @@ class TestBankAccount
 
 class BankAccountFacade {
   
-  withdrasCash(): void
+  withdrasCash(amount: Double): void
+  depositCash(amout: Double): void
 
 }
 BankAccountFacade --> WelcomeToBank

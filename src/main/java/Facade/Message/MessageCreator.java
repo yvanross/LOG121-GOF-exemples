@@ -95,11 +95,14 @@ public class MessageCreator {
      * Send the message.
      */
     public void send() {
+        System.out.println("\nSend message\n----------");
         MessageBody body = new MessageBody(messageBody);
         for (int i = 0; i < attachments.size(); i++) {
             body.addAttachment(new Attachment(attachments.elementAt(i)));
         } // for
         MessageHeader header = new MessageHeader(headerFields);
+        System.out.println("header: " + headerFields.toString());
+        System.out.println("body:" + messageBody.toString());
         Message msg = new Message(header, body);
         if (signMessage) {
             msg.setSecurity(createSecurity());

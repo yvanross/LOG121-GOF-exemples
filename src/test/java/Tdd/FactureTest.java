@@ -1,3 +1,4 @@
+
 package Tdd;
 
 import static org.junit.Assert.assertEquals;
@@ -6,6 +7,7 @@ import org.junit.Test;
 
 public class FactureTest {
 
+  // MGL802 demo TDD
   // pseudo code
   // creéer une vente pour l'entreprise XYZ
   // ajouter des items avec un prix une quantité et une descriptioun
@@ -24,7 +26,7 @@ public class FactureTest {
     assertEquals(17.0, items.getTotal(),0.001);
    
     facture.addItem(items);
-    
+
     Taxe tps = new Taxe(items,"tps", 9.975);
     assertEquals(1.6957, tps.getTotal(),0.001);
 

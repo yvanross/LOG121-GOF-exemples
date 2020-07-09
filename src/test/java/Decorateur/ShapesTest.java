@@ -35,29 +35,29 @@ public class ShapesTest extends OutStream {
         redRectangle.draw();
 
         assertEquals("Circle with normal border"+ System.lineSeparator()+
-        "Shape: Circle"+ System.lineSeparator()+
+        "Shape: draw Circle"+ System.lineSeparator()+
         ""+ System.lineSeparator()+
         "Circle of red border"+ System.lineSeparator()+
-        "Shape: Circle"+ System.lineSeparator()+
+        "Shape: draw Circle"+ System.lineSeparator()+
         "Border Color: Red"+ System.lineSeparator()+
         ""+ System.lineSeparator()+
         "Rectangle with normal border"+ System.lineSeparator()+
-        "Shape: Rectangle"+ System.lineSeparator()+
+        "Shape: draw Rectangle"+ System.lineSeparator()+
         ""+ System.lineSeparator()+
         "Rectangle of red border"+ System.lineSeparator()+
-        "Shape: Rectangle"+ System.lineSeparator()+
+        "Shape: draw Rectangle"+ System.lineSeparator()+
         "Border Color: Red"+System.lineSeparator()+System.lineSeparator(),getOutput());
 
         // pour test sur windows
         assertEquals("Circle with normal border" + System.lineSeparator() +
-        "Shape: Circle" + System.lineSeparator() +
+        "Shape: draw Circle" + System.lineSeparator() +
         System.lineSeparator() +"Circle of red border" + System.lineSeparator() +
-        "Shape: Circle" + System.lineSeparator() +
+        "Shape: draw Circle" + System.lineSeparator() +
         "Border Color: Red"+ System.lineSeparator() + System.lineSeparator() +
         "Rectangle with normal border" + System.lineSeparator() +
-        "Shape: Rectangle" + System.lineSeparator() +
+        "Shape: draw Rectangle" + System.lineSeparator() +
         System.lineSeparator() + "Rectangle of red border" + System.lineSeparator() +
-        "Shape: Rectangle" + System.lineSeparator() +
+        "Shape: draw Rectangle" + System.lineSeparator() +
         "Border Color: Red" +System.lineSeparator() + System.lineSeparator(),getOutput());
         
         System.out.println("This is a test");
