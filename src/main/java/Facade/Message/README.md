@@ -21,16 +21,16 @@ Message --> MessageBody
 MessageBody --> Attachment
 }
 
-class MessageCreator {
-  MessageCreator(String to, String from, String subject, int type)
+class MessageCreatorFacade {
+  MessageCreatorFacade(String to, String from, String subject, int type)
 }
-MessageCreator --> RichText
-MessageCreator --> attachments
-MessageCreator -down-> MessageBody
-MessageCreator --> Message
-MessageCreator --> headerFields
+MessageCreatorFacade --> RichText
+MessageCreatorFacade --> attachments
+MessageCreatorFacade -down-> MessageBody
+MessageCreatorFacade --> Message
+MessageCreatorFacade --> headerFields
 
-MessageDemo --> MessageCreator
+MessageDemo --> MessageCreatorFacade
 
 @enduml
 ```

@@ -4,14 +4,14 @@ public class MessageDemo {
 
 
   public static void main(String[] args) {
-   MessageCreator messageCreator1 = new MessageCreator("yvan.ross@gmail","cc-yvan.ross@gmail.com","This is a facade pattern demo");
+   MessageCreatorFacade messageCreator1 = new MessageCreatorFacade("yvan.ross@gmail","cc-yvan.ross@gmail.com","This is a facade pattern demo");
    messageCreator1.setHeaderField("token", "09328453ijoweldsfja09sduf9");
    messageCreator1.setMessageBody(new RichTextString("This is the body"));
    messageCreator1.setSignMessage(true);
    messageCreator1.send();
 
 
-   MessageCreator messageCreator2 = new MessageCreator(
+   MessageCreatorFacade messageCreator2 = new MessageCreatorFacade(
      "yvan.ross@gmail",
      "cc-yvan.ross@gmail.com",
      "This is a facade pattern demo"

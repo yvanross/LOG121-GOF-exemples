@@ -5,7 +5,7 @@ public abstract class Handler {
 	
 	Handler successor;
 	
-	public void setProchain(Handler successor) {
+	public void setProchain(Handler successor) throws Exception {
 		this.successor = successor;
 	}
 

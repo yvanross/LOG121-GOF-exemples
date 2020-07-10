@@ -8,7 +8,7 @@ package ChaineResponsabilite.Mail;
 
 public class Demo {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		
 		Handler handler1 = new SpamHandler();
 		Handler handler2 = new FanHandler();
@@ -20,6 +20,8 @@ public class Demo {
 		handler2.setProchain(handler3);
 		handler3.setProchain(handler4);
 		handler4.setProchain(handler5);
+		// handler5.setProchain(handler3);
+		
 		
 		Analyser analyser = new Analyser(handler1);
 		analyser.analyser();

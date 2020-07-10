@@ -9,19 +9,20 @@ public class TestCalcChain {
 		Chain chainCalc1 = new AddNumbers();
 		Chain chainCalc2 = new SubtractNumbers();
 		Chain chainCalc3 = new MultNumbers();
-		Chain chainCalc4 = new DivideNumbers();
+		Chain finalChainElement = new DivideNumbers();
 		
 		// Here I tell each object where to forward the
 		// data if it can't process the request
 		
 		chainCalc1.setNextChain(chainCalc2);
 		chainCalc2.setNextChain(chainCalc3);
-		chainCalc3.setNextChain(chainCalc4);
+
+		chainCalc3.setNextChain(finalChainElement);
 		
 		// Define the data in the Numbers Object
 		// and send it to the first Object in the chain
 		
-		Numbers request = new Numbers(4,2,"add");
+		Numbers request = new Numbers(4,2,"div");
 		
 		chainCalc1.calculate(request);
 		

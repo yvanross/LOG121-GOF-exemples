@@ -23,7 +23,6 @@ public class BankAccountFacade {
 		securityCode = newSecCode;
 		
 		bankWelcome = new WelcomeToBank();
-		
 		acctChecker = new AccountNumberCheck();
 		codeChecker = new SecurityCodeCheck();
 		fundChecker = new FundsCheck();
