@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - VisitorDemo",
+            "request": "launch",
+            "mainClass": "Visiteur.Taxes.VisitorDemo",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestVIsitor",
+            "request": "launch",
+            "mainClass": "Visiteur.Repertoire.TestVIsitor",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - VisitorPatternDemo",
+            "request": "launch",
+            "mainClass": "Visiteur.Computer.VisitorPatternDemo",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - VisitorDemo",
+            "request": "launch",
+            "mainClass": "Visiteur.Car.VisitorDemo",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - BottinDemo",
             "request": "launch",
             "mainClass": "Commande.Bottin.BottinDemo",
