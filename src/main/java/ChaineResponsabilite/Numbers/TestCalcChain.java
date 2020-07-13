@@ -16,7 +16,6 @@ public class TestCalcChain {
 		
 		chainCalc1.setNextChain(chainCalc2);
 		chainCalc2.setNextChain(chainCalc3);
-
 		chainCalc3.setNextChain(finalChainElement);
 		
 		// Define the data in the Numbers Object
