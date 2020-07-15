@@ -1,7 +1,8 @@
 # Bottin
 Diagramme de Classe UML du package Bottin
 
-Voila comment je pense que le pattern command s'articule
+A lire pour comprendre l'intégration du patron commande avec un controlleur
+https://www.codeproject.com/Articles/12263/The-Command-Pattern-and-MVC-Architecture
 
 Invoker = GestionnaireDeCommandes
 Client = Bottin
@@ -308,7 +309,7 @@ FicheCommandeRefaire--up|>Commande
 
 GestionnaireDeCommandes o--Commande
 
-BottinAbstractAction--up>GestionnaireDeCommandes
+BottinAbstractAction--up> "*" VuePrincipale
 
 
 Fiche o-->FicheControleur
