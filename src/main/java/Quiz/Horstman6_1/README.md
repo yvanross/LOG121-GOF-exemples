@@ -46,3 +46,5 @@ CheckingAccount -|> BankAccount
 ```
 
 Débuter par l'écriture des tests pour la classe BankAccount et ensuite écrivez les tests pour la classe CheckingAccout et termine par l'implémentation de celle-ci.
+
+Ceci est un test pour les forks.
