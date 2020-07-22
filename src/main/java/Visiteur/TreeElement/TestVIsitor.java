@@ -19,6 +19,10 @@ import javax.swing.JTextArea;
 
 public class TestVIsitor extends JFrame {
 
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = -7922259148439943278L;
 	private JPanel contentPane;
 	private Noeud base;
 

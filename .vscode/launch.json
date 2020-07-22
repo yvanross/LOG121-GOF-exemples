@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - PrototypePatternDemo",
+            "request": "launch",
+            "mainClass": "Proptoptype.PrototypePatternDemo",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestATMMachine",
+            "request": "launch",
+            "mainClass": "Proxy.Atm.TestATMMachine",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ProxyTester",
+            "request": "launch",
+            "mainClass": "Proxy.Images.ProxyTester",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - VisitorDemo",
             "request": "launch",
             "mainClass": "Visiteur.Taxes.VisitorDemo",

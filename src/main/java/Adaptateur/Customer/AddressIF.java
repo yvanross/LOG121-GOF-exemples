@@ -4,7 +4,7 @@ package Adaptateur.Customer;
  * this interface.
  */
 public interface AddressIF {
-    /**
+        /**
      * Get the first line of the street address.
      */
     public String getAddress1();

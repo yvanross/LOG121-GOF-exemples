@@ -38,6 +38,7 @@ class CarElement {
   class CarElementDoVisitor implements CarElementVisitor
   class CarElementPrintVisitor implements CarElementVisitor
 
+Car *- "*" CarElement
 
 
 

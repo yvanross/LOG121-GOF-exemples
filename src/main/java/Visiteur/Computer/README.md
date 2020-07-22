@@ -24,5 +24,6 @@ class VisitorPatternDemo
 
 VisitorPatternDemo --> ComputerPartDisplayVisitor: use
 VisitorPatternDemo --> ComputerPart: use
+Computer *-- "*" ComputerPart
 @enduml
 ```
