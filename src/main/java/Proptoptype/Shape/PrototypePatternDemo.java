@@ -1,4 +1,4 @@
-package Proptoptype;
+package Proptoptype.Shape;
 
 public class PrototypePatternDemo {
   public static void main(String[] args) {

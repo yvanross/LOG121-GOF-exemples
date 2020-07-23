@@ -1,4 +1,4 @@
-package Proptoptype;
+package Proptoptype.Shape;
 
 import java.util.Hashtable;
 

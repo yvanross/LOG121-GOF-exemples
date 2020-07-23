@@ -1,4 +1,4 @@
-package Proptoptype;
+package Proptoptype.Shape;
 
 public class Circle extends Shape {
 

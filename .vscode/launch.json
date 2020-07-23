@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - SimpleGraphEditor",
+            "request": "launch",
+            "mainClass": "Proptoptype.Graph.SimpleGraphEditor",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - PrototypePatternDemo",
+            "request": "launch",
+            "mainClass": "Proptoptype.Shape.PrototypePatternDemo",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - PrototypePatternDemo",
             "request": "launch",
             "mainClass": "Proptoptype.PrototypePatternDemo",

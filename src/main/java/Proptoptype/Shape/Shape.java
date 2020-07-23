@@ -1,6 +1,6 @@
-package Proptoptype;
+package Proptoptype.Shape;
 
-public abstract class Shape implements Cloneable {
+ abstract class Shape implements Cloneable {
    
   private String id;
   protected String type;
