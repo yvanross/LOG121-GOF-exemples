@@ -15,12 +15,14 @@ public class HasCardState implements ATMState {
 
   @Override
   public void ejectCard() {
+    System.out.println("HasCardStarte -> Eject card");
    this.getAtmData.setATMState(new NoCardState(getAtmData));
 
   }
 
   @Override
   public void insertPin(final int pinEntered) {
+    System.out.println("HasCardStarte -> insert Pin: Valid");
    this.getAtmData.setATMState(new HasPinState(getAtmData));
 
   }

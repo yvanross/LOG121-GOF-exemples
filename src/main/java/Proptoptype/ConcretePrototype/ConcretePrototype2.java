@@ -2,7 +2,7 @@ package Proptoptype.ConcretePrototype;
 
 public class ConcretePrototype2 extends Prototype {
   public String getType(){
-    return "ConcretePrototype1";
+    return "ConcretePrototype2";
   }
 
   // @Override

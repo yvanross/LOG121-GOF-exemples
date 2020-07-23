@@ -73,7 +73,5 @@ public class ConcretePrototype  {
 
 
 
-
-
-// Object obj = new Object();
+//  Object obj = new Object();
 // assertTrue(concretePrototype1 instanceof Object);
