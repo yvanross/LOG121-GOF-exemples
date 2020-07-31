@@ -23,7 +23,7 @@
             <version>3.3.3</version>
             <scope>test</scope>
         </dependency>
-    
+
       <dependency>
         <groupId>net.reini</groupId>
         <artifactId>junit-compat</artifactId>
@@ -35,8 +35,9 @@
             <plugins>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-checkstyle-plugin</artifactId>
-                    <version>3.0.0</version>
+                     <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M5</version>
+
                     <dependencies>
                         <dependency>
                             <groupId>com.puppycrawl.tools</groupId>
