@@ -25,7 +25,7 @@ class CantFly implements Flys{
 
 
 interface Flys{
-    String fly(): void
+    fly(): void
 }
 
 ItFlys ..|> Flys : Interface realization
