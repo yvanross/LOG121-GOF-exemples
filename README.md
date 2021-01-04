@@ -12,6 +12,3 @@ Pour obtenir le rapport de couverture de test
 mvn -P jacoco test
 ```
 [Ouvrir le rapport jacoco dans votre browser](./target/jacoco/site/../../site/jacoco/index.html)
-
-[README.me]
-(./README.md)
