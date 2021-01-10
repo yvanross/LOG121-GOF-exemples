@@ -1,4 +1,4 @@
-@startuml
+@startuml Diagramme de classe
 skinparam style strictuml
 interface Container <<Interface>> {
   getIterator(): Iterator
@@ -22,8 +22,5 @@ class NameRepository implements Container
 class NameIterator implements Iterator  
 IteratorPatternDemo -> NameRepository : uses
 NameRepository -> NameIterator : as
-
-
-
 
 @enduml

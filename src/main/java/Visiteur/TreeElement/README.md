@@ -2,25 +2,4 @@
 Exemple du patron Visiteur
 https://github.com/lacasse4/Visitor
 
-
-
-```plantuml
-@startuml
-class CompteRepertoire implements Visitor {}
-class Fichier extends Noeud {}
-class ListeVisiteur implements Visitor {}
-abstract class Noeud {}
-class Repertoire extends Noeud {}
-class TestVisitor extends JFrame {}
-class TrouveFichier implements Visitor{}
-interface Visitor {	
-   void visit(Fichier fichier);
-	 void visit(Repertoire repertoire);
-}
-
-TestVisitor --> Noeud: select 
-TestVisitor --> Visitor : use
-
-
-@enduml
-```
+![Diagramme de classe](https://www.plantuml.com/plantuml/svg/TP51Qm9138NFpg_8iHxy0nQAKF4WqaCflO-xppQmixCacQLG_EyTtOuEYgU4UI-Pxv6LcXTBeQCr-o_n8O1QKDDvLRXpeTSO1iCx1eX55X27eKD0RqgVh6nHwFVuRzvmyyqGme-XRvNU8b9xbNUiXlCGaZnOvFTguXkRA6utL1mF_lY0MbbNBDjDpeRA8p6DAB3t7Dd8lK4Eli6LRUQ8Q8pSqdXwUYhpXwdEdzsibYjKkRJPT7IkPbmiNgO8Ir9qoC7lvD8lAUMpEBVAeVBH_W00 "Diagramme de classe")

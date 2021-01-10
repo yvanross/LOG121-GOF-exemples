@@ -1,12 +1,19 @@
 # Patron stratégie Comparateur
-## sous-titre
-- list
-  - list2
+# Table de correspondance
 
-- list3
+|Nom dans le <br>modèle de conception | Nom actuel |
+|-|-|
+|Context| Collection |
+|Strategy| Interface ou classe abstraite |
+|ConcreteStrategy| Classe qui implémente l'interface |
+|doWork()| Ppération polymorphe|
+
+# Diagramme de classe
 
 ![class](https://www.plantuml.com/plantuml/png/0/PP7D2i8m48JlUOebnq84hoAbKZnu4to2jQvj83zbcnn4V7TZQMrBRilCjyDiKWq1EKHhX6WC3WESMggzxP4nU7v_9dMKMgSfAVMedEqTOzDjuTdgZNyjw9N9UJk351VoXWOrqzQwk43yn8PWoJvEcMNonQOYx6AloXKgycOvarNAaRnRploV1UHUWagcBEHyFno0VfEc5GU5OjrsGOqRgoXHaNkaV_W2 "class")
 
+
+# Diagramme de séquence
 
 
 

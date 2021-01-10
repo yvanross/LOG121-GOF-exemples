@@ -1,33 +1,4 @@
 
-Patron Commande
+# Patron Commande
 https://www.tutorialspoint.com/design_pattern/command_pattern.htm
-
-```plantuml
-@startuml
-skinparam style strictuml
-
-class Order{
-  execute(): void
-}
-
-class Stock{
-  name: string
-  quantity: int
-  buy(): void
-  sell(): void
-}
-
-class Broker{
-  takeOrder(): void
-  placeOrders(): void
-}
-class BuyStock implements Order
-class SellStock implements Order
-
-BuyStock *- Stock
-SellStock *- Stock
-Broker -> "*" Order: uses
-
-@enduml
-```
-
+![Diagramme de classe](https://www.plantuml.com/plantuml/svg/TP112i8m44NtSuh1bHQyG1SYujw59nZJGKAJj6OcOX7lRcoq5iHDO3xlp_-JhIX5JTxXtj8valUC3QDn9C8WhGqzPHL51yVvZTQyQ82Hm4DiEDu1aMzial9oLUErimqyFiHHEzE-Y42Uwt53EEVnaYYerQ566pJFfpHCPaHXvtvtxMBNbZYbbiVicQTtP8eeC-lRcOQn25hVE_OSzDtzqpBd_G5WybRhSWrywKagrN2zmKMrACuQax00R3aq-SkU "Diagramme de classe")

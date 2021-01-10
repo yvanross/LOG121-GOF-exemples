@@ -1,42 +1,4 @@
 # Patron Proxy
 http://www.newthinktank.com/2012/10/proxy-design-pattern-tutorial/
 
-
-```plantuml
-@startuml
-class ATMMachine implements GetATMData, ATMState
-class ATMProxy implements GetATMData, ATMState
-
- interface ATMState {
-	+insertCard(): void 
-	+ejectCard(): void 
-	+insertPin(int pinEntered): void 
-	+requestCash(int cashToWithdraw): void 
-	
-}
- interface GetATMData {
-   getATMState(): ATMState
-   setState(ATMState): void
-   getCashInMachine(): int
-}
-
-class TestATMMachine {
-  +main(final String[] args) : void
-}
-TestATMMachine *-- ATMMachine
-TestATMMachine *-- ATMProxy
-ATMProxy *-- ATMMachine
-ATMMachine *-- "*" ATMState
-
-	class HasCard implements ATMState
-  
-	class NoCard implements ATMState
-	class HasPin implements ATMState
-  class NoCash implements ATMState
-
-note bottom of HasCard: public void insercard(ATMMachine machine) {\n machine.setState(new HasPin())\n} 
-note left of ATMMachine: public void insertCard(){\n getATMState().insertCard()\n}
-
-note right of ATMProxy: public void insertCard(){\n machine.insertCard()\n}
-@enduml
-```
+![Diagramme de classe](https://www.plantuml.com/plantuml/svg/XLF1Ki8m43tJhzZXH4Nu04uuugW776PWneDu2EcsZTCac0JHOVWNlyKlCsdJDbRGKvhTjszVzcsdsX1bTho06IEP8fmZ90Yq85fZL1vmjPhF2SsPG61yMo17OJJSeh696J7aqY6MXfYWOA7a-yU_y0YOCAXIGh49mY7g3PdGgCmrKSaWdi2RP0dOABuW_HMie0ic1fOBjapSE4fC0eZ2rnrgMwdp4aJjnqe-CfCdYknRO7GC1RMAhIG0oCfxgT7rRnvXKnfD5Q-3djENkSRtmi_GrTecjfUVrifA2qRiUWqviUz9cI05B8rY8djw1g8o7OCdFaQTielHA33gJBPq9MhiwTHqyFsBVk1Khn9xHxGp87Gs64IDUf1dGIsFjUmCJKkYyvEGI4YxA1jfZEGWqrhL1BQxJS5evMUv6DHjI_0mNftnr-TXBUhRkF5FuDvB6yJnMXoXwbHWQboVbkX4Ax-PZlV7gep3hENqwXNByfgqjEDlobfgbsoA8h6_xpS0 "Diagramme de classe")

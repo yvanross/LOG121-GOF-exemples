@@ -1,3 +1,30 @@
+@startuml Diagramme de classe
+skinparam style strictuml
+participant ":RepasTest" as repasTest <<C, xx>>
+participant "repas:Repas" as repas <<IIngredient>>
+participant "pizza:Pizza" as pizza <<IIngredient>>
+participant "patate:Patate" as patate <<classe>>
+participant "citron[i]:Citron" as citron
+-> repasTest: repasTest()
+repasTest --> pizza**: create(10,"Pizzaxxx")
+repasTest --> repas**: create(10,"Pizzaxxx")
+repas -> patate : ajouter x
+
+loop [condition]
+
+repasTest -> citron: getTotal()
+activate citron
+citron -> citron : getCostA()
+activate citron
+citron -> banane : getCostB()
+deactivate citron
+citron -> orange: getCostC()
+deactivate citron
+
+end
+@enduml
+
+@startuml Diagramme de séquence
 skinparam style strictuml
 participant ":Repas:" as repas
 participant ":Pizza" as pizza
@@ -5,3 +32,4 @@ participant ":Coffe" as coffee
 
 repas -> pizza: hello
 
+@enduml

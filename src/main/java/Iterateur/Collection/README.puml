@@ -1,4 +1,4 @@
-@startuml
+@startuml Diagramme de classe
 skinparam style strictuml
  interface Iterable {
 	 createIterator(): Iterateur

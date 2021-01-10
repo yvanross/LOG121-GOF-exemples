@@ -1,27 +1,2 @@
 [Derek Banas  Memento Design pattern Tutorial](http://www.newthinktank.com/2012/10/memento-design-pattern-tutorial/)
-
-```plantuml
-@startuml
-class Memento {
-  getSavedArticle(): String
-}
-
-class Originator {
-  Set(String state): void
-  getState(): State
-  storeInMemento(): void
-  restoreFrom Memento(Memento memento): void
-}
-
-class CareTaker{
-  addMemento(Memento memento): void
-  getMemento(Int index): Memento
-}
-
-CareTaker *-left-> "*" Memento : own
-Originator -> Memento
-
-TestMemento --> CareTaker
-TestMemento --> Originator
-@enduml
-```
+![Diagramme de classe](https://www.plantuml.com/plantuml/svg/XL5BQWCn3Dtx52AhIM0ka4L8Q2ba4RgON434BuFfs0QDcXP2xrxDnvD05rt9w7tq9EzxPT7FsD5hu5OuHf07NJhkUxYnq0aHIJFT7L4BRVW6Vn0DbmxLUakDIaYj-t4p_Lr26n9hbb7HGAk9GZPBOOfR3dxs6ZgJYJsirviCnpIFh1vamGYzIOubK5M2nQaMyfBaXGLd_e0CETZxVtHZei8v9gMGFBuDdNk3yM99cxh3LUiThJQhvKHRob_9FLt0yA9sPrkX46i35gy_oCF0xP6yVSyl "Diagramme de classe")

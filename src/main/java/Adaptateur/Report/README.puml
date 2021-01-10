@@ -1,0 +1,38 @@
+
+@startuml Diagramme de classe
+skinparam style strict
+class WordAdaptee implements IReport {
+     report(String s): void
+}
+
+class ExcellAdaptee implements IReport {
+     report(String s): void
+}
+
+
+class ReportAdapter implements IReport {
+     report(String s): void
+        wordAdaptee.report(s);
+}
+ReportAdapter -left-> WordAdaptee: adapt
+
+interface IReport {
+     report(String s: void
+}
+
+@enduml
+
+@startuml Diagramme de séquence
+participant Main
+participant "iReport:ReportAdapter" as ReportAdapter
+
+Main -> ReportAdapter**: create()
+ReportAdapter -> WordAdaptee**: create()
+Main -> ReportAdapter: report(String)
+Main -> Array**:report2 = Create(new ExcellAdaptee(),new WordAdaptee())
+loop "report2.length"
+    Main -> Array: report(String)
+end
+
+
+@enduml

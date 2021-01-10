@@ -1,4 +1,4 @@
-@startuml Patron Statégie Comparateur
+@startuml diagramme de classe
 
 class AgeComparator{}
 class Compagnie{}
@@ -14,5 +14,12 @@ PrenomComparateur .up-> Comparator
 SalaireComparateur .up-> Comparator
 Compagnie "1" --> "*" Employe : emploie
 Compagnie  *-right- "1" Comparator
+
+@enduml
+
+
+@startuml diagamme de séquence
+
+
 
 @enduml

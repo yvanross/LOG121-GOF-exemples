@@ -1,0 +1,24 @@
+
+@startuml Diagramme de classe
+skinparam style strictuml
+ class DiscJockey{
+	  getSongList(): void  
+}
+class Song{
+  songName:String
+	bandName: String
+	releaseYear: int
+}
+
+class SongComponent <<Abstract>>{
+
+}
+
+class SongGroup <<Composite>> extends SongComponent
+class Song extends SongComponent
+
+SongGroup *-down- "*" SongComponent : > is\ncomposed\nof
+DiscJockey *-right- "1" SongComponent
+
+@enduml
+

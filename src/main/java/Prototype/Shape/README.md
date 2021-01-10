@@ -1,28 +1,3 @@
-# Patron Prototype
-
-[](https://www.tutorialspoint.com/design_pattern/prototype_pattern.htm)
-
-```plantuml
-@startuml
-class PrototypePatternDemo
-class Circle extends Shape
-class Rectangle extends Shape 
- class Shape implements Cloneable {
-   +draw():  void
-   +getType():  String
-   +getId() :  String
-   +setId(String id) :  void
-   +clone() :  Object
-  }
-  class Square extends Shape 
-  Class ShapeCache {
-    getShape(final String shapeId): Shape 
-  }
-
-ShapeCache ..> Circle
-ShapeCache ..> Rectangle
-ShapeCache ..> Square
-PrototypePatternDemo *-- ShapeCache
-ShapeCache *-- Shape: Hashtable<String, Shape>
-@enduml
-```
+# Patron prototype: Shape
+## Diagramme de classe
+![Diagramme de classe](https://www.plantuml.com/plantuml/svg/RP9DJiCm44RtFiKiMw0zG8MgIks2hgWe5vZ6Gs9aEy6UyYFKkpEntIW45b6Kz-aRlqooYOo1pyx2pc0Tq3a2JL1PZ95Kki4XjDpoLqS7PARWT-JQ4crDg2m1VJ9v7U7OO7TjFL75wEjf2YeFBq_6TPOSUPPPjlM49obyAm2urG4_PlCLm7jhT28ryRDe97ZaO7nznNizcyDl6XFD08nEyJ2fwi_AbSVJgvWAlSXLrDxE6FvwY-4WliMgAQ8WvoSsUp4URN60sAEz5jUXVr5gL5ukrsL_KpgiRXfaCVNV1u6RnMAaDcuEoGeUC3RSx_W-MzxbOAqsygRo5_m0 "Diagramme de classe")

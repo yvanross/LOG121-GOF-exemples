@@ -1,0 +1,20 @@
+
+@startuml Diagramme de classe
+skinparam style strict
+ 
+abstract class AbstractLogger {
+  -level: int
+  +setNextLogger(AbstractLogger): void
+  +logMesssage(String): void
+}
+class ChainPatternDemo {
+  +main():void
+}
+class ConsoleLogger extends AbstractLogger
+class ErrorLogger extends AbstractLogger 
+class FileLogger extends AbstractLogger 
+
+AbstractLogger -> AbstractLogger: chain
+ChainPatternDemo -> AbstractLogger
+
+@enduml

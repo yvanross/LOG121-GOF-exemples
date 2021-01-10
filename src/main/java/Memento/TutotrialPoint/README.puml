@@ -1,0 +1,21 @@
+@startuml Diagramme de classe
+class Memento {
+  getState(): String
+}
+
+class Originator {
+  setState(String state): void
+  getState(): State
+  saveStatToMememto(): Memento
+  getStateFromMemento(Memento memento): void
+}
+
+class CareTaker{
+  add(Memento memento): void
+  get(Int index): Memento
+}
+
+CareTaker *-left-> "*" Memento : own
+Originator -> Memento
+
+@enduml

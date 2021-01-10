@@ -1,22 +1,2 @@
 # Composite
-
-```plantuml
-@startuml
-skinparam style strictuml
-class Noeud <<Abstract>>{
-  toString(): String
-}
-class Repertoire {
-  getEnfants(): void
-  toString(): String
-}
-class Fichier{
-    toString(): String
-}
-class Fichier extends Noeud
-class Repertoire extends Noeud
-Repertoire *-- Noeud: composed of
-
-@enduml
-```
-
+![Diagramme de classe](https://www.plantuml.com/plantuml/svg/ZO_12i8m44Jl-Oezgj0VAALKK8yUz0jYigsBJLAoMr74VpUn7XH1l2pBp1kOQLXqbD7ri2BTHUqSWaKmlMP6nIVoWqugi5nxJ3UIoRHw0h0DE5gegkKXETf8NTyKW8HzudmtcvSmVUh-2knmm2Y18a8cEvIrRxKNpkmvaFqTtv0v4iOS_OS3l0Xw--hvNU7JVZCMHJ699PZWXi1e8RHADGbFwny0 "Diagramme de classe")

@@ -1,33 +1,3 @@
 # Chat Application using Mediator Pattern
 
-```plantuml
-@startuml
-skinparam style strictuml
-
-interface Mediator {
-  addUser(User): void
-  sendMessage(String,User) void
-}
-
-interface Collegue {
-  sendMessage(String) void
-  receiveMessage(String): void
-
-}
-
-class User implements Collegue {
-  sendMessage(String) void
-  receiveMessage(String): void
-}
-
-class Group implements Mediator {
-    addUser(User): void
-  sendMessage(String, User) void
-}
-
-Collegue -left-> Mediator
-Group "1" *- "*" User: mediate\nmessage\nbetween
-
-
-@enduml
-```
+![Diagramme de classe](https://www.plantuml.com/plantuml/svg/hP4nRy8m48Lt_ufJ9a3Dq9K18O7KYGcniHpn8xAmdSZdWAgg_nt7eH6K2OdbXdjttpi_BoLoY9spj3PS1tOEf46LPH4eEHdVSkgIn6-BL8Ef-ccbZ8y8Hwv06sZ3iGdqeuXOwvqWJFeodTEvCJfr1Lvl8C8r9jl4yFL77XZqttlQgh4MTOTCUzwR_Y43AfWp_gatnnwPdq2z3HdNMZZuAE_1Z_Ilq7JjFVuXYnVIeCSunYjBYsCi5oDN3Ox5Pq6paefPaHVdvBAElNS3T-yFY1V0gsKoInzs1G00 "Diagramme de classe")

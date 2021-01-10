@@ -1,25 +1,4 @@
 # Logger utilisant le patron Chaine de Responsabilité
 https://www.tutorialspoint.com/design_pattern/chain_of_responsibility_pattern.htm
 
-
-```plantuml
-@startuml
-skinparam style strict
- 
-abstract class AbstractLogger {
-  -level: int
-  +setNextLogger(AbstractLogger): void
-  +logMesssage(String): void
-}
-class ChainPatternDemo {
-  +main():void
-}
-class ConsoleLogger extends AbstractLogger
-class ErrorLogger extends AbstractLogger 
-class FileLogger extends AbstractLogger 
-
-AbstractLogger -> AbstractLogger: chain
-ChainPatternDemo -> AbstractLogger
-
-@enduml
-```
+![Diagramme de classe](https://www.plantuml.com/plantuml/svg/XT5B2W8n30RWVKwHvOXuWLc8ucEb8dY2E1DgiGzfgYZYtOrQ5uwWczAc7_qJEf9CAH-zmwabayXxnfQnSIJ287iR3gHLb7nnh6koJGO4skgMclo2E2x7HJI64ru1SU3unAv66zHZNpYl-5n0zUbxDPwYRH_CHRDa4I73rKR3WdbVtk0LDTcH3MlAcLEOie_FiBxNOjMhFsKC4XsNdZISGzjjjT1PIZ7zX5ZatFvv4G4wXS6mGsfi7aF0roXV4c2a4VexTm00 "Diagramme de classe")

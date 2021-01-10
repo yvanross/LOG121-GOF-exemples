@@ -1,25 +1,3 @@
 # Patron Itérateur
 reference: http://www.newthinktank.com/2012/10/iterator-design-pattern-tutorial/
-
-```plantuml
-@startuml
-interface SongIterator {
-  createIterator(): Iterator<SongInfo>
-}
-class DiskJockey{
-  printTheSongs(Iterator<SongInfo> iterator): void
-}
-class SongOfThe70s
-SongOfThe70s-up->SongIterator
-SongOfThe80s-up->SongIterator
-SongOfThe90s-up->SongIterator
-
-DiskJockey *-- "3" SongIterator
-
-SongOfThe70s*-down- "*" SongInfo
-SongOfThe80s*-down- "*" SongInfo
-SongOfThe90s *-down- "*" SongInfo
-@enduml
-
-
-```
+![Diagramme de classe](https://www.plantuml.com/plantuml/svg/VP7F2e904CRl-nI39nCMWWxz8SH3bxfqg1TOrh54tPNTjOZetHj5KqcyxSptcs--OIFhX75LaSCX5JSZYW8XHf2vi1PPgXoQH4Y4YrQt8nN2QGDl1Y0D2eTTor_ie7ll6rObEcGVrXYHjyrEMcRugaTBGxxNEzQSzV_786rRPFhGQVopgObpGfFhfMN3WbSb3uSHUtKpgswdLDR7XO1py5OUZ87Xxe37-gc82bgAJXYjdmSe0KmI4QgO_kKB "Diagramme de classe")

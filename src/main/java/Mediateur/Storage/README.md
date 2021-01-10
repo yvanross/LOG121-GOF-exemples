@@ -1,91 +1,9 @@
 # Patron Médiateur avec intégration Observateur
+# Diagramme de classe
 
-```plantuml
-@startuml
-class Mediator<T>
-class Storage<T> 
-class MediatorDemo 
+![Diagramme de classe](https://www.plantuml.com/plantuml/svg/NO_12i8m44Jl-Oeb9nLxy5ga5Eor9_s1rIvfe9kKtTJlDseZsDCoRtO6fjM4aXQUeFFe19a91eB7XAfaFWTw6ZocAETRiv9hLkWe0zZyTCGHZ2aIxCb29TwDgMe0xC6MR0qZAkEyqwyEo7HSlRtvg_lb2ztKBtFstjMN67HXaXhYNKcU96fQ2aEUzm80 "Diagramme de classe")
 
-Mediator "1" -right->  "*" Storage: hasmap(storagename,Storage)
-MediatorDemo -right-> Mediator
-Mediator "1" -up-> "*" Consumer: observers
-@enduml
-```
+# Diagramme de séquence
 
-```plantuml
-@startuml
-skinparam style strictuml
-participant MediatorDemo 
-participant Mediator
-participant ":Map<String,Storage>" as MSS
-participant "bob:Storage" as Bob
-participant "alice:Storage" as Alice
-participant Runnable
-participant "observers[i]:Map<String,Runnable>" as Observers
+![Diagramme de séquence](https://www.plantuml.com/plantuml/svg/fPNDRfmm4CVlFCMKqv9kgYRgYMQZDCsjMhKgKYzH3WPcYLLZA3Qfzf7w77snZW4JcuK6AGTMhFsVmVER3zyepHhTbWBkE2iQLfO8EOBw--TNYpB3GFtaicQq0KeV1UteXcV68A1LpJDUCwbXZpbdkchkiAnWTiTR3ECzgwyISYMBRKAxhC3h49Y2VPBuohHAuq7H2Mwhr1SmmJFq99_CYYVwtah9Kk4lXbMgi7d2Hjtp1_T0LjsVwAjL1O4NvVdr6DlPMGnPWqpZ9Xf5dI195lT6lxEAwITYKAX_CD7YnY09jvVleu1bcZ-HtJFaoSV9SIKrun9szarzmMFlWkm5KHWLEz1DY-6f3nAJVO7Qsg5Gw7W-CFeV0BY6b2OJLs-wn2Q6kXsSResKFCiycBXn8jUFN6q7kOa_nrC2gmXsDKCCFxo6OUzaDSLERZbQMu2EfMlUqGmdEBkIDa2jbyyMgQzxXZg4s1kSWkqSdg2rHWRCYt0zjiM4xIgmiqXcJacDJIf--DQWGccqXGL_RzxXpGvaAqJuu5adHwMnV5UrcfXGPsiXErCuq7u_DYZIi8UpgfRiP32PQ8PtDndBjSVot3RyKF3MFeBviJ0sHqq96SNHD0UB0m8kBwAFmN-2cjQteaZS2bVkcB3hAwR3olwzS4h437LwV6Ioqlnm77bOzqwYZDa2kxIgn8hXPmvlYsV9bPFeXIXjMNJQZHFNUE-CwgjpHztNTU7bRLNZtBx8VE8w2knN5nj3uc-mpM4kNGZXhLdesyCyD_H35_y_ "Diagramme de séquence")
 
-MediatorDemo -> Mediator**: create()
-Mediator -> MSS**: create()
-Mediator -> Observers**: create()
-MediatorDemo -> Mediator: setValue("bob",20)
-activate Mediator
-Mediator -> MSS: contain = containsKey("bob")
-alt "contain == true"
-Mediator -> MSS: bob = get("bob")
-else contain = false
-  Mediator -> Bob**: bob = create()
-Mediator -> MSS: put("bob", bob)
-end
-Mediator -> Bob: setValue(this,"bob", 20)
-deactivate Mediator
-
-MediatorDemo -> Mediator: setValue("alice",24)
-activate Mediator
-Mediator -> MSS: contain = containsKey("alice")
-alt "contain == true"
-Mediator -> MSS: alice = get("alice")
-  else "contain == false"
-  Mediator -> Alice**: alice = Create()
-  Mediator -> MSS: put("alice", alice)
-end
-Mediator -> Alice: setValue(this,"alice", 24)
-deactivate Mediator
-
-MediatorDemo-> Mediator: getValue("alice")
-activate Mediator
-Mediator -> MSS: alice = get("alice")
-Mediator -> Alice: age = ifPresent("age")
-alt ["age != null"]
-Mediator -> System.out: println("age for alice: 24")
-end
-deactivate Mediator
-
-MediatorDemo -> Runnable**: runnable = Create()
-MediatorDemo -> Mediator: addObserver("bob",runnable) 
-Mediator -> Observers: put("bop", runnable))
-
-MediatorDemo->Mediator: setValue("bob", 21);
-activate Mediator
-
-Mediator -> MSS: contains =  containsKeys("bob")
-alt contains
-Mediator -> MSS: bob = get("bob")
-Mediator -> Bob: setValue(this,"bob", 21)
-activate Bob
-Bob -> Mediator: notifyObservers("bob")
-deactivate Bob
-Mediator -> Observers: bool contain = containsKey("bob")
-alt "bob != null"
-Mediator -> Observers: runnable = get("bob")
-Mediator -> Runnable: run()
-activate Runnable
-Mediator <- Runnable: age = getValue("bob")
-activate Mediator
-Mediator -> MSS: Bob = get("bob")
-Mediator -> Bob: age = getValue()
-Runnable -> System.out: println("new age for bob: " + age)
-end
-end
-
-
-@enduml
-```

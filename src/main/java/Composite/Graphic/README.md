@@ -1,48 +1,9 @@
-```plantuml
-@startuml
-skinparam style strictuml
-interface Graphic {
-  print(): void 
-}
-class Ellipse implements Graphic{
-    print(): void 
-}
-class CompositeGraphic implements Graphic{
-      print(): void 
+# Patron Composite: Graphic
+## Diagramme de classe
 
-}
-CompositeGraphic *-- "1..*" Graphic : composed of 
-@enduml
-```
+![Diagramme de classe](https://www.plantuml.com/plantuml/svg/TO_B2i8m44Nt-OfBLrgmuBQhWehV4PAf3kP59WeY_hjfeMvADxEut7DcPf2YStbwXpFhMzRU4op1E2r2IXuSaguffBmTrPdPJ6t5eL0UjI5SiqvtDlWe8EMQx_OzNf4jr5VD7boSuoG4zicHfr1aeIPe4pj5dw9meMN55hyoLCKARWy7DCUkQvl_oJtCt2ABE48D56pzxGS0 "Diagramme de classe")
 
-```plantuml
-@startuml
-skinparam style strictuml
-participant CompositeDemo as m
-participant "ellipse1:Ellipse" as e1
-participant "ellipse2:Ellipse" as e2
-participant "ellipse3:Ellipse" as e3
-participant "ellipse4:Ellipse" as e4
-participant "graphic2:CompositeGraphic"  as g2 <<Graphic>>
-participant "graphic3:CompositeGraphic"  as g3 <<Graphic>>
-participant "graphic1:CompositeGraphic"  as g1 <<Graphic>>
-->m: main()
-m-->e1**: create
-m-->e2**: create
-m-->e3**: create
-m-->e4**: create
-m-->g2**: create
-m->g2: add(ellipse1)
-m->g2: add(ellipse2)
-m->g2: add(ellipse3)
-m-->g3**: create
-m->g3: add(ellipse4)
+## Diagramme de séquence
 
-m-->g1**: create
-m->g1: add(graphic2)
-m->g1: add(graphic3)
-m->g1: add(ellipse1)
-m->g1: print()
+![Diagramme de séquence](https://www.plantuml.com/plantuml/svg/XP91RiCW44Ntd6BaLHp92y0h55cHcghdG7ZaeXfCW2nof9oZ5oiMJIKGKNVmvdqqC9n3b3xUp0eNBHSlZK6O4SBtutf3gv24BssTJ0K8yRwcIlHQxG6IQDHAEsaZl6t6RK57lA3PG0OmHRd3TTKk81NlUT7j3jAcn4g9DILUIhmfZQKqbbAwhVlKYec_vZyowM3N5mQdqo-PfcQKluhoVwFqLPGMqM4o0epKzj0JCmmJqkDHWF8e8sR0Qi1hC5PWAIDfBq3Ey-4vexu1MGlotDF2g_DuOOqzoHgjD9grvnZw1kG5B1jCq7bjOtePSaOxfo_v0m00 "Diagramme de séquence")
 
-@enduml
-```

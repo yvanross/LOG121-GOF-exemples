@@ -7,28 +7,4 @@
 6. Assurez vous de tester adéquatement la classe Abstraite SongComponent. C'est a dire de générer les exceptions de chaque fonction.
 7. En mode TDD, ajouter le test suivant dans DiskJockeyTest, assertEquals(7,diskJockey.numberOfSong()) qui doit vérifier le nombre de chanson.
 
-
-```plantuml
-@startuml style strictuml
- class DiscJockey{
-	  getSongList(): void  
-}
-class Song{
-  songName:String
-	bandName: String
-	releaseYear: int
-}
-
-class SongComponent <<Abstract>>{
-
-}
-
-class SongGroup <<Composite>> extends SongComponent
-class Song extends SongComponent
-
-SongGroup *-down- "*" SongComponent : > is\ncomposed\nof
-DiscJockey *-right- "1" SongComponent
-
-@enduml
-```
-
+![Diagramme de classe](https://www.plantuml.com/plantuml/svg/TP31IWD138RFdQS8Uz923xqkPQXO4AHuwKdePJeJrw4xcMMIgcNnNNmMdynqYxGkU9c1vFk_X2nPN953Qc4LNLDSIWW1mRUE6Gtl8tLEgy1oR57V4ls9DcT2G-mViz_ZiJSJW0PbawbPHvQRsnhUSWpm_MK-pPa-zNe3mFe_kOJrHdtKcCdEKHWAy5ifsA9ZV4PNQeWawhYItEVKPK8IM2pkThgLys9jR_vI3oKVEYK6cgEWjO0VWXH6bglCFu2v-AQpaDzf1jMq6krIWuN8M_B3F0nRoY_cSY5DbjYyYaRdrTY_rA5wrny0 "Diagramme de classe")

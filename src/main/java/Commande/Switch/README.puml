@@ -1,0 +1,16 @@
+@startuml Diagramme de classe
+skinparam style strictuml
+interface Command{
+  execute(): void
+}
+
+class Switch
+Class Light
+class SwitchOnCommand implements Command
+class SwitchOffCommand implements Command
+SwitchOnCommand *-- Light
+SwitchOffCommand *-- Light
+Switch *-- "*" Command
+
+@enduml
+

@@ -1,0 +1,23 @@
+
+@startuml Diagramme de classe
+skinparam Style strictuml
+
+Interface Coffee <<Interface>>{
+    getCost(): double
+    getIngredients(): String
+}
+class SimpleCoffe implements Coffee{
+    getCost(): double
+    getIngredients(): String
+}
+
+class CoffeeDecorator <<Abstract>>{
+    getCost(): double
+    getIngredient(): String
+}
+CoffeeDecorator .-up-|> Coffee: implement
+CoffeeDecorator -->  "1" Coffee: Decorate
+
+class WithMilk extends CoffeeDecorator
+class WithSprinkles extends CoffeeDecorator
+@enduml

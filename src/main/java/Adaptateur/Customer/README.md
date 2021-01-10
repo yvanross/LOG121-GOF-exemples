@@ -1,34 +1,3 @@
 # Patron Adaptateur Customer
 
-```plantuml
-@startuml
-interface AddressIF {
-   
-     getAddress1(): String
-     setAddress1(String address1):  void
-     getAddress2():  String
-     setAddress2(String address2):  void
-     getCity():  String
-     setCity(String city):  void
-     getState():  String
-     setState(String state):  void
-     getPostalCode() :  String
-     setPostalCode(String postalCode):  void
-}
-class Customer
-Class CuttomerBillToAdapter implements AddressIF {
-  getAddress1(): String
-     setAddress1(String address1):  void
-     getAddress2():  String
-     setAddress2(String address2):  void
-     getCity():  String
-     setCity(String city):  void
-     getState():  String
-     setState(String state):  void
-     getPostalCode() :  String
-     setPostalCode(String postalCode):  void
-}
-CuttomerBillToAdapter -> Customer: adapt
-
-@enduml
-```
+![Diagramme de classe](https://www.plantuml.com/plantuml/svg/xPCn2y8m48Nt_8eRTN2mOmUnLWGtGVz0QCuII9gIkmeY_dVJDfJIritH8P1xB--3v94ziVJSM0D7BKilhKLG28MHH2XqnUZlia38bF98T3x1Im10km1AvAXlL-iKhknrLVOMZQnU1nddS18UJgif8saPNo3919BC8BdcvnAWqsEu2FjPyCgISIdP6p5AxJ3BNbpGJUvK0C2SCB8ZfXwKWVKMtMD3tX0xYrxaSUHkF6XZRYvJiWvLWBQrGOiLqwIHVnK_gMBvrJUxePqqN3k8GkonKk7RV000 "Diagramme de classe")

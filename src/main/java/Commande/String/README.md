@@ -1,15 +1,2 @@
-
-```plantuml
-@startuml
-class AbstractCommand
-class CommandManager
-class DeleteCommand extends AbstractCommand
-
-class Document
-interface Redo
-class RedoCommand implements Redo
-interface Undo
-class UndoCommand implements Undo
-
-@enduml
-```
+# Patron commande
+![Diagramme de classe](https://www.plantuml.com/plantuml/svg/RKz92iCm3Bpx5NfAIdFjfT07gFOq62ovs0hq-OqJfnIIaqQp8GtLkDWiYSR8Ks4HK03vnBN2hOCkpsg5lLsp26leRDzkh3oXT794Wg5BX8z1mx5WDsS_2zHSL4DviGVT4N9N6zoBehmJcdMZ_m8F_GKQF0ci3ZSiXonVVW40 "Diagramme de classe")

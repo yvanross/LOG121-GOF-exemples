@@ -1,36 +1,4 @@
 # Patron Décorateur
 référence: https://www.tutorialspoint.com/design_pattern/decorator_pattern.htm
 
-
-```plantuml
-@startuml
-skinparam Style Strictuml
-class Shape <Interface>{
-draw(): void
-}
-class Circle{
-draw(): void
-}
-class Rectangle{
-draw(): void
-}
-class ShapeDecorator{
-draw(): void
-}
-Class RedShapeDecorator{
-draw(): void
-}
-class DecoratorPatternDemo{
-    main(): void
-}
-DecoratorPatternDemo -right-> "*" ShapeDecorator: ask
-ShapeDecorator .-left-|> Shape: <<Interface>>  
-Circle .-up-|> Shape: implement
-Rectangle .-up-|> Shape: implement
-
-RedShapeDecorator  .-up-|> ShapeDecorator: implement
-ShapeDecorator --> Shape:  decorates
-
-
-@enduml
-```
+![Diagramme de classe](https://www.plantuml.com/plantuml/svg/XP71Ri8m38RlVWgB4qpA7g125HAzx8R64rY9AH59MYLc4mBUVLcBIe5Loo67tv-TFxzNIIZAqJkiBDMHl6SqZDfHIWpfO4DBMSMjd1pdErhzIqC7u7PFBUFo8mZ77Makps0YVSyN1Nurri3rngrjr8udYf-iXK8zMUyUgLWtaQI9Bz3wDiJym_N3Xlg699iE5Vlc39YF9nj6-5yWgcZhlQWIPs-p9ry5KZh0euRlol5ErANiuGANewnAHEY3oTon7L7Mjuuz1u4Xcsa4NhwEZ_38uhthgKEfON9UVwTo0e0L1vFN_GC0 "Diagramme de classe")

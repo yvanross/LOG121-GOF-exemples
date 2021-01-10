@@ -1,0 +1,13 @@
+@startuml Diagramme de classe
+skinparam style strictuml
+ abstract class EnemyShip
+ class UFOEnemyShip extends EnemyShip
+class RocketEnemyShip extends EnemyShip 
+class BigUFOEnemyShip extends UFOEnemyShip
+class EnemyShipFactory {
+  makeEnemyShip(String type): EnemyShip
+}
+EnemyShipFactory -right->EnemyShip
+
+
+@enduml

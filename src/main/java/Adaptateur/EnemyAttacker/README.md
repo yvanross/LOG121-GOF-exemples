@@ -1,16 +1,2 @@
 # Enemy Attacker Adapter Pattern
-
-```plantuml
-@startuml
- interface EnemyAttacker {
-	fireWeapon(): void
-	driveForward(): void
-	assignDriver(String driverName): void
-}
-class EnemyRobot
-class EnemyRobotAdapter implements EnemyAttacker
-class EnemyTank implements EnemyAttacker
-EnemyRobotAdapter  -up-> EnemyRobot: adapt
-
-@enduml
-```
+![Diagramme de classe](https://www.plantuml.com/plantuml/svg/TP2z3e9048HhxYcsn88Ne32GeAM5cbYlt48kS3zP5emnlhk0CMA8xSpiV9FDEa6MthPG6AmPhING16MBNKSAZ1FY2ak2dIDxpqMmR8ZXeQBAC5q8WtVn9eN16wqYpMQWlUSRilwgOvMfNJ5v79-4ZQjXJl81BNrYJpL3tw2ZltfP2Rd6CEu1OqDBbfnqlxEM1sTqpV_WkXEIFYJR1Im5d2obCd9wVD0B "Diagramme de classe")

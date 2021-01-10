@@ -1,28 +1,3 @@
-# Chaine de responsabilité: MailHeadFirst Design
+# Chaine de responsabilité: Mail HeadFirst Design
 
-
-```plantuml
-@startuml
-skinparam style strict
-
-class Analyser
-class ComplaintHandler extends Handler
-class Demo 
-class FanHandler extends Handler
-abstract class Handler{
-  	+setProchain(Handler successor) : void
-	  +handleRequest(Mail mail): void
-	  +printMsg(String s) : void
-}
-class Mail 
-class NewLocationHandler extends Handler
-class NormalHandler extends Handler
-class SpamHandler extends Handler
-
-Demo -> "*" Handler
-Handler -up-> Mail: Analyse
-Analyser -> Handler
-Demo -> Analyser
-Handler -down-> Handler: prochain hanbler
-@enduml
-```
+![Diagramme de classe](https://www.plantuml.com/plantuml/svg/VL9BJWCn35qtfx2wcbBr0hD0HLI81QqGFO6RMDEe-H5dA1NYxcI6P63JRY9_thEVxQmvOKozDR3Hs4Mqba0HI8FC9FYaNS0S1KuNG_cDMYOXnZGyE3GNfbZSHs-3GUtICpfbA09z9dAAeVW5jY7heTXFwAw1yP2ReKo_KchuIm3CbapfDNfvpCsQokTUIcBsSG4jV7Yjn0nWUHopR_JU4wTcYzg0pS_Y7oJ4B7dBNRFFmxaEU2hmNLIEj6BlwFpY9IRjtUqnTpvQDBSn-u3s6aACUrhTm_nkFWKhUDM7d1bqjVKAebvZu5HyhJ5TQYgW_Ddz0Li8PP-GDtOOgEki9d-B7m00 "Diagramme de classe")

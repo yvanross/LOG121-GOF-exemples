@@ -1,23 +1,3 @@
 
 [Factory pattern from TutorialsPoint.com](https://www.tutorialspoint.com/design_pattern/factory_pattern.htm)
-
-```plantuml
-@startuml
-skinparam style strictuml
-
-interface Shape {
-  draw(): void
-}
-
-class Circle implements Shape
-class Square implements Shape
-class Rectangle implements Shape
-
-Class ShapeFactory{
-  getShape(String shape): Shape
-}
-
-ShapeFactory -right-> Shape: create
-
-@enduml
-```
+![Diagramme de classe](https://www.plantuml.com/plantuml/svg/TOyn3i8m34NtdC8Z3Br01rIfY0FG4rY9IIEIj3Wkg4BSdQHXO835qlVt-_hkaY3B4ZmS7Lh640WCWVQO4gbqTN76l8KagwSysUbohPIBGdn1JJ2CE1Cy5O1XVEpsBTmdPzHBgIq5UiSwioxCdW95IPNukCDjGVxhdaaBHliBLttbYpYXbedNqi6IRAlTaBj62wc8tAb2kTGt00qxEqfpg7OBcWabPtSKJNxp3G00 "Diagramme de classe")
