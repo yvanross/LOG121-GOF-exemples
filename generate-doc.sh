@@ -1,0 +1,1 @@
+javadoc -d docs -sourcepath src/main/java -subpackages Adaptateur:ChaineResponsabilite:Commande:Composite:Decorateur:Facade:Factory:iterateur:Mediateur:Memento:MVC:Observateur:Prototype:Proxy:Singleton:Strategie:Visiteur

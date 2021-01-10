@@ -6,8 +6,8 @@ import static org.junit.Assert.assertNotEquals;
 
 import org.junit.Test;
 
-import Proptoptype.ConcretePrototype.ConcretePrototype1;
-import Proptoptype.ConcretePrototype.ConcretePrototype2;
+import Prototype.ConcretePrototype.ConcretePrototype1;
+import Prototype.ConcretePrototype.ConcretePrototype2;
 
 public class ConcretePrototype  {
 
