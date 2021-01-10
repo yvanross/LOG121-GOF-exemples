@@ -3,7 +3,7 @@ package Strategie.LayoutManager;
 import javax.swing.*;
 // référence: Cay Horstmann chapitre 5
 
-public class FormLayoutTester
+public class FormLayoutDemo
 {
    public static void main(String[] args)
    {

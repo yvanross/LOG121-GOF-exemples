@@ -5,11 +5,10 @@ import static org.junit.Assert.assertNotEquals;
 // import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
-
 import Prototype.ConcretePrototype.ConcretePrototype1;
 import Prototype.ConcretePrototype.ConcretePrototype2;
 
-public class ConcretePrototype  {
+public class ConcretePrototypeTest  {
 
   @Test
   public void createClone() throws CloneNotSupportedException {

@@ -1,6 +1,6 @@
 package Strategie.Billing;
 
-public class StrategyPattern {
+public class StrategyDemo {
     public static void main(String[] arguments) {
         // Prepare strategies
         BillingStrategy normalStrategy    = BillingStrategy.normalStrategy();

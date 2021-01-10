@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch FormLayoutDemo",
+            "request": "launch",
+            "mainClass": "Strategie.LayoutManager.FormLayoutDemo",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
+            "name": "Launch StrategyPattern",
+            "request": "launch",
+            "mainClass": "Strategie.Billing.StrategyPattern",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
             "name": "Launch AnimalExample",
             "request": "launch",
             "mainClass": "Strategie.Animal.AnimalExample",

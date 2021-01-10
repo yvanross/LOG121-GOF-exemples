@@ -38,8 +38,7 @@ public class TextViewA extends JFrame implements  Observer, ActionListener{
 		//Image im = new Image()
 
 		String userDirectory = new File("").getAbsolutePath();
-		// System.out.println(userDirectory);
-		String violon = userDirectory + "/log121/target/classes/PatronObservateur/TextView/violine.jpg";
+		String violon = userDirectory + File.separator + "src" + File.separator + "main" + File.separator + "java" + File.separator + "Observateur" + File.separator + "TextView" + File.separator + "violine.jpg";
 		System.out.println(violon);
 
 		JImagePanel violon1 = new JImagePanel(violon);
