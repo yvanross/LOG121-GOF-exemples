@@ -20,13 +20,52 @@ public class Mail {
 		this.text = text;
 	}
 	
+	
+	/** 
+	 * @param toString(
+	 * @return String
+	 */
 	public String getFrom() { return from; }
+	
+	/** 
+	 * @param toString(
+	 * @return Iterator<String>
+	 */
 	public Iterator<String> getTo() { return to.iterator(); }
+	
+	/** 
+	 * @param toString(
+	 * @return Iterator<String>
+	 */
 	public Iterator<String> getCc() { return cc.iterator(); }
+	
+	/** 
+	 * @param toString(
+	 * @return String
+	 */
 	public String getSubject() { return subject; }
+	
+	/** 
+	 * @param toString(
+	 * @return String
+	 */
 	public String getText() { return text; }
+	
+	/** 
+	 * @param toString(
+	 * @return int
+	 */
 	public int getToSize() { return to.size(); }
+	
+	/** 
+	 * @param toString(
+	 * @return int
+	 */
 	public int getCcSize() { return cc.size(); }
+	
+	/** 
+	 * @return String
+	 */
 	public String toString() {
 		StringBuffer sb = new StringBuffer();
 		sb.append("\nFROM: \t"); 	sb.append(from);

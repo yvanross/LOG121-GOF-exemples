@@ -10,10 +10,19 @@ public abstract class AbstractLogger {
    //next element in chain or responsibility
    protected AbstractLogger nextLogger;
 
+   
+   /** 
+    * @param nextLogger
+    */
    public void setNextLogger(AbstractLogger nextLogger){
       this.nextLogger = nextLogger;
    }
 
+   
+   /** 
+    * @param level
+    * @param message
+    */
    public void logMessage(int level, String message){
       if(this.level <= level){
          write(message);

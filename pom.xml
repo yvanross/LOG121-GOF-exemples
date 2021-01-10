@@ -9,6 +9,12 @@
         <maven.compiler.target>14</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories> 
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -52,6 +58,24 @@
                     <configuration>
                         <configLocation>com/github/ngeor/checkstyle.xml</configLocation>
                         <includeTestSourceDirectory>true</includeTestSourceDirectory>
+                    </configuration>
+                </plugin>
+                 <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>                                  
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>3.2.0</version>
+                    <configuration>
+                       <sourcepath>src/main/java</sourcepath>
+                        <doclet>info.leadinglight.umljavadoclet.UmlJavaDoclet</doclet>
+                        <docletArtifact>
+                            <groupId>com.github.gboersma</groupId>
+                            <artifactId>uml-java-doclet</artifactId>
+                            <version>1.1</version>
+                        </docletArtifact>
+                        <useStandardDocletOptions>true</useStandardDocletOptions>
+                        <additionalOptions>
+                            <!-- Specify each diagram option here as an additionOption tag. -->
+                        </additionalOptions>
                     </configuration>
                 </plugin>
             </plugins>

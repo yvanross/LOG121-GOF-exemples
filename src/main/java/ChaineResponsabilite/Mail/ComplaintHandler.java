@@ -2,6 +2,10 @@ package ChaineResponsabilite.Mail;
 
 public class ComplaintHandler extends Handler {
 	
+	
+	/** 
+	 * @param mail
+	 */
 	@Override
 	public void handleRequest(Mail mail) {
 		if (applyRules(mail)) {
@@ -12,6 +16,11 @@ public class ComplaintHandler extends Handler {
 			successor.handleRequest(mail);
 	}
 	
+	
+	/** 
+	 * @param mail
+	 * @return boolean
+	 */
 	private boolean applyRules(Mail mail) {
 		return mail.getSubject().toLowerCase().contains("complaint");
 	}

@@ -12,6 +12,10 @@ public class OK extends Frame {
      */
     private static final long serialVersionUID = 1L;
 
+    
+    /** 
+     * @param argv
+     */
     public static void main(String[] argv) {
         OK app = new OK();
         app.setVisible(true);

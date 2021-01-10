@@ -6,6 +6,10 @@ public class FanHandler extends Handler {
     		"un.tres.bon.ami@yahoo.com",
     		"je.vous.adore@gmail.com" };
 	
+	
+	/** 
+	 * @param mail
+	 */
 	@Override
 	public void handleRequest(Mail mail) {
 		if (applyRules(mail)) {
@@ -16,10 +20,20 @@ public class FanHandler extends Handler {
 			successor.handleRequest(mail);
 	}
 	
+	
+	/** 
+	 * @param mail
+	 * @return boolean
+	 */
 	private boolean applyRules(Mail mail) {
 		return match(mail.getFrom());
 	}
 	
+	
+	/** 
+	 * @param m
+	 * @return boolean
+	 */
 	private boolean match(String m) {
 		for (String s : FANS)
 			if (m.toLowerCase().contains(s.toLowerCase()))

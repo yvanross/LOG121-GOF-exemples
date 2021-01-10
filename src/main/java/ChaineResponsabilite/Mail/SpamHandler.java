@@ -10,6 +10,10 @@ public class SpamHandler extends Handler {
     		"discount",
     		"mortgage" };
 	
+	
+	/** 
+	 * @param mail
+	 */
 	@Override
 	public void handleRequest(Mail mail) {
 		if (applyRules(mail)) {
@@ -20,12 +24,22 @@ public class SpamHandler extends Handler {
 			successor.handleRequest(mail);
 	}
 	
+	
+	/** 
+	 * @param mail
+	 * @return boolean
+	 */
 	private boolean applyRules(Mail mail) {
 		return  match(mail.getSubject()) ||
 				mail.getToSize() > MAX_TO ||
 				mail.getCcSize() > MAX_CC;
 	}
 	
+	
+	/** 
+	 * @param m
+	 * @return boolean
+	 */
 	private boolean match(String m) {
 		for (String s : EXCLURE)
 			if (m.toLowerCase().contains(s.toLowerCase()))

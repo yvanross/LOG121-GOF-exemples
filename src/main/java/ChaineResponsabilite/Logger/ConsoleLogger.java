@@ -6,6 +6,10 @@ public class ConsoleLogger extends AbstractLogger {
      this.level = level;
   }
 
+  
+  /** 
+   * @param message
+   */
   @Override
   protected void write(String message) {		
      System.out.println("Standard Console::Logger: " + message);

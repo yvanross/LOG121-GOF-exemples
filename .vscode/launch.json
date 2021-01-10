@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch AnimalExample",
+            "request": "launch",
+            "mainClass": "Strategie.Animal.AnimalExample",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - SimpleGraphEditor",
             "request": "launch",
             "mainClass": "Proptoptype.Graph.SimpleGraphEditor",

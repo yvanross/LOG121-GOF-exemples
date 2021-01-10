@@ -2,6 +2,10 @@ package ChaineResponsabilite.Mail;
 
 public class NewLocationHandler extends Handler {
 	
+	
+	/** 
+	 * @param mail
+	 */
 	@Override
 	public void handleRequest(Mail mail) {
 		if (applyRules(mail)) {
@@ -12,6 +16,11 @@ public class NewLocationHandler extends Handler {
 			successor.handleRequest(mail);
 	}
 	
+	
+	/** 
+	 * @param mail
+	 * @return boolean
+	 */
 	private boolean applyRules(Mail mail) {
 		return mail.getSubject().toLowerCase().contains("location");
 	}

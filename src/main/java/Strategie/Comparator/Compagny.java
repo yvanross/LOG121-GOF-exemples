@@ -18,11 +18,19 @@ public class Compagny {
 	}
 	
 
+	
+	/** 
+	 * @param comparateur
+	 */
 	// Cette méthode permet de modifier la Stratégie après l'instanciation de l'objet.
 	public void setComparatorStrategy(Comparator<Employe> comparateur) {
 		this.comparateur = comparateur;		
 	}
 	
+	
+	/** 
+	 * @return String
+	 */
 	// toString() utilise la Stratégie.
 	@Override
 	public String toString() {
@@ -38,6 +46,10 @@ public class Compagny {
 	}
 
 
+	
+	/** 
+	 * @param employe
+	 */
 	public void add_employe(Employe employe) {
 		liste.add(employe);
 	}

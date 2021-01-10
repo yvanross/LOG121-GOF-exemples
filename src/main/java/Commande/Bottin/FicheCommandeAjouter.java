@@ -11,6 +11,10 @@ public class FicheCommandeAjouter implements Commande {
 		this.index = index;
 	}
 
+	
+	/** 
+	 * @return boolean
+	 */
 	public boolean faire() {
 		FicheDialog dialog = new FicheDialog(new Fiche(), FicheDialog.Type.AJOUTER);
 		dialog.setVisible(true);

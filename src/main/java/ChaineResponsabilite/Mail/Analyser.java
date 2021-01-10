@@ -14,6 +14,10 @@ public class Analyser {
 		h.handleRequest(creerCourriel6());
 	}
 	
+	
+	/** 
+	 * @return Mail
+	 */
 	static Mail creerCourriel1() {		
 		// SPAM
 		String from = "rxlygealaigpsofk@pharmaaa.can";
@@ -24,6 +28,10 @@ public class Analyser {
 	    return new Mail(from, to, cc, subject, text);
 	}
 
+	
+	/** 
+	 * @return Mail
+	 */
 	static Mail creerCourriel2() {	
 		// FAN
 		String from = "je.vous.adore@gmail.com";
@@ -34,6 +42,10 @@ public class Analyser {
 	    return new Mail(from, to, cc, subject, text);
 	}
 	
+	
+	/** 
+	 * @return Mail
+	 */
 	static Mail creerCourriel3() {	
 		// COMPLAINT
 		String from = "maman.fachee@gmail.com";
@@ -44,6 +56,10 @@ public class Analyser {
 	    return new Mail(from, to, cc, subject, text);
 	}
 
+	
+	/** 
+	 * @return Mail
+	 */
 	static Mail creerCourriel4() {	
 		// NEWLOCATION
 		String from = "business.man@gmail.com";
@@ -54,6 +70,10 @@ public class Analyser {
 	    return new Mail(from, to, cc, subject, text);
 	}
 	
+	
+	/** 
+	 * @return Mail
+	 */
 	static Mail creerCourriel5() {	
 		// SPAM et FAN
 		String from = "un.tres.bon.ami@yahoo.com";
@@ -64,6 +84,10 @@ public class Analyser {
 	    return new Mail(from, to, cc, subject, text);
 	}
 
+	
+	/** 
+	 * @return Mail
+	 */
 	static Mail creerCourriel6() {	
 		// normal
 		String from = "normal.ok@gmail.com";

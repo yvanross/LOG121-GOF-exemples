@@ -8,6 +8,11 @@ package ChaineResponsabilite.Mail;
 
 public class Demo {
 
+	
+	/** 
+	 * @param args
+	 * @throws Exception
+	 */
 	public static void main(String[] args) throws Exception {
 		
 		Handler handler1 = new SpamHandler();
