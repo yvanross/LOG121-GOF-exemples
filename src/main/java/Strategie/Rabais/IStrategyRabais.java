@@ -1,5 +1,5 @@
 package Strategie.Rabais;
 
-public interface IRabais {
+public interface IStrategyRabais {
   public Double getCost();
 }

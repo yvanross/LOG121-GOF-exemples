@@ -3,7 +3,7 @@ public class Animal {
 	
 	private String name;
 	private double height;
-	private int weight;
+	private double weight;
 	private String favFood;
 	private double speed;
 	private String sound;
@@ -30,7 +30,7 @@ public class Animal {
 	public void setHeight(double newHeight){ height = newHeight; }
 	public double getHeight(){ return height; }
 	
-	public void setWeight(int newWeight){ 
+	public void setWeight(double newWeight){ 
 		if (newWeight > 0){
 			weight = newWeight; 
 		} else {

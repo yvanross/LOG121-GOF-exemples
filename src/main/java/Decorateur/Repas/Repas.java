@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import Strategie.Rabais.IRabais;
+import Strategie.Rabais.IStrategyRabais;
 
 
-public class Repas implements IRabais{
+public class Repas implements IStrategyRabais{
 
   List<IIngredient> lstIngredient = new ArrayList<IIngredient>();
 	public void add(IIngredient pizza) {
