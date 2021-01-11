@@ -2,13 +2,92 @@
 
 |Nom dans le <br>modèle de conception | Nom actuel |
 |-|-|
-|Context| Collection |
-|Strategy| Interface ou classe abstraite |
-|ConcreteStrategy| Classe qui implémente l'interface |
-|doWork()| Ppération polymorphe|
+|Context| Animal |
+|Strategy| Flys |
+|ConcreteStrategy| ItFlys, CantFly |
+|doWork()| fly() |
 
 # Diagramme de classe
 
+```plantuml
+@startuml
+class Animal{
+    - String : name;
+	- double : height;
+	- int : weight;
+	- String : favFood;
+	- double : speed;
+	- String : sound;
+    + Flys : flyingType;
 
+    + String tryToFly()
+    + void setFlyingAbility()
+}
+
+class AnimalExample{
+    {static} + void main()
+}
+
+class Bird{}
+
+class Dog{
+    + void digHole()
+}
+
+interface Flys{
+    + String fly()
+}
+class ItFlys{
+    + String fly()
+}
+class CantFly{
+    + String fly()
+}
+
+ItFlys -|> Flys
+CantFly -|> Flys
+
+Flys .. Animal
+Bird -|> Animal
+Dog -|> Animal
+
+AnimalExample .. Animal
+@enduml
+```
 
 # Diagramme de séquence
+
+```plantuml
+@startuml
+skinparam Style strictuml
+title Diagramme de séquence
+actor AnimalExemple
+participant "sparky:Dog" as Dog
+participant "tweety:Bird" as Bird
+participant "flyingType:CantFly" as CantFly
+participant "flyingType:ItFlys" as CanFly
+participant ":ItFlys" as CanFly2
+participant "System.out" as sysout
+
+AnimalExemple -> Dog ** : Animal sparky = new Dog()
+Dog -> CantFly ** : Flys flyingType = new CantFly()
+AnimalExemple -> Bird ** : Animal tweety = new Bird()
+Bird -> CanFly ** : Flys flyingType = new ItFlys()
+AnimalExemple -> Dog : tryToFly()
+Dog -> CantFly : fly()
+CantFly --> AnimalExemple : flyText
+AnimalExemple -> sysout : println("Dog: " + flyText)
+AnimalExemple -> Bird : tryToFly()
+Bird -> CanFly : fly()
+CanFly --> AnimalExemple : flyText
+AnimalExemple -> sysout : println("Bird: " + flyText)
+
+AnimalExemple -> CanFly2 ** : Flys newFlyingType = new ItFlys()
+AnimalExemple -> Dog : setFlyingAbility(newFlyingType)
+AnimalExemple -> Dog : tryToFly()
+Dog -> CanFly2 : fly()
+CanFly2 --> AnimalExemple : flyText
+AnimalExemple -> sysout : println("Dog: " + flyText)
+
+@enduml
+```
