@@ -1,12 +1,41 @@
-@startuml diagamme de classe
+@startuml diagramme de classe
 
+class JFrame{
+    + setLayout(layout:LayoutManager)
+}
+class FormLayout{}
+Interface LayoutManager{
+    preferredLayoutSize(parent:Container) : Dimension
+    minimumLayoutSize(parent:Container) : Dimension
+    layoutContainer(parent:Container)
+    addLayoutComponent(name:String, comp:Component) 
+    removeLayoutComponent(comp:Component) 
+}
 
+FormLayout .up-> LayoutManager
+
+JFrame  o-right- "1" LayoutManager
 
 @enduml
 
 
-@startuml diagamme de séquence
+@startuml diagramme de séquence
+skinparam Style strictuml
 
+actor FormLayoutDemo
+participant "frame:JFrame" as JFrame
+participant "formLayout:FormLayout" as FormLayout
+participant "component:Component" as Component
 
+FormLayoutDemo -> JFrame **: frame = new()
+
+FormLayoutDemo -> FormLayout **: LayoutManager layout = new()
+FormLayoutDemo -> JFrame : setLayout(layout)
+FormLayoutDemo -> Component ** : component = new()
+FormLayoutDemo -> JFrame : add(component)
+note left : possibilité d'ajouter \nplusieurs composants
+FormLayoutDemo -> JFrame : setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE)
+FormLayoutDemo -> JFrame : pack()
+FormLayoutDemo -> JFrame : setVisible(true)
 
 @enduml
