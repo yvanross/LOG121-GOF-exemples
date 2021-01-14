@@ -1,20 +1,20 @@
 package Strategie.Rabais;
 
 
-public class StrategiePourcentageRemise implements IRabais {
+public class StrategiePourcentageRemise implements IStrategyRabais {
   
-  private IRabais repas = null;
+  private IStrategyRabais strategyRabais = null;
   private Double pourcentageRemise = 0.0;
 
-  public StrategiePourcentageRemise(IRabais repas, Double pourcentageRemise){
+  public StrategiePourcentageRemise(IStrategyRabais strategyRabais, Double pourcentageRemise){
     assert(pourcentageRemise >= 0): "Parameter should be greater or equal to 0";
     assert(pourcentageRemise <= 1) : "Parameter should be smaller or equal to 1";
     this.pourcentageRemise = pourcentageRemise;
-    this.repas = repas;
+    this.strategyRabais = strategyRabais;
   }
 
   public Double getCost(){
-    Double cost = this.repas.getCost();
+    Double cost = this.strategyRabais.getCost();
     return cost  - (cost * this.pourcentageRemise);
   }
 

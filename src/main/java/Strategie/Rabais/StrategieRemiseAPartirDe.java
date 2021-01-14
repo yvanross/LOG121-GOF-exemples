@@ -1,20 +1,20 @@
 package Strategie.Rabais;
 
 
-public class StrategieRemiseAPartirDe implements IRabais {
+public class StrategieRemiseAPartirDe implements IStrategyRabais {
 
-  private IRabais repas = null;
+  private IStrategyRabais strategyRabais = null;
   private Double rabais = 0.0;
   private Double aPartirDe = 0.0;
 
-  public StrategieRemiseAPartirDe(IRabais repas, Double rabais, Double aPartirDe){
-    this.repas = repas;
+  public StrategieRemiseAPartirDe(IStrategyRabais strategyRabais, Double rabais, Double aPartirDe){
+    this.strategyRabais = strategyRabais;
     this.rabais = rabais;
     this.aPartirDe = aPartirDe;
   }
 
   public Double getCost(){
-    Double cost = this.repas.getCost();
+    Double cost = this.strategyRabais.getCost();
     if(cost >= aPartirDe)
       cost = cost - rabais;
     return cost;

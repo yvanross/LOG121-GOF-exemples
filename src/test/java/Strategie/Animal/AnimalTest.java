@@ -25,13 +25,10 @@ public class AnimalTest {
 		assertEquals(3.1416,animal.getHeight(),0.001);
 	}
 
-
-
 	@Test
 	public void testSetWeight() throws Exception {
-			animal.setWeight(123);
-			// assertEquals(123,animal.getWeight());
-			//TODO: demo test yvan
+			animal.setWeight(123.04);
+			assertEquals(123.04,animal.getWeight(),0.001);
 	}
 
 	@Test

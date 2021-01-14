@@ -6,7 +6,7 @@
 |Context| Collection |
 |Strategy| Interface ou classe abstraite |
 |ConcreteStrategy| Classe qui implémente l'interface |
-|doWork()| Ppération polymorphe|
+|doWork()| Opération polymorphe|
 
 # Diagramme de classe
 

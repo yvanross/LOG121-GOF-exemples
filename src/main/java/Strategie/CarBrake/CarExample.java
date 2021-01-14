@@ -4,6 +4,8 @@ package Strategie.CarBrake;
 /* Using the Car example */
 public class CarExample {
     public static void main(final String[] arguments) {
+        // IBrakeBehavior normal = new Brake();
+        // Car sedanCar = new Sedan(normal);
         Car sedanCar = new Sedan();
         sedanCar.applyBrake();  // This will invoke class "Brake"
 

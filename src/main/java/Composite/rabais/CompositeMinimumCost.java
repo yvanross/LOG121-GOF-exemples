@@ -1,12 +1,12 @@
 package Composite.rabais;
 
-import Strategie.Rabais.IRabais;
+import Strategie.Rabais.IStrategyRabais;
 
-public class CompositeMinimumCost implements IRabais {
-  private IRabais rabais1 = null;
-  private IRabais rabais2 = null;
+public class CompositeMinimumCost implements IStrategyRabais {
+  private IStrategyRabais rabais1 = null;
+  private IStrategyRabais rabais2 = null;
 
-  public CompositeMinimumCost(IRabais rabais1, IRabais rabais2){
+  public CompositeMinimumCost(IStrategyRabais rabais1, IStrategyRabais rabais2){
     this.rabais1 = rabais1;
     this.rabais2 = rabais2;
   }
