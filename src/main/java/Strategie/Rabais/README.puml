@@ -1,6 +1,22 @@
 @startuml diagamme de classe
 
+interface IStrategyRabais{
+    +getCost() : Double 
+}
+class StrategiePourcentageRemise{
+    -strategyRabais : IStrategyRabais
+    -pourcentageRemise : Double
+    +getCost() : Double
+}
+class StrategieRemiseAPartirDe{
+    -strategyRabais : IStrategyRabais
+    -rabais : Double
+    -aPartirDe : Double
+    +getCost() : Double
+}
 
+StrategiePourcentageRemise .up-|> IStrategyRabais
+StrategieRemiseAPartirDe .up-|> IStrategyRabais
 
 @enduml
 
