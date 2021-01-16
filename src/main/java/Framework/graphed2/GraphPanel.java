@@ -1,3 +1,4 @@
+package Framework.Graphed2;
 import java.awt.*;
 import java.awt.geom.*;
 import java.awt.event.*;
@@ -10,10 +11,16 @@ import javax.swing.event.*;
 public class GraphPanel extends JPanel
 {
    /**
-      Constructs a graph.
-      @param aToolBar the tool bar with the node and edge tools
-      @param aGraph the graph to be displayed and edited
-   */
+    *
+    */
+   private static final long serialVersionUID = 5032960723216150172L;
+
+   /**
+    * Constructs a graph.
+    * 
+    * @param aToolBar the tool bar with the node and edge tools
+    * @param aGraph   the graph to be displayed and edited
+    */
    public GraphPanel(ToolBar aToolBar, Graph aGraph)
    {
       toolBar = aToolBar;
@@ -123,8 +130,8 @@ public class GraphPanel extends JPanel
    {
       super.paintComponent(g);
       Graphics2D g2 = (Graphics2D) g;
-      Rectangle2D bounds = getBounds();
-      Rectangle2D graphBounds = graph.getBounds(g2);
+      // Rectangle2D bounds = getBounds();
+      // Rectangle2D graphBounds = graph.getBounds(g2);
       graph.draw(g2);
 
       if (selected instanceof Node)

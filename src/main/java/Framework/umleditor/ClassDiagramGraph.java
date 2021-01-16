@@ -1,3 +1,4 @@
+package Framework.Umleditor;
 import java.awt.geom.*;
 
 /**
@@ -5,6 +6,11 @@ import java.awt.geom.*;
 */
 public class ClassDiagramGraph extends Graph
 {
+
+   /**
+    *
+    */
+   private static final long serialVersionUID = -4991484254679005807L;
 
    public boolean connect(Edge e, Point2D p1, Point2D p2)
    {

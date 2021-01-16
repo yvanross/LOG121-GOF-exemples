@@ -1,3 +1,4 @@
+package Framework.Umleditor;
 import java.awt.*;
 import java.awt.geom.*;
 import java.io.*;
@@ -10,12 +11,17 @@ import java.util.List;
 public abstract class Graph implements Serializable
 {
    /**
-      Constructs a graph with no nodes or edges.
-   */
+    *
+    */
+   private static final long serialVersionUID = 7900827421326679946L;
+
+   /**
+    * Constructs a graph with no nodes or edges.
+    */
    public Graph()
    {
-      nodes = new ArrayList();
-      edges = new ArrayList();
+      nodes = new ArrayList<Node>();
+      edges = new ArrayList<Edge>();
    }
 
    /**
@@ -166,7 +172,7 @@ public abstract class Graph implements Serializable
       Gets the nodes of this graph.
       @return an unmodifiable list of the nodes
    */
-   public List getNodes() 
+   public List<Node> getNodes() 
    { 
       return Collections.unmodifiableList(nodes); }
 
@@ -174,13 +180,13 @@ public abstract class Graph implements Serializable
       Gets the edges of this graph.
       @return an unmodifiable list of the edges
    */
-   public List getEdges() 
+   public List<Edge> getEdges() 
    { 
       return Collections.unmodifiableList(edges); 
    }
 
-   private ArrayList nodes;
-   private ArrayList edges;
+   private ArrayList<Node> nodes;
+   private ArrayList<Edge> edges;
 }
 
 

@@ -1,7 +1,7 @@
-import java.awt.BasicStroke;
+package Framework.Umleditor;
 import java.awt.Graphics2D;
-import java.awt.Shape;
-import java.awt.geom.GeneralPath;
+// import java.awt.Shape;
+// import java.awt.geom.GeneralPath;
 import java.awt.geom.Line2D;
 import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
@@ -12,6 +12,11 @@ import java.awt.geom.Rectangle2D;
 */
 public abstract class AbstractEdge implements Edge
 {  
+   /**
+    *
+    */
+   private static final long serialVersionUID = -6049679258495858727L;
+
    public Object clone()
    {
       try

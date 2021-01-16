@@ -1,3 +1,4 @@
+package Framework.Umleditor;
 import java.awt.*;
 import java.awt.geom.*;
 
@@ -10,11 +11,16 @@ import java.awt.geom.*;
 abstract class GeneralPathEdge extends AbstractEdge
 {  
    /**
-      Returns the path that should be stroked to
-      draw this edge. The path does not include
-      arrow tips or labels.
-      @return a path along the edge
-   */
+    *
+    */
+   private static final long serialVersionUID = 3977153877698184632L;
+
+   /**
+    * Returns the path that should be stroked to draw this edge. The path does not
+    * include arrow tips or labels.
+    * 
+    * @return a path along the edge
+    */
    public abstract GeneralPath getPath();
 
    public boolean contains(Point2D aPoint)

@@ -1,11 +1,11 @@
+package Framework.Umleditor;
 import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
 import java.util.ArrayList;
 
 /**
    A style for a segmented line that indicates the number
-   and sequence of bends.
-*/
+**/
 public class BentStyle extends SerializableEnumeration
 {
    private BentStyle() {}
@@ -18,9 +18,9 @@ public class BentStyle extends SerializableEnumeration
       @return an array list of points at which to bend the
       segmented line joining the two rectangles
    */
-   public ArrayList getPath(Rectangle2D start, Rectangle2D end)
+   public ArrayList<Point2D> getPath(Rectangle2D start, Rectangle2D end)
    {
-      ArrayList r = getPath(this, start, end);
+      ArrayList<Point2D> r = getPath(this, start, end);
       if (r != null) return r;
       
       if (this == HVH) r = getPath(VHV, start, end);
@@ -54,10 +54,10 @@ public class BentStyle extends SerializableEnumeration
       @return an array list of points at which to bend the
       segmented line joining the two rectangles
    */
-   private static ArrayList getPath(BentStyle bent, 
+   private static ArrayList<Point2D> getPath(BentStyle bent, 
       Rectangle2D s, Rectangle2D e)
    {
-      ArrayList r = new ArrayList();
+      ArrayList<Point2D> r = new ArrayList<Point2D>();
       if (bent == STRAIGHT)
       {
          Point2D[] a = connectionPoints(s);

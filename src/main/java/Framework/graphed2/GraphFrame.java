@@ -1,8 +1,9 @@
+package Framework.Graphed2;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import javax.swing.*;
-import javax.swing.event.*;
+// import javax.swing.event.*;
 
 /**
    This frame shows the toolbar and the graph.
@@ -10,9 +11,15 @@ import javax.swing.event.*;
 public class GraphFrame extends JFrame
 {
    /**
-      Constructs a graph frame that displays a given graph.
-      @param graph the graph to display
-   */
+    *
+    */
+   private static final long serialVersionUID = -1370695840656852202L;
+
+   /**
+    * Constructs a graph frame that displays a given graph.
+    * 
+    * @param graph the graph to display
+    */
    public GraphFrame(final Graph graph)
    {  
       setSize(FRAME_WIDTH, FRAME_HEIGHT);
@@ -118,7 +125,7 @@ public class GraphFrame extends JFrame
             File file = fileChooser.getSelectedFile();
             ObjectInputStream in = new ObjectInputStream(
                new FileInputStream(file));
-            Graph graph = (Graph) in.readObject();
+            // Graph graph = (Graph) in.readObject();
             in.close();
             Container contentPane = getContentPane();
             contentPane.remove(scrollPane);
@@ -128,11 +135,6 @@ public class GraphFrame extends JFrame
             repaint();
          }
          catch (IOException exception)
-         {
-            JOptionPane.showMessageDialog(null, 
-               exception);
-         }
-         catch (ClassNotFoundException exception)
          {
             JOptionPane.showMessageDialog(null, 
                exception);

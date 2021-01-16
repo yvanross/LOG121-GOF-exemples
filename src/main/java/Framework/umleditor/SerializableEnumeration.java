@@ -1,3 +1,4 @@
+package Framework.Umleditor;
 import java.io.ObjectStreamException;
 import java.io.Serializable;
 import java.lang.reflect.Field;
@@ -22,6 +23,8 @@ import java.lang.reflect.Field;
 */
 public class SerializableEnumeration implements Serializable
 {
+
+   @SuppressWarnings("serial")
    protected Object writeReplace() throws ObjectStreamException
    {
       if (name == null) toString();
@@ -49,6 +52,7 @@ public class SerializableEnumeration implements Serializable
       return super.toString();
    }
 
+   @SuppressWarnings("serial")
    protected Object readResolve() throws ObjectStreamException
    {
       try

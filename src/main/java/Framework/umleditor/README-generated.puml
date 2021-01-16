@@ -1,0 +1,148 @@
+@startuml
+abstract class Framework.Umleditor.AbstractEdge
+abstract class Framework.Umleditor.GeneralPathEdge
+abstract class Framework.Umleditor.Graph
+abstract class Framework.Umleditor.RectangularNode
+abstract class Framework.Umleditor.SegmentedLineEdge
+annotation java.lang.SuppressWarnings
+class Framework.Umleditor.ArrowHead
+class Framework.Umleditor.ArrowHeadEditor
+class Framework.Umleditor.BentStyle
+class Framework.Umleditor.BentStyleEditor
+class Framework.Umleditor.ClassDiagramGraph
+class Framework.Umleditor.ClassNode
+class Framework.Umleditor.ClassRelationshipEdge
+class Framework.Umleditor.FormLayout
+class Framework.Umleditor.GraphFrame
+class Framework.Umleditor.GraphPanel
+class Framework.Umleditor.JFrame
+class Framework.Umleditor.JPanel
+class Framework.Umleditor.LineStyle
+class Framework.Umleditor.LineStyleEditor
+class Framework.Umleditor.MultiLineString
+class Framework.Umleditor.MultiLineStringEditor
+class Framework.Umleditor.PointNode
+class Framework.Umleditor.PropertySelector
+class Framework.Umleditor.PropertySheet
+class Framework.Umleditor.SerializableEnumeration
+class Framework.Umleditor.ToolBar
+class Framework.Umleditor.UMLEditor
+class java.awt.BasicStroke
+class java.awt.Color
+class java.awt.Component
+class java.awt.Font
+class java.awt.Graphics2D
+class java.awt.Stroke
+class java.awt.font.FontRenderContext
+class java.awt.geom.GeneralPath
+class java.awt.geom.Line2D
+class java.awt.geom.Point2D
+class java.awt.geom.Rectangle2D
+class java.awt.geom.RectangularShape
+class java.beans.PropertyEditorSupport
+class java.io.IOException
+class java.io.ObjectInputStream
+class java.io.ObjectOutputStream
+class java.io.ObjectStreamException
+class java.lang.reflect.Field
+class java.util.ArrayList
+class java.util.List
+class java.util.StringTokenizer
+class javax.swing.JFrame
+class javax.swing.JScrollPane
+class javax.swing.JTextArea
+class javax.swing.event.DocumentEvent
+class javax.swing.event.DocumentListener
+interface Framework.Umleditor.Edge
+interface Framework.Umleditor.LayoutManager
+interface Framework.Umleditor.Node
+interface Framework.Umleditor.Serializable
+interface java.io.Serializable
+interface java.lang.Cloneable
+Framework.Umleditor.AbstractEdge ..> java.awt.Graphics2D
+Framework.Umleditor.AbstractEdge ..> java.awt.geom.Line2D
+Framework.Umleditor.AbstractEdge ..> java.awt.geom.Point2D
+Framework.Umleditor.AbstractEdge ..> java.awt.geom.Rectangle2D
+Framework.Umleditor.AbstractEdge --|> Framework.Umleditor.Edge
+Framework.Umleditor.GeneralPathEdge --|> Framework.Umleditor.AbstractEdge
+Framework.Umleditor.Graph ..> java.util.List
+Framework.Umleditor.Graph --|> Framework.Umleditor.Serializable
+Framework.Umleditor.RectangularNode ..> java.awt.geom.Point2D
+Framework.Umleditor.RectangularNode ..> java.awt.geom.Rectangle2D
+Framework.Umleditor.RectangularNode ..> java.awt.geom.RectangularShape
+Framework.Umleditor.RectangularNode ..> java.io.IOException
+Framework.Umleditor.RectangularNode ..> java.io.ObjectInputStream
+Framework.Umleditor.RectangularNode ..> java.io.ObjectOutputStream
+Framework.Umleditor.RectangularNode --|> Framework.Umleditor.Node
+Framework.Umleditor.SegmentedLineEdge --|> Framework.Umleditor.GeneralPathEdge
+Framework.Umleditor.SegmentedLineEdge ..> java.awt.Font
+Framework.Umleditor.SegmentedLineEdge ..> java.awt.Graphics2D
+Framework.Umleditor.SegmentedLineEdge ..> java.awt.Stroke
+Framework.Umleditor.SegmentedLineEdge ..> java.awt.font.FontRenderContext
+Framework.Umleditor.SegmentedLineEdge ..> java.awt.geom.GeneralPath
+Framework.Umleditor.SegmentedLineEdge ..> java.awt.geom.Line2D
+Framework.Umleditor.SegmentedLineEdge ..> java.awt.geom.Point2D
+Framework.Umleditor.SegmentedLineEdge ..> java.awt.geom.Rectangle2D
+Framework.Umleditor.SegmentedLineEdge ..> java.util.ArrayList
+Framework.Umleditor.ArrowHead --|> Framework.Umleditor.SerializableEnumeration
+Framework.Umleditor.ArrowHead ..> java.awt.Color
+Framework.Umleditor.ArrowHead ..> java.awt.Graphics2D
+Framework.Umleditor.ArrowHead ..> java.awt.geom.GeneralPath
+Framework.Umleditor.ArrowHead ..> java.awt.geom.Point2D
+Framework.Umleditor.ArrowHeadEditor --|> Framework.Umleditor.PropertySelector
+Framework.Umleditor.BentStyle --|> Framework.Umleditor.SerializableEnumeration
+Framework.Umleditor.BentStyle ..> java.awt.geom.Point2D
+Framework.Umleditor.BentStyle ..> java.awt.geom.Rectangle2D
+Framework.Umleditor.BentStyle ..> java.util.ArrayList
+Framework.Umleditor.BentStyleEditor --|> Framework.Umleditor.PropertySelector
+Framework.Umleditor.ClassDiagramGraph --|> Framework.Umleditor.Graph
+Framework.Umleditor.ClassNode --|> Framework.Umleditor.RectangularNode
+Framework.Umleditor.ClassNode ..> java.awt.Graphics2D
+Framework.Umleditor.ClassNode ..> java.awt.geom.Rectangle2D
+Framework.Umleditor.ClassRelationshipEdge --|> Framework.Umleditor.SegmentedLineEdge
+Framework.Umleditor.ClassRelationshipEdge ..> java.awt.geom.Point2D
+Framework.Umleditor.ClassRelationshipEdge ..> java.util.ArrayList
+Framework.Umleditor.FormLayout --|> Framework.Umleditor.LayoutManager
+Framework.Umleditor.GraphFrame --|> Framework.Umleditor.JFrame
+Framework.Umleditor.GraphPanel --|> Framework.Umleditor.JPanel
+Framework.Umleditor.LineStyle --|> Framework.Umleditor.SerializableEnumeration
+Framework.Umleditor.LineStyle ..> java.awt.BasicStroke
+Framework.Umleditor.LineStyle ..> java.awt.Stroke
+Framework.Umleditor.LineStyleEditor --|> Framework.Umleditor.PropertySelector
+Framework.Umleditor.MultiLineString ..> java.awt.Font
+Framework.Umleditor.MultiLineString ..> java.awt.Graphics2D
+Framework.Umleditor.MultiLineString ..> java.awt.font.FontRenderContext
+Framework.Umleditor.MultiLineString ..> java.awt.geom.Line2D
+Framework.Umleditor.MultiLineString ..> java.awt.geom.Rectangle2D
+Framework.Umleditor.MultiLineString ..> java.util.StringTokenizer
+Framework.Umleditor.MultiLineString ..> java.io.Serializable
+Framework.Umleditor.MultiLineString --|> java.lang.Cloneable
+Framework.Umleditor.MultiLineStringEditor ..> java.awt.Component
+Framework.Umleditor.MultiLineStringEditor --|> java.beans.PropertyEditorSupport
+Framework.Umleditor.MultiLineStringEditor ..> javax.swing.JScrollPane
+Framework.Umleditor.MultiLineStringEditor ..> javax.swing.JTextArea
+Framework.Umleditor.MultiLineStringEditor ..> javax.swing.event.DocumentEvent
+Framework.Umleditor.MultiLineStringEditor ..> javax.swing.event.DocumentListener
+Framework.Umleditor.PointNode --|> Framework.Umleditor.Node
+Framework.Umleditor.PropertySelector --|> java.beans.PropertyEditorSupport
+Framework.Umleditor.PropertySheet ..> java.lang.SuppressWarnings
+Framework.Umleditor.PropertySheet --|> Framework.Umleditor.JPanel
+Framework.Umleditor.SerializableEnumeration ..> java.lang.SuppressWarnings
+Framework.Umleditor.SerializableEnumeration ..> java.io.ObjectStreamException
+Framework.Umleditor.SerializableEnumeration ..> java.lang.reflect.Field
+Framework.Umleditor.SerializableEnumeration --|> java.io.Serializable
+Framework.Umleditor.ToolBar --|> Framework.Umleditor.JPanel
+Framework.Umleditor.UMLEditor ..> java.lang.SuppressWarnings
+Framework.Umleditor.UMLEditor ..> javax.swing.JFrame
+Framework.Umleditor.Edge ..> java.awt.Graphics2D
+Framework.Umleditor.Edge ..> java.awt.geom.Line2D
+Framework.Umleditor.Edge ..> java.awt.geom.Point2D
+Framework.Umleditor.Edge ..> java.awt.geom.Rectangle2D
+Framework.Umleditor.Edge ..> java.io.Serializable
+Framework.Umleditor.Edge --|> java.lang.Cloneable
+Framework.Umleditor.Node ..> java.awt.Graphics2D
+Framework.Umleditor.Node ..> java.awt.geom.Point2D
+Framework.Umleditor.Node ..> java.awt.geom.Rectangle2D
+Framework.Umleditor.Node ..> java.io.Serializable
+Framework.Umleditor.Node --|> java.lang.Cloneable
+@enduml

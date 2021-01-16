@@ -1,3 +1,4 @@
+package Framework.Graphed2;
 import java.awt.*;
 import java.awt.geom.*;
 
@@ -7,10 +8,16 @@ import java.awt.geom.*;
 public class CircleNode implements Node
 {
    /**
-      Construct a circle node with a given size and color.
-      @param size the size
-      @param aColor the fill color
-   */
+    *
+    */
+   private static final long serialVersionUID = -261492761337384140L;
+
+   /**
+    * Construct a circle node with a given size and color.
+    * 
+    * @param size   the size
+    * @param aColor the fill color
+    */
    public CircleNode(Color aColor)
    {
       size = DEFAULT_SIZE;

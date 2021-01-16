@@ -1,3 +1,4 @@
+package Framework.Umleditor;
 /**
    A property editor for the ArrowHead type.
 */

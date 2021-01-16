@@ -1,9 +1,10 @@
+package Framework.Queue;
 import java.util.*;
 
 /** 
     A first-in, first-out bounded collection of objects. 
 */ 
-public class Queue extends AbstractCollection
+public class Queue extends AbstractCollection<Object> 
 { 
    /** 
        Constructs an empty queue. 
@@ -18,10 +19,10 @@ public class Queue extends AbstractCollection
       tail = 0; 
    } 
 
-   public Iterator iterator()
+   public Iterator<Object> iterator()
    {
       return new 
-         Iterator()
+         Iterator<Object>()
          {
             public boolean hasNext()
             {
@@ -100,5 +101,5 @@ public class Queue extends AbstractCollection
    private Object[] elements; 
    private int head; 
    private int tail; 
-   private int count; 
+   private int count;
 }

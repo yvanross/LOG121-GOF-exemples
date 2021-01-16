@@ -1,3 +1,4 @@
+package Framework.Umleditor;
 import java.awt.Font;
 import java.awt.Graphics2D;
 import java.awt.font.FontRenderContext;
@@ -12,9 +13,14 @@ import java.util.StringTokenizer;
 public class MultiLineString implements Cloneable, Serializable
 {
    /**
-      Constructs an empty, centered, normal size multiline
-      string that is not underlined.
-   */
+    *
+    */
+   private static final long serialVersionUID = 8925953216238369077L;
+
+   /**
+    * Constructs an empty, centered, normal size multiline string that is not
+    * underlined.
+    */
    public MultiLineString() 
    { 
       text = ""; 

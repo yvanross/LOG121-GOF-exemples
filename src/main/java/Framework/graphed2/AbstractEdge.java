@@ -1,3 +1,4 @@
+package Framework.Graphed2;
 import java.awt.*;
 import java.awt.geom.*;
 
@@ -7,6 +8,11 @@ import java.awt.geom.*;
 */
 public abstract class AbstractEdge implements Edge
 {  
+   /**
+    *
+    */
+   private static final long serialVersionUID = -2549171625087402016L;
+
    public Object clone()
    {
       try

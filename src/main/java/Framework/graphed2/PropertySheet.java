@@ -1,3 +1,4 @@
+package Framework.Graphed2;
 import java.awt.*;
 import java.awt.event.*;
 import java.beans.*;
@@ -13,10 +14,16 @@ import javax.swing.event.*;
 public class PropertySheet extends JPanel
 {
    /**
-      Constructs a property sheet that shows the editable
-      properties of a given object.
-      @param object the object whose properties are being edited
-   */
+    *
+    */
+   private static final long serialVersionUID = -3112485960070422514L;
+
+   /**
+    * Constructs a property sheet that shows the editable properties of a given
+    * object.
+    * 
+    * @param object the object whose properties are being edited
+    */
    public PropertySheet(Object bean)
    {
       try
@@ -52,6 +59,7 @@ public class PropertySheet extends JPanel
       @return a property editor that edits the property
       with the given descriptor and updates the given object
    */
+  @SuppressWarnings("deprecation")
    public PropertyEditor getEditor(final Object bean,
       PropertyDescriptor descriptor)
    {
@@ -62,7 +70,7 @@ public class PropertySheet extends JPanel
          final Method setter = descriptor.getWriteMethod();
          if (setter == null) return null;
          final PropertyEditor editor;
-         Class editorClass = descriptor.getPropertyEditorClass();
+         Class<?> editorClass = descriptor.getPropertyEditorClass();
          if (editorClass != null)            
             editor = (PropertyEditor) editorClass.newInstance();
          else
@@ -165,7 +173,7 @@ public class PropertySheet extends JPanel
       else if (tags != null)
       {
          // make a combo box that shows all tags
-         final JComboBox comboBox = new JComboBox(tags);
+         final JComboBox<String> comboBox = new JComboBox<String>(tags);
          comboBox.setSelectedItem(text);
          comboBox.addItemListener(new
             ItemListener()
@@ -250,7 +258,7 @@ public class PropertySheet extends JPanel
       }
    }
 
-   private ArrayList changeListeners = new ArrayList();
+   private ArrayList<ChangeListener> changeListeners = new ArrayList<ChangeListener>();
    private static final int WIDTH = 100;
    private static final int HEIGHT = 25;
    private static final int MAX_TEXT_LENGTH = 15;

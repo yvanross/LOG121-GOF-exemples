@@ -9,8 +9,14 @@
  
 //  https://www.javatpoint.com/java-applet
 
+@SuppressWarnings("deprecation")
  public class BannerApplet extends Applet
  {
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1854491203556539813L;
+
     public void init()
     {
        System.out.println("Init called");

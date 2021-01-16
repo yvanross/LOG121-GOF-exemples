@@ -1,3 +1,4 @@
+package Framework.Umleditor;
 import java.awt.Graphics2D;
 import java.awt.geom.Rectangle2D;
 
@@ -7,8 +8,13 @@ import java.awt.geom.Rectangle2D;
 public class ClassNode extends RectangularNode
 {
    /**
-      Construct a class node with a default size
-   */
+    *
+    */
+   private static final long serialVersionUID = -2218966356117358745L;
+
+   /**
+    * Construct a class node with a default size
+    */
    public ClassNode()
    {
       name = new MultiLineString();
