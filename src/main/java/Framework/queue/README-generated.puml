@@ -1,4 +1,4 @@
-@startuml
+@startuml Diagramme de classes
 annotation org.junit.Test
 class Framework.Queue.AbstractCollection
 class Framework.Queue.NameComparator
