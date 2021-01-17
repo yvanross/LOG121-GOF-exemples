@@ -25,7 +25,6 @@ Customer "1"--> "1" BillingStrategy : possède >
 ```plantuml
 @startuml Diagramme de séquence de StrategieDemo
 skinparam Style strictuml
-title Diagramme de séquence de StrategieDemo
 
 actor main
 participant " firstCustomer:Customer"  as  firstCustomer
