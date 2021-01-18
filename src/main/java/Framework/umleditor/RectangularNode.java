@@ -1,4 +1,5 @@
-import java.awt.Graphics2D;
+package Framework.Umleditor;
+// import java.awt.Graphics2D;
 import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
 import java.awt.geom.RectangularShape;
@@ -11,6 +12,11 @@ import java.io.ObjectOutputStream;
 */
 public abstract class RectangularNode implements Node
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = -5808488261029580091L;
+
    public Object clone()
    {
       try

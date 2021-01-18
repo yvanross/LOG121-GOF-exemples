@@ -1,4 +1,7 @@
+package Framework.Umleditor;
 import java.util.ArrayList;
+// import java.awt.geom.*;
+import java.awt.geom.Point2D;
 
 /**
    An edge that is shaped like a line with up to 
@@ -7,8 +10,13 @@ import java.util.ArrayList;
 public class ClassRelationshipEdge extends SegmentedLineEdge
 {
    /**
-      Constructs a straight edge.
-   */
+    *
+    */
+   private static final long serialVersionUID = 5779984220380367230L;
+
+   /**
+    * Constructs a straight edge.
+    */
    public ClassRelationshipEdge()
    {
       bentStyle = BentStyle.STRAIGHT;
@@ -25,7 +33,7 @@ public class ClassRelationshipEdge extends SegmentedLineEdge
    */
    public BentStyle getBentStyle() { return bentStyle; }
    
-   public ArrayList getPoints()
+   public ArrayList<Point2D> getPoints()
    {
       return bentStyle.getPath(getStart().getBounds(),
          getEnd().getBounds());

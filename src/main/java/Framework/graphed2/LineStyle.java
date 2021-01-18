@@ -1,3 +1,4 @@
+package Framework.Graphed2;
 import java.awt.*;
 import java.io.*;
 
@@ -6,7 +7,14 @@ import java.io.*;
 */
 public class LineStyle implements Serializable
 {
-   private LineStyle(String name) { this.name = name; }
+   /**
+    *
+    */
+   private static final long serialVersionUID = -5902074580184838958L;
+
+   private LineStyle(String name) {
+      this.name = name;
+   }
 
    /**
       Gets a stroke with which to draw this line style.

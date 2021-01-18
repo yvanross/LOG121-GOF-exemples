@@ -1,3 +1,4 @@
+package Framework.Graphed2;
 import java.awt.*;
 import java.awt.geom.*;
 import java.util.*;
@@ -10,12 +11,17 @@ import javax.swing.*;
 public class ToolBar extends JPanel
 {
    /**
-      Constructs a tool bar with no icons.
-   */
+    *
+    */
+   private static final long serialVersionUID = -570035101199729676L;
+
+   /**
+    * Constructs a tool bar with no icons.
+    */
    public ToolBar(Graph graph)
    {
       group = new ButtonGroup();
-      tools = new ArrayList();
+      tools = new ArrayList<Object>();
 
       JToggleButton grabberButton = new JToggleButton(new 
          Icon()
@@ -127,7 +133,7 @@ public class ToolBar extends JPanel
    }
  
    private ButtonGroup group;
-   private ArrayList tools;
+   private ArrayList<Object> tools;
 
    private static final int BUTTON_SIZE = 25;
    private static final int OFFSET = 4;

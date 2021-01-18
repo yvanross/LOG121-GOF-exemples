@@ -1,15 +1,21 @@
+package Framework.Graphed2;
 import java.awt.*;
 import java.awt.geom.*;
 
 /**
-   An inivisible node that is used in the toolbar to draw an
+   An invisible node that is used in the toolbar to draw an
    edge.
 */
 public class PointNode implements Node
 {
    /**
-      Constructs a point node with coordinates (0, 0)
-   */
+    *
+    */
+   private static final long serialVersionUID = -7931016302169187392L;
+
+   /**
+    * Constructs a point node with coordinates (0, 0)
+    */
    public PointNode()
    {
       point = new Point2D.Double();

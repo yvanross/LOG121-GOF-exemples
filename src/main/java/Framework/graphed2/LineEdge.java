@@ -1,3 +1,4 @@
+package Framework.Graphed2;
 import java.awt.*;
 import java.awt.geom.*;
 
@@ -6,6 +7,11 @@ import java.awt.geom.*;
 */
 public class LineEdge extends AbstractEdge
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = 776191829344402846L;
+
    public LineEdge()
    {
       lineStyle = LineStyle.SOLID;

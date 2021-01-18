@@ -1,3 +1,4 @@
+package Framework.Umleditor;
 import java.awt.Font;
 import java.awt.Graphics2D;
 import java.awt.Stroke;
@@ -14,8 +15,13 @@ import java.util.ArrayList;
 public abstract class SegmentedLineEdge extends GeneralPathEdge
 {
    /**
-      Costructs an edge with no adornments.
-   */
+    *
+    */
+   private static final long serialVersionUID = -7531021999952585414L;
+
+   /**
+    * Constructs an edge with no adornments.
+    */
    public SegmentedLineEdge()
    {
       lineStyle = LineStyle.SOLID;
@@ -108,7 +114,7 @@ public abstract class SegmentedLineEdge extends GeneralPathEdge
       g2.setStroke(lineStyle.getStroke());
       g2.draw(getPath());
       g2.setStroke(oldStroke);
-      ArrayList points = getPoints();
+      ArrayList<Point2D> points = getPoints();
       startArrowHead.draw(g2, (Point2D) points.get(1),
          (Point2D) points.get(0));
       endArrowHead.draw(g2, (Point2D) points.get(points.size() - 2),
@@ -221,7 +227,7 @@ public abstract class SegmentedLineEdge extends GeneralPathEdge
 
    public Rectangle2D getBounds(Graphics2D g2)
    {
-      ArrayList points = getPoints();
+      ArrayList<Point2D> points = getPoints();
       Rectangle2D r = super.getBounds(g2);
       r.add(getStringBounds(g2, 
                (Point2D) points.get(1), (Point2D) points.get(0), 
@@ -239,7 +245,7 @@ public abstract class SegmentedLineEdge extends GeneralPathEdge
 
    public GeneralPath getPath()
    {
-      ArrayList points = getPoints();
+      ArrayList<Point2D> points = getPoints();
       GeneralPath path = new GeneralPath();
       Point2D p = (Point2D) points.get(points.size() - 1);
       path.moveTo((float) p.getX(), (float) p.getY());
@@ -253,7 +259,7 @@ public abstract class SegmentedLineEdge extends GeneralPathEdge
 
    public Line2D getConnectionPoints()
    {
-      ArrayList points = getPoints();
+      ArrayList<Point2D> points = getPoints();
       return new Line2D.Double((Point2D) points.get(0),
          (Point2D) points.get(points.size() - 1));
    }
@@ -263,7 +269,7 @@ public abstract class SegmentedLineEdge extends GeneralPathEdge
       @return an array list of Point2D objects, containing
       the corner points
    */
-   public abstract ArrayList getPoints();
+   public abstract ArrayList<Point2D> getPoints();
 
    private LineStyle lineStyle;
    private ArrowHead startArrowHead;

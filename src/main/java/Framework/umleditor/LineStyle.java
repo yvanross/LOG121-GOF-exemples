@@ -1,3 +1,4 @@
+package Framework.Umleditor;
 import java.awt.BasicStroke;
 import java.awt.Stroke;
 

@@ -1,0 +1,84 @@
+@startuml all
+annotation org.junit.Test
+class Adaptateur.Customer.CustomerBillToAdapterTest
+class Adaptateur.Customer.CustomerTest
+class Adaptateur.EnemyAttacker.EnemyAttackerTest
+class ChaineResponsabilite.Numbers.TestCalcChain
+class Commande.String.StringTest
+class Commande.TelevisionTest
+class Commande.stockTest
+class Commande.switchTest
+class Composite.RabaisTest
+class Decorateur.CoffeeTest
+class Decorateur.PizzaTest
+class Decorateur.RepasTest
+class Decorateur.ShapesTest
+class Facade.Bank.TestBankAccount
+class Factory.EnemyTest
+class Factory.ShapeFactoryReflectTest
+class Factory.ShapeFactoryTest
+class Framework.Queue.QueueTest
+class Iterateur.CollectionTest
+class Iterateur.NameRepositoryTest
+class Iterateur.RadioStationTest
+class Mediateur.Chat.ChatMessageTest
+class Mediateur.DerekBanas.TestStockMediator
+class Mediateur.Storage.MediatorDemoTest
+class Memento.DerekBanas.TestMemento
+class Memento.DerekBanasTest
+class Observateur.TextView.TestExemple
+class Prototype.ConcretePrototypeTest
+class Proxy.Atm.TestATMMachine
+class Proxy.Images.ProxyTester
+class Singleton.SingleRandomTest
+class Strategie.Animal.AnimalTest
+class Strategie.Animal.BirdTest
+class Strategie.Animal.CantFlyTest
+class Strategie.Animal.DogTest
+class Strategie.Animal.ItFlysTest
+class Strategie.Billing.CustomerTest
+class Strategie.Billing.StrategyPatternTest
+class Strategie.Comparator.EmployeTest
+class Strategie.Comparator.StrategieComparatorTest
+class Tdd.FactureTest
+class TestSeance5.TemperatureDecoratorTest
+class TestSeance5.TemperatureProxyTest
+class Visiteur.TreeElement.TestVIsitor
+Adaptateur.Customer.CustomerBillToAdapterTest ..> org.junit.Test
+Adaptateur.Customer.CustomerTest ..> org.junit.Test
+Adaptateur.EnemyAttacker.EnemyAttackerTest ..> org.junit.Test
+Commande.String.StringTest ..> org.junit.Test
+Commande.TelevisionTest ..> org.junit.Test
+Commande.stockTest ..> org.junit.Test
+Commande.switchTest ..> org.junit.Test
+Composite.RabaisTest ..> org.junit.Test
+Decorateur.CoffeeTest ..> org.junit.Test
+Decorateur.PizzaTest ..> org.junit.Test
+Decorateur.RepasTest ..> org.junit.Test
+Decorateur.ShapesTest ..> org.junit.Test
+Factory.EnemyTest ..> org.junit.Test
+Factory.ShapeFactoryReflectTest ..> org.junit.Test
+Factory.ShapeFactoryTest ..> org.junit.Test
+Framework.Queue.QueueTest ..> org.junit.Test
+Iterateur.CollectionTest ..> org.junit.Test
+Iterateur.NameRepositoryTest ..> org.junit.Test
+Iterateur.RadioStationTest ..> org.junit.Test
+Mediateur.Chat.ChatMessageTest ..> org.junit.Test
+Mediateur.Storage.MediatorDemoTest ..> org.junit.Test
+Memento.DerekBanasTest ..> org.junit.Test
+Memento.DerekBanasTest ..> Memento.DerekBanas.TestMemento
+Prototype.ConcretePrototypeTest ..> org.junit.Test
+Singleton.SingleRandomTest ..> org.junit.Test
+Strategie.Animal.AnimalTest ..> org.junit.Test
+Strategie.Animal.BirdTest ..> org.junit.Test
+Strategie.Animal.CantFlyTest ..> org.junit.Test
+Strategie.Animal.DogTest ..> org.junit.Test
+Strategie.Animal.ItFlysTest ..> org.junit.Test
+Strategie.Billing.CustomerTest ..> org.junit.Test
+Strategie.Billing.StrategyPatternTest ..> org.junit.Test
+Strategie.Comparator.EmployeTest ..> org.junit.Test
+Strategie.Comparator.StrategieComparatorTest ..> org.junit.Test
+Tdd.FactureTest ..> org.junit.Test
+TestSeance5.TemperatureDecoratorTest ..> org.junit.Test
+TestSeance5.TemperatureProxyTest ..> org.junit.Test
+@enduml
