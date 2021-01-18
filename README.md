@@ -12,3 +12,11 @@ Pour obtenir le rapport de couverture de test
 mvn -P jacoco test
 ```
 [Ouvrir le rapport jacoco dans votre browser](./target/jacoco/site/../../site/jacoco/index.html)
+
+
+
+# Generation des diagramme de classes
+ java -jar plantuml-dependency-cli-1.4.0-jar-with-dependencies.jar -o plantuml.puml -b . -i **/*.java -e **/*Test*.jva -dn .*Test.* -v
+
+
+  java -jar plantuml-dependency-cli-1.4.0-jar-with-dependencies.jar -o plantuml-framework-graphed2.puml -b . -i ./src/main/java/Framework/**/*.java -e **/*Test*.jva -dn .*Test.* -v
