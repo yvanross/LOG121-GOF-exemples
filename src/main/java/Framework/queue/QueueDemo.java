@@ -1,4 +1,4 @@
-package Framework.Queue;
+package Framework.queue;
 // import Framework.Queue.Queue;
 import java.util.*;
 

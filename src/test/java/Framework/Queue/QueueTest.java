@@ -1,13 +1,16 @@
 package Framework.Queue;
 import static org.junit.Assert.*;
 import org.junit.Test;
+
+import Framework.queue.NameComparator;
+
 import java.util.*;
 
 public class QueueTest {
 
    @Test
    public void sendMessage() {
-      Framework.Queue.Queue q = new Framework.Queue.Queue(10);
+      Framework.queue.Queue q = new Framework.queue.Queue(10);
 
       q.add("Belgium");     
       q.add("Italy");     
