@@ -8,6 +8,13 @@
             "type": "java",
             "name": "Launch SimpleGraphEditor",
             "request": "launch",
+            "mainClass": "Framework.Graphed2.SimpleGraphEditor",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
+            "name": "Launch SimpleGraphEditor",
+            "request": "launch",
             "mainClass": "Framework.graphed2.SimpleGraphEditor",
             "projectName": "log121"
         },
