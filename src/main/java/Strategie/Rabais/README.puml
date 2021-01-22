@@ -1,6 +1,6 @@
 @startuml diagamme de classe
-
-interface IStrategyRabais{
+skinparam Style strictuml
+interface IStrategyRabais <<interface>>{
     +getCost() : Double 
 }
 class StrategiePourcentageRemise{
@@ -22,7 +22,17 @@ StrategieRemiseAPartirDe .up-|> IStrategyRabais
 
 
 @startuml diagamme de séquence
+skinparam   Style strictuml
+title Diagramme de séquence PatronStrategieRabais
 
+actor RabaisDemo
+participant ": IStartegyRabais" as IStrategyRabais
+participant ": StrategiePourcentageRemise" as StrategiePourcentageRemise
+participant ": StrategieRemiseAPartirDe" as StrategieRemiseAPartirDe
+
+
+
+  
 
 
 @enduml
