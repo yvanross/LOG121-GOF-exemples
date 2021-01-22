@@ -1,9 +1,8 @@
 package Decorateur.Coffee;
 
-import Decorateur.Repas.IIngredient;
 
 // Extension of a simple coffee without any extra ingredients
-public class SimpleCoffee implements IIngredient {
+public class SimpleCoffee implements ICoffee {
     private Double cost = 0.0;
     private String description = "";
 
@@ -12,7 +11,7 @@ public class SimpleCoffee implements IIngredient {
         this.description = description;
     }
 
-    public Double getCost() {
+    public double getCost() {
         return this.cost;
     }
 

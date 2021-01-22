@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch SandwichSculptor",
+            "request": "launch",
+            "mainClass": "TemplateMethod.Sandwish.SandwichSculptor",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
             "name": "Launch SimpleGraphEditor",
             "request": "launch",
             "mainClass": "Framework.graphed2.SimpleGraphEditor",
