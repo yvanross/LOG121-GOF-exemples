@@ -3,8 +3,23 @@ interface IStrategyRabais{
     getCost(): Double
 }
 
-StrategiePourcentageRemise .up-|> IStrategyRabais
-StrategyRemiseAPartirDe .up-|> IStrategyRabais
+interface IStrategyRabais{
+    getCost() : Double
+}
+class StrategiePourcentageRemise{
+   strategyRabais : IStrategyRabais
+   pourcentageRemise : Double
+   getCost() : Double
+}
+class StrategieRemiseAPartirDe{
+    strategyRabais : IStrategyRabais
+    rabais : Double
+    aPartirDe : Double
+    getCost() : Double
+}
+
+IStrategyRabais <|.. StrategiePourcentageRemise
+IStrategyRabais <|.. StrategieRemiseAPartirDe
 
 @enduml
 

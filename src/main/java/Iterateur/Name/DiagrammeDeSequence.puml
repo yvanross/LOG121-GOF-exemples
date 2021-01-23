@@ -1,0 +1,20 @@
+@startuml Diagramme de Séquence
+skinparam style strictuml
+
+actor IteratorPatternDemo
+
+participant "nameRepository:NameRepository" as NameRepository
+participant "nameIterator:NameIterator" as NameIterator
+participant "System.out" as System
+
+IteratorPatternDemo --> NameRepository ** : nameRepository = new()
+IteratorPatternDemo -> NameRepository : getIterator()
+NameRepository --> NameIterator ** : nameIterator = new()
+NameRepository --> IteratorPatternDemo : nameIterator
+IteratorPatternDemo -> NameIterator : hasNext = hasNext()
+    loop hasNext
+        IteratorPatternDemo -> NameIterator : currentItem = next()
+        IteratorPatternDemo -> System : println(currentItem)
+        IteratorPatternDemo -> NameIterator : hasNext = hasNext()
+    end
+@enduml
