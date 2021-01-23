@@ -6,6 +6,55 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch SandwichSculptor",
+            "request": "launch",
+            "mainClass": "TemplateMethod.Sandwish.SandwichSculptor",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
+            "name": "Launch SimpleGraphEditor",
+            "request": "launch",
+            "mainClass": "Framework.graphed2.SimpleGraphEditor",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
+            "name": "Launch SimpleGraphEditor",
+            "request": "launch",
+            "mainClass": "Framework.graphed.SimpleGraphEditor",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
+            "name": "Launch QueueDemo",
+            "request": "launch",
+            "mainClass": "Framework.Queue.QueueDemo",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
+            "name": "Launch QueueDemo",
+            "request": "launch",
+            "mainClass": "Framework.queue.QueueDemo",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
+            "name": "Launch QueueTest",
+            "request": "launch",
+            "mainClass": "Framework.queue.QueueTest",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
+            "name": "Launch UMLEditor",
+            "request": "launch",
+            "mainClass": "Framework.umleditor.UMLEditor",
+            "projectName": "log121"
+        },
+        {
+            "type": "java",
             "name": "Launch StrategyDemo",
             "request": "launch",
             "mainClass": "Strategie.Billing.StrategyDemo",

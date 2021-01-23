@@ -1,17 +1,16 @@
 package Decorateur.Coffee;
 
-import Decorateur.Repas.IIngredient;
 
 // Abstract decorator class - note that it implements Coffee interface
-public abstract class CoffeeDecorator implements IIngredient {
-    private final Coffee decoratedCoffee;
+public abstract class CoffeeDecorator implements ICoffee {
+    private final ICoffee decoratedCoffee;
 
-    public CoffeeDecorator(Coffee c) {
+    public CoffeeDecorator(ICoffee c) {
         this.decoratedCoffee = c;
     }
 
     @Override
-    public Double getCost() { // Implementing methods of the interface
+    public double getCost() { // Implementing methods of the interface
         return decoratedCoffee.getCost();
     }
 

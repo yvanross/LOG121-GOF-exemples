@@ -1,6 +1,5 @@
 package Decorateur.Pizza;
 
-import Decorateur.Repas.IIngredient;
 
 // By going this route I'll have to create a new subclass
 // for an infinite number of pizza.
@@ -11,7 +10,7 @@ import Decorateur.Repas.IIngredient;
 // Through composition I'll be able to add new functionality
 // by writing new code rather than by changing current code
 
-public class ThreeCheesePizza implements IIngredient {
+public class ThreeCheesePizza implements IPizza {
 	 private	Double cost = 0.0;
 	 private String description = "";
 
@@ -19,12 +18,9 @@ public class ThreeCheesePizza implements IIngredient {
 		this.cost = cost;
 		this.description = description;
 	}
-
 	public Double getCost() {
 		return cost;
 	}
-
-	@Override
 	public String getDescription() {
 		return description;
 	}

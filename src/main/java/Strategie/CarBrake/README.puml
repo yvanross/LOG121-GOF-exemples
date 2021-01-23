@@ -1,11 +1,36 @@
 @startuml diagamme de classe
+Interface IBrakeBehavior <<Interface>>{
+    +brake()
+}
+
+Class Brake {
+    +brake()
+}
+
+Class BrakeWithABS {
+    +brake()
+}
+
+Abstract Class Car {
+    -brakeBehavior : IBrakeBehavior
+    +applyBrake()
+    +setBrakeBehavior(IBrakeBehavior brakeType)
+}
+
+Class Sedan{}
+Class SUV{}
 
 
+IBrakeBehavior <|.. Brake : est
+IBrakeBehavior <|.. BrakeWithABS : est
+Car <|-- SUV : est
+Car <|-- Sedan : est
+Car --> "1" IBrakeBehavior : utilise
 
 @enduml
 
 
-@startuml diagamme de séquence
+@startuml Diagramme de séquence
 
 
 

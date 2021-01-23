@@ -1,5 +1,5 @@
 
-@startuml Diagramme de classe
+@startuml DCL-repas
 skinparam Style strictuml
 
 Interface Coffee <<Interface>>{

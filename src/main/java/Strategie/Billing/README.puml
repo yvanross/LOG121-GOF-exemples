@@ -1,12 +1,48 @@
+```plantuml
 @startuml diagamme de classe
+skinparam Style strictuml
+title Diagramme de classe 
 
+interface BillingStrategy{
+    getActPrice(rawPrice : int): int
+    {static} normalStrategy(): BillingStrategy
+    happyHourStrategy(): BillingStrategy    
+}
+Class Customer{
+    -drinks : ArrayList
+    +add(price : int, quantity : int) 
+    +printbill()
+    +setStrategy(strategy : BillingStrategy)
+        
+}
+Customer "1"--> "1" BillingStrategy : possède >
 
 
 @enduml
+```
 
 
-@startuml diagamme de séquence
+```plantuml
+@startuml Diagramme de séquence de StrategieDemo
+skinparam Style strictuml
 
+actor main
+participant " firstCustomer:Customer"  as  firstCustomer
+participant " secondCustomer:Customer"  as  secondCustomer
 
+main -> BillingStrategy : normalStrategy = normalStrategy()
+main -> BillingStrategy : happyHourStrategy = happyHourStrategy()
+main -> firstCustomer ** : firstCustomer = new(normalStrategy) 
+main -> firstCustomer : add(100,1)
+main -> firstCustomer : setStrategy(happyHourStrategy)
+main -> firstCustomer : add(100, 2)
+main -> secondCustomer ** : secondCustomer = new(happyHourStrategy) 
+main -> secondCustomer : add(80, 1)
+main -> firstCustomer : printBill()
+main -> secondCustomer : setStrategy(normalStrategy)
+main -> secondCustomer : add(130, 2)
+main -> secondCustomer : add(250, 1)
+main -> secondCustomer : printBill()
 
 @enduml
+```
