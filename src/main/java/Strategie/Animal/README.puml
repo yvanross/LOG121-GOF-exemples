@@ -1,4 +1,4 @@
-@startuml diagamme de classe
+@startuml DCL
 
 class Animal{
     - String : name;
@@ -33,19 +33,19 @@ class CantFly{
     + String fly()
 }
 
-ItFlys -|> Flys
-CantFly -|> Flys
+ItFlys -up-|> Flys
+CantFly -up-|> Flys
 
-Flys .. Animal
-Bird -|> Animal
-Dog -|> Animal
+Flys <-up- Animal
+Bird -up-|> Animal
+Dog -up-|> Animal
 
 AnimalExample .. Animal
 
 @enduml
 
 
-@startuml diagamme de séquence
+@startuml DSS
 
 skinparam Style strictuml
 title Diagramme de séquence
@@ -54,30 +54,28 @@ participant "sparky:Dog" as Dog
 participant "tweety:Bird" as Bird
 participant "flyingType:CantFly" as CantFly
 participant "flyingType:ItFlys" as CanFly
-participant ":ItFlys" as CanFly2
+participant "newFlyingType:ItFlys" as CanFly2
 participant "System.out" as sysout
 
 AnimalExemple -> Dog ** : Animal sparky = new Dog()
 Dog -> CantFly ** : Flys flyingType = new CantFly()
-AnimalExemple -> Dog : tryToFly()
-Dog -> CantFly : fly()
-CantFly --> AnimalExemple : flyText
-AnimalExemple -> sysout : println("Dog: " + flyText)
+AnimalExemple -> Dog : String flyText = tryToFly()
+Dog -> CantFly : String flyText = fly()
+AnimalExemple -> sysout: println(flyText)
 == ==
 
 AnimalExemple -> Bird ** : Animal tweety = new Bird()
 Bird -> CanFly ** : Flys flyingType = new ItFlys()
-AnimalExemple -> Bird : tryToFly()
-Bird -> CanFly : fly()
-CanFly --> AnimalExemple : flyText
-AnimalExemple -> sysout : println("Bird: " + flyText)
+AnimalExemple -> Bird : String flyText = tryToFly()
+Bird -> CanFly : String flyText = fly()
+AnimalExemple -> sysout: println(flyText)
+
 == ==
 
 AnimalExemple -> CanFly2 ** : Flys newFlyingType = new ItFlys()
 AnimalExemple -> Dog : setFlyingAbility(newFlyingType)
-AnimalExemple -> Dog : tryToFly()
-Dog -> CanFly2 : fly()
-CanFly2 --> AnimalExemple : flyText
-AnimalExemple -> sysout : println("Dog: " + flyText)
+AnimalExemple -> Dog : String flyText = tryToFly()
+Dog -> CanFly2 : String flyText = fly()
+AnimalExemple -> sysout: println(flyText)
 
 @enduml

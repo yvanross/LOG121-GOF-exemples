@@ -1,12 +1,16 @@
 @startuml diagamme de classe
+interface IStrategyRabais{
+    getCost(): Double
+}
 
-
+StrategiePourcentageRemise .up-|> IStrategyRabais
+StrategyRemiseAPartirDe .up-|> IStrategyRabais
 
 @enduml
 
 
 @startuml diagamme de séquence
 
-
+title N/A
 
 @enduml

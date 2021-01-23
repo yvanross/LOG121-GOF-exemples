@@ -1,4 +1,4 @@
-@startuml diagamme de classe
+@startuml DCL
 Interface IBrakeBehavior <<Interface>>{
     +brake()
 }
@@ -30,8 +30,32 @@ Car --> "1" IBrakeBehavior : utilise
 @enduml
 
 
-@startuml Diagramme de séquence
 
+@startuml DS-carExample
+title Diagramme de séquence CartExample
+skinparam style strictuml
+skinparam Handwritten true
+skinparam BackgroundColor white
+participant ":main" as m
+participant "sedanCar:Sedan" as sedan
+participant ":Brake" as brake
+participant "suvCar:SUV" as suv
+participant ":BrakeWithABS" as abs
+participant "newBrake:Brake" as nbrake
+m --> sedan**: create()
+sedan --> brake**: create()
+m -> sedan: applyBrake()
+sedan -> brake: brake()
+
+m --> suv**:create()
+suv -->> abs**: create()
+m->suv: applyBrake()
+suv -> abs: brake()
+
+m->nbrake**: create()
+m->suv: setBrakeBehavior(newBrake)
+m->suv: applyBrake()
+suv -> nbrake: brake()
 
 
 @enduml

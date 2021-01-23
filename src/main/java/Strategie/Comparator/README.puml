@@ -1,25 +1,65 @@
 @startuml diagramme de classe
 
-class AgeComparator{}
+class AgeComparator{
+     compare(o1:Employ, o2:Employe): int
+}
 class Compagnie{}
-Class EmbaucheComparator{}
+Class EmbaucheComparator{
+     compare(o1:Employ, o2:Employe): int
+}
 Class Employe{}
-Class PrenomComparateur{}
-Class SalaireComparateur{}
-Interface Comparator<Employe>{}
+Class PrenomComparateur{
+     compare(o1:Employ, o2:Employe): int
+}
+Class SalaireComparateur{
+     compare(o1:Employ, o2:Employe): int
+}
 
-AgeComparator .up-> Comparator
-EmbaucheComparator .up-> Comparator
-PrenomComparateur .up-> Comparator
-SalaireComparateur .up-> Comparator
+Interface Comparator<Employe>{
+    compare(o1:Employ, o2:Employe): int
+}
+
+AgeComparator .up-|> Comparator
+EmbaucheComparator .up-|> Comparator
+PrenomComparateur .up-|> Comparator
+SalaireComparateur .up-|> Comparator
 Compagnie "1" --> "*" Employe : emploie
-Compagnie  *-right- "1" Comparator
+Compagnie  -right-> "1" Comparator: compare les employés avec
+Comparator ..> Employe: dépendant de  
 
 @enduml
 
 
-@startuml diagamme de séquence
 
+@startuml DS-ComparatorDemo
+skinparam Style strictuml
+title Diagramme de séquence PatronStragégieComparator
 
+actor main
+participant "ageComparateur:AgeComparator" as AC
+participant ":Compagnie" as C
+participant "listEmploye[i]:List<Employe>" as LE
+participant "sb:StringBuffer" as SB
+participant "employe1:Employe" as E
 
+main -> AC ** : ageComparator = new()
+main -> C ** : compagnie = new(ageComparator)
+C --> LE **: create()
+main --> E **: crate("gendron","Yves",LocalDate.of(1990, 10, 18), LocalDate.of(2015,  2, 28),  40000.0)
+...
+main -> C : temp = toString()
+C --> SB**: create()
+C -> "Employe": String entete = getEntete()
+C -> SB: append(entete)
+C -> "Collection": sort(listEmploye,ageComparator)
+loop i<liste.size()
+C -> LE: Employe e = get(i)
+C -> E: String info = toString()
+C -> SB: append(info)
+end
+main -> System.out : println(temp)
+
+main --> SalaireComparator ** : salaireComparator = new()
+main -> C : setComparatorStrategy(salaireComparator)
+...
 @enduml
