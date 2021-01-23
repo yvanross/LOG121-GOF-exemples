@@ -6,7 +6,7 @@ public class EnemyAttackerTest {
   
   @Test
     public  void enemyAttackerTest(){
-      
+
       final EnemyTank rx7Tank = new EnemyTank();
       
       final EnemyRobot fredTheRobot = new EnemyRobot();
