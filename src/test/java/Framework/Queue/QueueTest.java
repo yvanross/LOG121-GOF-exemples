@@ -1,6 +1,9 @@
 package Framework.Queue;
 import static org.junit.Assert.*;
 import org.junit.Test;
+
+// import Framework.Queue.;
+
 import java.util.*;
 
 public class QueueTest {
@@ -19,8 +22,8 @@ public class QueueTest {
       q.removeFirst();
 
       assertEquals("[Belgium, Italy, France, Thailand]",a.toString());
-      assertEquals("Belgium",Collections.min(a,new NameComparator()));
-      assertEquals("France",Collections.min(q,new NameComparator()));
+      assertEquals("Belgium",Collections.min(a,new Framework.Queue.NameComparator()));
+      assertEquals("France",Collections.min(q,new Framework.Queue.NameComparator()));
    }
    
    
