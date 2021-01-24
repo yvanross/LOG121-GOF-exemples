@@ -1,0 +1,111 @@
+@startuml Diagramme de classe avec packages
+left to right direction
+package UmlEditor {
+    abstract class Graph
+    class ArrowHeadEditor
+    class BentStyleEditor
+    class ClassDiagramGraph
+    class FormLayout
+    class GraphFrame
+    class GraphPanel
+    class JFrame
+    class JPanel
+    class LineStyleEditor
+    class MultiLineString
+    class MultiLineStringEditor
+    class PropertySelector
+    class PropertySheet
+    class SerializableEnumeration {
+       public String toString()
+       protected Object writeReplace() throws ObjectStreamException
+       protected Object readResolve() throws ObjectStreamException
+    }
+    class ToolBar
+    class UMLEditor
+    note left of UMLEditor: main()
+    interface LayoutManager
+    interface Serializable
+    interface java.io.Serializable
+    interface java.lang.Cloneable
+
+    package Nodes {
+        interface Node {
+           void draw(Graphics2D g2);
+           void translate(double dx, double dy);
+           boolean contains(Point2D aPoint);
+           Point2D getConnectionPoint(Point2D aPoint);
+           Rectangle2D getBounds();
+           Object clone();
+        }
+        abstract class RectangularNode
+        class ClassNode
+        class PointNode
+
+    }
+
+    package Edges{
+        interface Edge{
+           void draw(Graphics2D g2);
+           boolean contains(Point2D aPoint);
+           void connect(Node aStart, Node anEnd);
+           Node getStart();
+           Node getEnd();
+           Line2D getConnectionPoints();
+           Rectangle2D getBounds(Graphics2D g2);
+           Object clone();
+        }
+        class LineStyle
+        class BentStyle
+        class ArrowHead {
+            private ArrowHead()
+            public void draw(Graphics2D g2, Point2D p, Point2D q)
+            public static final ArrowHead NONE
+            public static final ArrowHead TRIANGLE
+            public static final ArrowHead V
+            public static final ArrowHead DIAMOND
+            public static final ArrowHead BLACK_DIAMOND
+        }
+
+        abstract class AbstractEdge
+        abstract class GeneralPathEdge
+        abstract class SegmentedLineEdge
+        class ClassRelationshipEdge
+
+    }
+}
+
+LineStyle <.u. SegmentedLineEdge
+ArrowHead <.u. SegmentedLineEdge
+BentStyle <.u. SegmentedLineEdge
+
+AbstractEdge --|> Edge
+GeneralPathEdge --|> AbstractEdge
+Graph --|> Serializable
+RectangularNode --|> Node
+SegmentedLineEdge --|> GeneralPathEdge
+ArrowHead --|> SerializableEnumeration
+ArrowHeadEditor --|> PropertySelector
+BentStyle --|> SerializableEnumeration
+BentStyleEditor --|> PropertySelector
+ClassDiagramGraph --|> Graph
+ClassNode --|> RectangularNode
+ClassRelationshipEdge --|> SegmentedLineEdge
+FormLayout --|> LayoutManager
+GraphFrame --|> JFrame
+GraphPanel --|> JPanel
+LineStyle --|> SerializableEnumeration
+LineStyleEditor --|> PropertySelector
+MultiLineString .l.> java.io.Serializable
+MultiLineString .d.|> java.lang.Cloneable
+PointNode --|> Node
+PropertySheet --|> JPanel
+SerializableEnumeration --|> java.io.Serializable
+ToolBar --|> JPanel
+UMLEditor ..> javax.swing.JFrame
+Edge .l.> java.io.Serializable
+Edge .d.|> java.lang.Cloneable
+Node .r.> java.io.Serializable
+Node .d.|> java.lang.Cloneable
+
+
+@enduml

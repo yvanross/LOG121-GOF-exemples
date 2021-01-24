@@ -1,4 +1,4 @@
-@startuml Diagramme de classe
+@startuml Diagramme de classe initial
 abstract class Framework.Umleditor.AbstractEdge
 abstract class Framework.Umleditor.GeneralPathEdge
 abstract class Framework.Umleditor.Graph

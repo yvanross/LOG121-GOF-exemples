@@ -1,0 +1,89 @@
+@startuml Diagramme de classe
+package Graphed2{
+class FormLayout
+class GraphFrame
+class GraphPanel
+class JFrame
+class JPanel
+class LineStyleEditor
+class PropertyEditorSupport
+class PropertySheet
+class SimpleGraphEditor
+note bottom of SimpleGraphEditor: Contain main operation
+class ToolBar
+interface java.lang.Clonable
+interface LayoutManager
+interface java.io.Serializable
+
+package Nodes {
+interface Node {
+   void draw(Graphics2D g2);
+   boolean contains(Point2D aPoint);
+   void connect(Node aStart, Node anEnd);
+   Node getStart();
+   Node getEnd();
+   Line2D getConnectionPoints();
+   Rectangle2D getBounds(Graphics2D g2);
+
+}
+class PointNode
+class CircleNode
+    }
+
+package edges {
+    abstract class AbstractEdge{
+        public Object clone()
+        public void connect(Node s, Node e)
+        public Node getStart()
+        public Node getEnd()
+        public Rectangle2D getBounds(Graphics2D g2)
+        public Line2D getConnectionPoints()
+        private Node start;
+        private Node end;
+    }
+    interface Edge {
+        void draw(Graphics2D g2);
+        boolean contains(Point2D aPoint);
+        void connect(Node aStart, Node anEnd);
+        Node getStart();
+        Node getEnd();
+        Line2D getConnectionPoints();
+        Rectangle2D getBounds(Graphics2D g2);
+    }
+    class LineEdge
+    class LineStyle {
+        private LineStyle(String name) 
+        public Stroke getStroke()
+        protected Object readResolve() throws ObjectStreamException
+        public static final LineStyle SOLID 
+        public static final LineStyle DOTTED 
+    }
+}
+
+ package Graphes {
+    abstract class Graph
+
+    class SimpleGraph
+}
+AbstractEdge -up-|> Edge
+Graph -up-|> java.io.Serializable
+CircleNode -up-|> Node
+FormLayout --|> LayoutManager
+GraphFrame --|> JFrame
+GraphPanel --|> JPanel
+LineEdge -up-|> AbstractEdge
+LineStyle -up-|> java.io.Serializable
+LineStyleEditor --|> PropertyEditorSupport
+PointNode -up-|> Node
+PropertySheet --|> JPanel
+SimpleGraph -up-|> Graph
+ToolBar --|> JPanel
+Edge -up-|> java.io.Serializable
+Node -up-|> java.io.Serializable
+
+LineEdge .left-> LineStyle: depend on
+Edge -up-|> java.lang.Clonable
+Node -up-|> java.lang.Clonable
+SimpleGraphEditor .up.> SimpleGraph
+}
+@enduml

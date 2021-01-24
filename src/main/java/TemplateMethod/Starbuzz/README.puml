@@ -1,0 +1,56 @@
+@startuml Diagramme de classe
+
+class Boisson <<Abstract>>{
+    bouillir_eau(): void 
+    infusser(): void 
+    verser_tasse(): void 
+    ajouter_condiments(): void 
+}
+class The extends Boisson{
+    infuser(): void 
+    ajouter_condiment(): void 
+}
+class Cafe extends Boisson{
+    infuser(): void 
+    ajouter_condiments(): void 
+}
+@enduml
+
+@startuml ds-preparer
+skinparam style strictuml
+
+participant ":StarbuzzTest" as S
+participant ":The" as T
+participant ":Boisson" as B
+participant "System.out" as P
+
+-> S: preparer_the()
+S --> T: create()
+T --> B: create()
+S -> T: prepare()
+activate T
+    T -> B: prepare()
+    activate B
+
+        B -> B: bouillir_eau()
+            activate B
+                B -> P: println(...)
+            deactivate B
+        B -> T: infuser()
+            activate T
+               T -> P: println(...)
+            deactivate T
+        B -> B: verser_tasse()
+            activate B
+                B -> P: println(...)
+            deactivate B
+        B -> T: ajouter_condiments()
+            activate T
+               T -> P: println(...)
+            deactivate T
+    deactivate B
+deactivate T
+
+
+
+@enduml
