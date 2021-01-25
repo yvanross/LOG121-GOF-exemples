@@ -1,6 +1,7 @@
 @startuml diagamme de classe
 skinparam style strict
 
+class Frame
 class FormLayout implements LayoutManager
 
 class FormLayout {
@@ -14,23 +15,28 @@ class FormLayout {
     +addLayoutComponent(parent: Container): Dimension
     +removeLayoutComponent(parent: Container): Dimension
 }
+
+Frame -> LayoutManager: use
 @enduml
 
 @startuml diagamme de séquence
 skinparam Style strictuml
 title Diagramme de séquence FormLayout
-
 actor main
 participant "frame:JFrame" as Frame
-
-main -> Frame  : frame = new()
-activate Frame
-main -> FormLayout  : layout = new()
+participant ":FormLayout" as FormLayout
+participant "name:Jlabel" as name
+participant "text:JTextField" as text
+main --> Frame**: frame = new()
+main --> FormLayout**: layout = new()
 main -> Frame : frame.setLayout(layout)
-main -> Frame : frame.add(JLabel(String))
-main -> Frame : frame.add(JTextField(int))
-main -> Frame : frame.setDefaultCloseOperation(int)
+main --> name**: create("Name")
+main -> Frame : frame.add(name)
+main --> text**: create(15)
+main -> Frame : frame.add(text)
+...
+main -> Frame : frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE)
 main -> Frame : frame.pack()
-main -> Frame : frame.setVisible(boolean) 
+main -> Frame : frame.setVisible(true) 
 
 @enduml

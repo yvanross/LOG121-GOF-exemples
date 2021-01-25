@@ -32,3 +32,49 @@ TextViewA ..> TextModel: setState(string)
  Observable *--> Observer
 
 @enduml
+
+
+@startuml DS
+skinparam style strictuml
+skinparam Handwritten true
+participant "Main" as M
+participant ":TestExemple" as TE
+participant "model:TextModel" as TM 
+participant ":Observable" as O
+participant "view[i]:List<Observer>" as LO
+participant "view1:TextViewA" as V1
+participant "view2:TextViewA" as V2
+participant "view3:TextViewB" as V3
+
+M --> TE**: create()
+TE --> TM**: create
+TM --> O**: extends
+O --> LO**: create()
+
+TE --> V1**: create(model: TextModel:,name:string)
+V1 -> TM: addObserver(view1)
+TM -> O:  addObserver(view1)
+O -> LO:  add(view1)
+
+TE --> V2**: create(model: TextModel:,name:string)
+V2 -> TM: addObserver(view2)
+TM -> O:  addObserver(view2)
+O -> LO:  add(view2)
+
+TE --> V3**: create(model: TextModel:,name:string)
+V3 -> TM: addObserver(view3)
+TM -> O:  addObserver(view3)
+O -> LO:  add(view3)
+
+V3->TM: setState("allo mon coco")
+
+TM -> O: setChange()
+TM -> O: notifyObservers()
+
+loop 
+O -> LO: update(this,state)
+end 
+
+
+
+@enduml

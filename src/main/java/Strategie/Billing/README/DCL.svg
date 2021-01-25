@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="281px" preserveAspectRatio="none" style="width:379px;height:281px;" version="1.1" viewBox="0 0 379 281" width="379px" zoomAndPan="magnify"><defs/><g><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacing" textLength="199" x="83.5" y="16.708">Diagramme de classe</text><!--MD5=[9af6afbc2668367963c74da73eb3f1d9]
+class BillingStrategy--><rect codeLine="4" fill="#FEFECE" height="78.3828" id="BillingStrategy" style="stroke:#A80036;stroke-width:1.5;" width="220" x="7" y="195.9531"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="88" x="73" y="212.0918">BillingStrategy</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="226" y1="219.9219" y2="219.9219"/><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="226" y1="227.9219" y2="227.9219"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="165" x="13" y="242.1323">getActPrice(rawPrice : int): int</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" text-decoration="underline" textLength="186" x="13" y="254.937">normalStrategy(): BillingStrategy</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="208" x="13" y="267.7417">happyHourStrategy(): BillingStrategy</text><!--MD5=[2ce0c9fb7f55b1e256ab28a8ea6b25ec]
+class Customer--><rect codeLine="9" fill="#FEFECE" height="91.1875" id="Customer" style="stroke:#A80036;stroke-width:1.5;" width="242" x="95" y="27.9531"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="58" x="187" y="44.0918">Customer</text><line style="stroke:#A80036;stroke-width:1.5;" x1="96" x2="336" y1="51.9219" y2="51.9219"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="103" y="59.9219"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="93" x="115" y="66.1323">drinks : ArrayList</text><line style="stroke:#A80036;stroke-width:1.5;" x1="96" x2="336" y1="72.7266" y2="72.7266"/><ellipse cx="106" cy="83.7266" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="160" x="115" y="86.937">add(price : int, quantity : int)</text><ellipse cx="106" cy="96.5313" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="49" x="115" y="99.7417">printbill()</text><ellipse cx="106" cy="109.3359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="216" x="115" y="112.5464">setStrategy(strategy : BillingStrategy)</text><!--MD5=[d755c5174fbc4166a0b82a39f0ad1a0e]
+class AI--><rect codeLine="16" fill="#FEFECE" height="39.9688" id="AI" style="stroke:#A80036;stroke-width:1.5;" width="106" x="262" y="214.9531"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="52" x="265" y="231.0918">ArrayList</text><rect fill="#FFFFFF" height="15.9688" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:2.0,2.0;" width="46" x="325" y="211.9531"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="44" x="326" y="224.0918">Integer</text><line style="stroke:#A80036;stroke-width:1.5;" x1="263" x2="367" y1="238.9219" y2="238.9219"/><line style="stroke:#A80036;stroke-width:1.5;" x1="263" x2="367" y1="246.9219" y2="246.9219"/><!--MD5=[eb561111f876fa2dc9b4292b86931b92]
+link Customer to BillingStrategy--><path codeLine="18" d="M188.16,119.3071 C174.112,141.9391 157.166,169.2421 143.335,191.5251 " fill="none" id="Customer-to-BillingStrategy" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="140.612,195.912,148.7576,190.3759,143.2494,191.6642,141.9611,186.156,140.612,195.912" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="172.3632,161.7677,179.6303,155.6325,174.6362,152.5328,172.3632,161.7677" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="54" x="184" y="162.02">possède</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="175.4835" y="139.2064">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="135.9828" y="184.9582">1</text><!--MD5=[e04c26dc5244ce501e3196a749d889c1]
+link Customer to AI--><path codeLine="19" d="M243.84,119.3071 C262.254,148.9731 285.648,186.6634 300.477,210.5555 " fill="none" id="Customer-to-AI" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="303.144,214.8511,301.7966,205.0949,300.5073,210.6028,294.9993,209.3136,303.144,214.8511" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="38" x="272" y="162.02">drinks</text><!--MD5=[bd9bce09265ca297937d2a41dcf0bf1a]
+@startuml
+skinparam Style strictuml
+title Diagramme de classe 
+
+interface BillingStrategy{
+    getActPrice(rawPrice : int): int
+    {static} normalStrategy(): BillingStrategy
+    happyHourStrategy(): BillingStrategy    
+}
+Class Customer{
+    -drinks : ArrayList
+    +add(price : int, quantity : int) 
+    +printbill()
+    +setStrategy(strategy : BillingStrategy)
+        
+}
+class "ArrayList<Integer>" as AI
+
+Customer "1"- -> "1" BillingStrategy : possède >
+Customer - -> AI: drinks
+@enduml
+
+PlantUML version 1.2021.01beta3(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

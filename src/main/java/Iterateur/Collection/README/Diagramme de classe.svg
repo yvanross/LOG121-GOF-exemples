@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="438px" preserveAspectRatio="none" style="width:783px;height:438px;" version="1.1" viewBox="0 0 783 438" width="783px" zoomAndPan="magnify"><defs/><g><!--MD5=[47de47a8b5f06cbc5e036fae0a9149b7]
+class Iterable--><rect codeLine="2" fill="#FEFECE" height="52.7734" id="Iterable" style="stroke:#A80036;stroke-width:1.5;" width="154" x="331" y="32.5"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="46" x="385" y="48.6387">Iterable</text><line style="stroke:#A80036;stroke-width:1.5;" x1="332" x2="484" y1="56.4688" y2="56.4688"/><line style="stroke:#A80036;stroke-width:1.5;" x1="332" x2="484" y1="64.4688" y2="64.4688"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="142" x="337" y="78.6792">createIterator(): Iterateur</text><!--MD5=[17d333cb3c18c1ea0c0be87b55dc092c]
+class Iterateur--><rect codeLine="5" fill="#FEFECE" height="65.5781" id="Iterateur" style="stroke:#A80036;stroke-width:1.5;" width="120" x="467" y="207"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="53" x="500.5" y="223.1387">Iterateur</text><line style="stroke:#A80036;stroke-width:1.5;" x1="468" x2="586" y1="230.9688" y2="230.9688"/><line style="stroke:#A80036;stroke-width:1.5;" x1="468" x2="586" y1="238.9688" y2="238.9688"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="108" x="473" y="253.1792">hasNext(): boolean</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="78" x="473" y="265.9839">next(): Object</text><!--MD5=[f0416644d38502a36db479875ec35bd9]
+class MaCollection--><rect codeLine="22" fill="#FEFECE" height="103.9922" id="MaCollection" style="stroke:#A80036;stroke-width:1.5;" width="154" x="278" y="188"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="76" x="317" y="204.1387">MaCollection</text><line style="stroke:#A80036;stroke-width:1.5;" x1="279" x2="431" y1="211.9688" y2="211.9688"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="46" x="284" y="226.1792">MAX: int</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="75" x="284" y="238.9839">compteur: int</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="120" x="284" y="251.7886">tableau: Object[MAX]</text><line style="stroke:#A80036;stroke-width:1.5;" x1="279" x2="431" y1="258.3828" y2="258.3828"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="127" x="284" y="272.5933">ajouter(Object o): void</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="142" x="284" y="285.3979">createIterator(): Iterateur</text><!--MD5=[b627370adfaade2476d2e38e9ab82f06]
+class UneAutreCollection--><rect codeLine="49" fill="#FEFECE" height="52.7734" id="UneAutreCollection" style="stroke:#A80036;stroke-width:1.5;" width="154" x="622" y="213.5"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="115" x="641.5" y="229.6387">UneAutreCollection</text><line style="stroke:#A80036;stroke-width:1.5;" x1="623" x2="775" y1="237.4688" y2="237.4688"/><line style="stroke:#A80036;stroke-width:1.5;" x1="623" x2="775" y1="245.4688" y2="245.4688"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="142" x="628" y="259.6792">createIterator(): Iterateur</text><!--MD5=[34a855ae97f1efc379c0f566606f4a58]
+class MonClient--><rect codeLine="24" fill="#FEFECE" height="52.7734" id="MonClient" style="stroke:#A80036;stroke-width:1.5;" width="208" x="7" y="32.5"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="58" x="82" y="48.6387">MonClient</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="214" y1="56.4688" y2="56.4688"/><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="214" y1="64.4688" y2="64.4688"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="196" x="13" y="78.6792">imprimer(Iterable unIterable): void</text><!--MD5=[44a1b4afaef76c16e6c9ec4990ad0c8d]
+class Item--><rect codeLine="29" fill="#FEFECE" height="103.9922" id="Item" style="stroke:#A80036;stroke-width:1.5;" width="162" x="539" y="7"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="26" x="607" y="23.1387">Item</text><line style="stroke:#A80036;stroke-width:1.5;" x1="540" x2="700" y1="30.9688" y2="30.9688"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="74" x="545" y="45.1792">suivant: Item</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="88" x="545" y="57.9839">donnee: Object</text><line style="stroke:#A80036;stroke-width:1.5;" x1="540" x2="700" y1="64.5781" y2="64.5781"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="150" x="545" y="78.7886">Item(Object donnee): void</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="127" x="545" y="91.5933">ajouter(Object o): void</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="142" x="545" y="104.3979">createIterator(): Iterateur</text><!--MD5=[c72d3826a537aa5a85b048ddfab21a58]
+class UneAutreCollectionIterateur--><rect codeLine="46" fill="#FEFECE" height="78.3828" id="UneAutreCollectionIterateur" style="stroke:#A80036;stroke-width:1.5;" width="172" x="514" y="353"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="166" x="517" y="369.1387">UneAutreCollectionIterateur</text><line style="stroke:#A80036;stroke-width:1.5;" x1="515" x2="685" y1="376.9688" y2="376.9688"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="124" x="520" y="391.1792">courantIterateur: Item</text><line style="stroke:#A80036;stroke-width:1.5;" x1="515" x2="685" y1="397.7734" y2="397.7734"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="108" x="520" y="411.9839">hasNext(): boolean</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="78" x="520" y="424.7886">next(): Object</text><!--MD5=[db32431a857c2418993446d91e8398e1]
+class MaCollectionIterateur--><rect codeLine="47" fill="#FEFECE" height="39.9688" id="MaCollectionIterateur" style="stroke:#A80036;stroke-width:1.5;" width="133" x="331.5" y="372"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="127" x="334.5" y="388.1387">MaCollectionIterateur</text><line style="stroke:#A80036;stroke-width:1.5;" x1="332.5" x2="463.5" y1="395.9688" y2="395.9688"/><line style="stroke:#A80036;stroke-width:1.5;" x1="332.5" x2="463.5" y1="403.9688" y2="403.9688"/><!--MD5=[23781b8574d99a9b01bb6a6beac2ccc2]
+reverse link Iterable to MaCollection--><path d="M394.65,105.087 C387.185,130.3 377.855,161.812 370.121,187.932 " fill="none" id="Iterable-backto-MaCollection" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="388.016,102.836,400.406,85.646,401.44,106.811,388.016,102.836" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[2f3296297dd70bcd5ae774f651028ae3]
+reverse link Iterateur to UneAutreCollectionIterateur--><path d="M551.515,291.373 C561.272,311.422 572.314,334.1111 581.393,352.7674 " fill="none" id="Iterateur-backto-UneAutreCollectionIterateur" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="545.118,294.225,542.66,273.179,557.707,288.099,545.118,294.225" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[7312243ee121509afb8dafdc8a10736c]
+reverse link Iterateur to MaCollectionIterateur--><path d="M486.155,288.494 C461.949,316.641 432.582,350.7883 414.598,371.6996 " fill="none" id="Iterateur-backto-MaCollectionIterateur" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="480.978,283.778,499.326,273.179,491.593,292.907,480.978,283.778" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[9c1da20adf43a343641ed6362e2c5a4f]
+reverse link Iterable to UneAutreCollection--><path d="M467.017,96.303 C523.577,131.094 607.502,182.718 657.384,213.401 " fill="none" id="Iterable-backto-UneAutreCollection" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="463.061,102.087,449.693,85.646,470.396,90.163,463.061,102.087" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[52f32701f4787326eab6a0bdd22119b3]
+reverse link MaCollection to MaCollectionIterateur--><path codeLine="51" d="M373.262,304.706 C380.229,329.007 387.659,354.926 392.537,371.9429 " fill="none" id="MaCollection-backto-MaCollectionIterateur" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="369.678,292.202,367.4859,299.0719,372.9842,303.7375,375.1763,296.8677,369.678,292.202" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[0801ee6d1936b0a0e195391e49fba563]
+reverse link UneAutreCollection to UneAutreCollectionIterateur--><path codeLine="52" d="M674.752,277.739 C659.69,300.561 640.367,329.838 625.14,352.9085 " fill="none" id="UneAutreCollection-backto-UneAutreCollectionIterateur" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="681.981,266.786,675.3377,269.5907,675.3715,276.8017,682.0148,273.997,681.981,266.786" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[49cd5b463606645bc0b3784839f1567a]
+reverse link Item to UneAutreCollection--><path codeLine="54" d="M610.273,116.231 C609.978,130.301 611.594,145.061 617,158 C626.257,180.156 644.853,199.339 661.999,213.468 " fill="none" id="Item-backto-UneAutreCollection" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="610.464,111.084,606.13,119.928,610.2769,116.0805,614.1244,120.2274,610.464,111.084" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="37" x="618" y="154.0669">debut</text><!--MD5=[49cd5b463606645bc0b3784839f1567a]
+reverse link Item to UneAutreCollection--><path codeLine="55" d="M648.265,115.771 C652.313,124.174 656.341,132.779 660,141 C670.796,165.258 681.874,193.476 689.451,213.386 " fill="none" id="Item-backto-UneAutreCollection-1" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="646.017,111.127,646.3385,120.9706,648.1957,115.6273,653.539,117.4846,646.017,111.127" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="49" x="667" y="154.0669">courant</text><!--MD5=[635c8b3c0ff89f407e9c3a5bbcccc437]
+link MonClient to Iterable--><path codeLine="57" d="M215.293,59 C251.308,59 291.14,59 325.198,59 " fill="none" id="MonClient-to-Iterable" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="330.613,59,321.613,55,325.613,59,321.613,63,330.613,59" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="79" x="233.5" y="52.0669">dependency</text><!--MD5=[98fac1bdf9f92ee1b9837593b23e317b]
+reverse link Item to MaCollection--><path codeLine="58" d="M540.209,113.897 C505.467,137.364 464.949,164.733 430.684,187.878 " fill="none" id="Item-backto-MaCollection" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="544.416,111.055,534.7188,112.7768,540.2723,113.8532,539.1959,119.4067,544.416,111.055" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="526.7891" y="131.134">*</text><!--MD5=[df8c8fd6b961c7c60d92e633fa3b57a8]
+@startuml
+skinparam style strictuml
+ interface Iterable {
+	 createIterator(): Iterateur
+}
+ interface Iterateur {
+	 hasNext(): boolean
+	 next(): Object
+}
+
+class MaCollection {
+  MAX: int
+  compteur: int
+  tableau: Object[MAX]
+  ajouter(Object o): void
+  createIterator(): Iterateur
+}
+
+class UneAutreCollection{
+    createIterator(): Iterateur
+
+}
+class MaCollection implements Iterable 
+
+class MonClient {
+	imprimer(Iterable unIterable): void
+}
+
+
+ class Item {
+		suivant: Item
+		donnee: Object
+		
+		Item(Object donnee): void 
+	ajouter(Object o): void
+	 createIterator(): Iterateur
+   }
+
+class UneAutreCollection{}   
+	
+class UneAutreCollectionIterateur {
+		courantIterateur: Item
+		hasNext(): boolean
+	next(): Object
+}
+
+class UneAutreCollectionIterateur implements Iterateur
+class MaCollectionIterateur implements Iterateur
+
+class UneAutreCollection implements Iterable 
+
+MaCollection *- - MaCollectionIterateur
+UneAutreCollection *- - UneAutreCollectionIterateur
+
+UneAutreCollection -up-> Item: debut
+UneAutreCollection -u-> Item: courant
+
+MonClient .-right-> Iterable: dependency
+MaCollection -u-> "*" Item
+@enduml
+
+PlantUML version 1.2021.01beta3(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

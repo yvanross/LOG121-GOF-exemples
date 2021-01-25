@@ -3,14 +3,14 @@
 
 |Nom dans le modèle de conception | Nom actuel |
 |-|-|
-|Aggregate| |                
-|ConcreteAggregate| |
-|Iterator| |
-|ConcreteIterator| |
-|createIterator()| |
-|next()| |
-|isDone()| |
-|currentItem()| |
+|Aggregate| n/a |                
+|ConcreteAggregate| DiskJockey|
+|Iterator| songIterator|
+|ConcreteIterator| SongOfThe70s,<br>SongOfThe80s,<br>SongOfThe90s|
+|createIterator()| createIterator() |
+|next()| next()|
+|isDone()| n/a|
+|currentItem()| hasNext() |
 
 reference: http://www.newthinktank.com/2012/10/iterator-design-pattern-tutorial/
 

@@ -26,9 +26,6 @@ class MonClient {
 	imprimer(Iterable unIterable): void
 }
 
-class MaCollectionIterateur implements Iterateur
-
-class UneAutreCollection implements Iterable 
 
  class Item {
 		suivant: Item
@@ -41,18 +38,24 @@ class UneAutreCollection implements Iterable
 
 class UneAutreCollection{}   
 	
-	class UneAutreCollectionIterateur {
-		 courantIterateur: Item
-		  hasNext(): boolean
-     next(): Object
-	}
+class UneAutreCollectionIterateur {
+		courantIterateur: Item
+		hasNext(): boolean
+	next(): Object
+}
+
 class UneAutreCollectionIterateur implements Iterateur
+class MaCollectionIterateur implements Iterateur
+
+class UneAutreCollection implements Iterable 
+
 MaCollection *-- MaCollectionIterateur
 UneAutreCollection *-- UneAutreCollectionIterateur
 
-UneAutreCollection -> Item: debut
-UneAutreCollection -> Item: courant
+UneAutreCollection -up-> Item: debut
+UneAutreCollection -u-> Item: courant
 
 MonClient .-right-> Iterable: dependency
-MaCollection --> "*" Item
+MaCollection -u-> "*" Item
 @enduml
+

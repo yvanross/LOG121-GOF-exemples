@@ -1,5 +1,4 @@
-```plantuml
-@startuml diagamme de classe
+@startuml DCL
 skinparam Style strictuml
 title Diagramme de classe 
 
@@ -15,34 +14,49 @@ Class Customer{
     +setStrategy(strategy : BillingStrategy)
         
 }
-Customer "1"--> "1" BillingStrategy : possède >
+class "ArrayList<Integer>" as AI
 
+Customer "1"--> "1" BillingStrategy : possède >
+Customer --> AI: drinks
 
 @enduml
-```
 
 
-```plantuml
-@startuml Diagramme de séquence de StrategieDemo
+@startuml DS-StrategieDemo
 skinparam Style strictuml
 
-actor main
-participant " firstCustomer:Customer"  as  firstCustomer
-participant " secondCustomer:Customer"  as  secondCustomer
+actor ":StrategyDemo" as main
+participant BillingStrategy
+participant "firstCustomer:Customer"  as  FC
+participant "normalStragegy:BillingStrategy" as NS
+participant "drinks1:ArrayList<Integer>" as D1
+participant "hapyHourstrategh:Billingstrategy" as HS
+participant "secondCustomer:Customer"  as  SC
+participant "drinks2:ArrayList<Integer>" as D2
 
 main -> BillingStrategy : normalStrategy = normalStrategy()
 main -> BillingStrategy : happyHourStrategy = happyHourStrategy()
-main -> firstCustomer ** : firstCustomer = new(normalStrategy) 
-main -> firstCustomer : add(100,1)
-main -> firstCustomer : setStrategy(happyHourStrategy)
-main -> firstCustomer : add(100, 2)
-main -> secondCustomer ** : secondCustomer = new(happyHourStrategy) 
-main -> secondCustomer : add(80, 1)
-main -> firstCustomer : printBill()
-main -> secondCustomer : setStrategy(normalStrategy)
-main -> secondCustomer : add(130, 2)
-main -> secondCustomer : add(250, 1)
-main -> secondCustomer : printBill()
+main -> FC ** : FC = new(normalStrategy) 
+main -> FC : add(100,1)
+FC -> NS: Integer price = getActPrice(price*quantity)
+FC -> D1: add(price)
+main -> FC : setStrategy(happyHourStrategy)
+main -> FC : add(100, 2)
+FC -> HS: price = getActPrice(price*quantity)
+FC -> D1: add(price)
+main -> SC ** : secondCustomer = new(happyHourStrategy) 
+main -> SC : add(80, 1)
+SC -> HS: Integer price = getActPrice(price*quantity)
+SC -> D2: add(price)
+main -> FC: printBill()
+FC -> D1: Integer total = stream().mappToInt(v->v).sum()
+FC-> D1: clear()
+
+
+main -> SC : setStrategy(normalStrategy)
+note right of main: voir définition de add et printBill ci-dessus
+main -> SC : add(130, 2)
+main -> SC : add(250, 1)
+main -> SC : printBill()
 
 @enduml
-```
