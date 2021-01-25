@@ -3,15 +3,14 @@ package Iterateur;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
-import Iterateur.Name.NameRepository;
-import Iterateur.Name.Iterator;
+import Iterateur.Name.*;
 
 
 public class NameRepositoryTest {
 
 	@Test
 	public void testGetIterator() throws Exception {
-		final NameRepository namesRepository = new NameRepository();
+		final Container namesRepository = new NameRepository();
 
 		String names = "";
 		final Iterator iter =  namesRepository.getIterator();

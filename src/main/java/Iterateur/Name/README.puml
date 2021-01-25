@@ -15,12 +15,56 @@ class NameIterator{
   hasNext(): boolean
   next(): Object
 }
-class IteratorPatternDemo{
-  main():void
+class NameRepositoryTest{
 }
 class NameRepository implements Container 
 class NameIterator implements Iterator  
-IteratorPatternDemo -> NameRepository : uses
-NameRepository -> NameIterator : as
+
+NameRepository .left-> NameIterator : depend on
+NameRepository <-left- NameIterator : internal
+NameRepositoryTest -left-> Iterator : uses
+Container <-left- NameRepositoryTest : uses
+@enduml
+
+
+@startuml diagramme de séquence
+
+skinparam Style strictuml
+title Diagramme de séquence
+actor main
+participant "namesRepository:NameRepository" as namesRepository
+participant "names: String" as names
+participant "name:String" as name 
+participant "iter:NameIterator" as iter
+
+main -> namesRepository ** : namesRepository = new NameRepository()
+main -> names **
+main -> namesRepository : iter = getIterator()
+namesRepository -> iter ** : iterateur = new NameIterator()
+iter --> namesRepository
+namesRepository --> main : return iterateur
+
+
+main -> iter : aSuivant = hasNext()
+iter -> names : taille = length
+alt (index < taille)
+  iter --> main : true
+else (else)
+  iter --> main : false
+end
+loop (aSuivant)
+  main -> iter : suivant = next()
+  iter -> iter : aSuivant2 = hasNext()
+  alt (aSuivant2)
+    iter -> names : item = names[index]
+    iter --> main : return item
+  else (else)
+  iter --> main : return null
+  end
+  main -> name ** : suivant = name
+  main -> System.out : print(suivant)
+  main -> names : names += name
+  main ->namesRepository : aSuivant = hasNext()
+end
 
 @enduml
