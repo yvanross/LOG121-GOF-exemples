@@ -17,4 +17,3 @@
 ![DS](README/ds-preparer.svg)
 
 - remplacer la classe The par Café pour voir comment se comport la classe Cafe.
-

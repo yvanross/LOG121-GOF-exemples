@@ -1,6 +1,7 @@
 @startuml Diagramme de classe
 
 class Boisson <<Abstract>>{
+    preparer(): void
     bouillir_eau(): void 
     infusser(): void 
     verser_tasse(): void 
