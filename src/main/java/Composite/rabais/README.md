@@ -8,4 +8,5 @@ inclus le patron visiteur
 
 
 # voir ficheir de test
-[RabaisTest.java](../../../../test/java/Composite/RabaisTest.java)
+[local - RabaisTest.java](../../../../test/java/Composite/RabaisTest.java)
+[github - RabaisTest.java](https://github.com/yvanross/LOG121-GOF-exemples/blob/master/src/test/java/Composite/VenteTest.java)
