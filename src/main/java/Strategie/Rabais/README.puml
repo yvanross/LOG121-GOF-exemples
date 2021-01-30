@@ -1,26 +1,33 @@
 @startuml diagamme de classe
-interface IStrategyRabais{
+class Vente {
+    prixAvantRabais(): Double
     getCost(): Double
+    setStrategyRabais(IStragegyRabais strategy): void 
 }
-
 interface IStrategyRabais{
-    getCost() : Double
+    getCost(Vente vente) : Double
 }
 class StrategiePourcentageRemise{
    strategyRabais : IStrategyRabais
    pourcentageRemise : Double
-   getCost() : Double
+   getCost(Vente vente) : Double
+    StrategiePourcentageRemise(Vente contexte, Double pourcentageRemise){
+
 }
 class StrategieRemiseAPartirDe{
     strategyRabais : IStrategyRabais
     rabais : Double
     aPartirDe : Double
     getCost() : Double
+    StrategieRemiseAPartirDe(Vente contexte, Double rabais, Double aPartirDe){
+
 }
+
 
 IStrategyRabais <|.. StrategiePourcentageRemise
 IStrategyRabais <|.. StrategieRemiseAPartirDe
-
+Vente -> IStrategyRabais: stragegie de vente
+Vente <.. IStrategyRabais: dépend de 
 @enduml
 
 

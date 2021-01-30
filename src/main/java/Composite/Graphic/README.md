@@ -1,9 +1,9 @@
 # Patron Composite: Graphic
 ## Diagramme de classe
 
-![Diagramme de classe](https://www.plantuml.com/plantuml/svg/TO_B2i8m44Nt-OfBLrgmuBQhWehV4PAf3kP59WeY_hjfeMvADxEut7DcPf2YStbwXpFhMzRU4op1E2r2IXuSaguffBmTrPdPJ6t5eL0UjI5SiqvtDlWe8EMQx_OzNf4jr5VD7boSuoG4zicHfr1aeIPe4pj5dw9meMN55hyoLCKARWy7DCUkQvl_oJtCt2ABE48D56pzxGS0 "Diagramme de classe")
 
+
+![Diagramme de classe](README/Diagramme%20de%20classe.svg)
 ## Diagramme de séquence
 
-![Diagramme de séquence](https://www.plantuml.com/plantuml/svg/XP91RiCW44Ntd6BaLHp92y0h55cHcghdG7ZaeXfCW2nof9oZ5oiMJIKGKNVmvdqqC9n3b3xUp0eNBHSlZK6O4SBtutf3gv24BssTJ0K8yRwcIlHQxG6IQDHAEsaZl6t6RK57lA3PG0OmHRd3TTKk81NlUT7j3jAcn4g9DILUIhmfZQKqbbAwhVlKYec_vZyowM3N5mQdqo-PfcQKluhoVwFqLPGMqM4o0epKzj0JCmmJqkDHWF8e8sR0Qi1hC5PWAIDfBq3Ey-4vexu1MGlotDF2g_DuOOqzoHgjD9grvnZw1kG5B1jCq7bjOtePSaOxfo_v0m00 "Diagramme de séquence")
-
+![Diagramme de séquence](README/Diagramme%20de%20séquence.svg)

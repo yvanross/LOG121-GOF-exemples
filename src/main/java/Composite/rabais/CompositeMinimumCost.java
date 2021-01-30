@@ -1,6 +1,6 @@
 package Composite.rabais;
 
-import Strategie.Rabais.IStrategyRabais;
+import Strategie.Rabais.*;
 
 public class CompositeMinimumCost implements IStrategyRabais {
   private IStrategyRabais rabais1 = null;
@@ -11,8 +11,8 @@ public class CompositeMinimumCost implements IStrategyRabais {
     this.rabais2 = rabais2;
   }
 
-  public Double getCost(){
-    return Math.min(rabais1.getCost(), rabais2.getCost());
+  public Double getCost(Vente vente){
+    return Math.min(rabais1.getCost(vente), rabais2.getCost(vente));
   }
 
 }

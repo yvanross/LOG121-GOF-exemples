@@ -1,0 +1,49 @@
+@startuml Diagramme de classe
+interface IStrategyRabais {
+  public Double getCost(Vente vente);
+}
+
+class Vente {
+  getCost(Vente vente): double
+  gePrixAvantRabais(): double
+}
+
+class StrategiePourcentageRemise{
+   pourcentageRemise : Double
+   getCost(Vente vente) : Double
+    StrategiePourcentageRemise(Vente contexte, Double pourcentageRemise){
+
+}
+class StrategieRemiseAPartirDe{
+    rabais : Double
+    aPartirDe : Double
+    getCost() : Double
+    StrategieRemiseAPartirDe(Vente contexte, Double rabais, Double aPartirDe){
+
+}
+
+
+class CompositeBestForCustomer implements IStrategyRabais {
+  void CompositeBestForCustomer()
+  void add(IStrategyRabais rabais)
+}
+class CompositeBestForStore implements IStrategyRabais {
+  void CompositeBestForStore()
+  void add(IStrategyRabais rabais)
+}
+class CompositeMinimumCost implements IStrategyRabais {
+    public CompositeMinimumCost(IStrategyRabais rabais1, IStrategyRabais rabais2){
+
+}
+
+Vente -d-> IStrategyRabais
+Vente <.d. IStrategyRabais
+CompositeBestForCustomer --> "*" IStrategyRabais 
+CompositeBestForStore --> "*" IStrategyRabais 
+CompositeMinimumCost --> "*" IStrategyRabais 
+
+
+IStrategyRabais <|.l. StrategiePourcentageRemise
+IStrategyRabais <|.r. StrategieRemiseAPartirDe
+
+@enduml
