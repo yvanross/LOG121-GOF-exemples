@@ -13,7 +13,9 @@ mvn -P jacoco test
 ```
 [Ouvrir le rapport jacoco dans votre browser](./target/jacoco/site/../../site/jacoco/index.html)
 
-
+# Maven file Watch
+https://github.com/rzymek/watcher-maven-plugin
+mvn watcher:run
 
 # Generation des diagramme de classes
  java -jar plantuml-dependency-cli-1.4.0-jar-with-dependencies.jar -o plantuml.puml -b . -i **/*.java -e **/*Test*.jva -dn .*Test.* -v

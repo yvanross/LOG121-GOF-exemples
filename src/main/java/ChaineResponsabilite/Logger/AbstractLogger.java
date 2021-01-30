@@ -17,7 +17,7 @@ public abstract class AbstractLogger {
    public void setNextLogger(AbstractLogger nextLogger){
       this.nextLogger = nextLogger;
    }
-
+ 
    
    /** 
     * @param level

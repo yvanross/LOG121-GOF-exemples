@@ -15,12 +15,13 @@ public class StarbuzzTest extends OutStream {
        the.preparer();
        assertEquals(
 		"L'eau est en train de bouillir" + System.lineSeparator() +
-		"Le thé est en train de tramper dans l'eau!" + System.lineSeparator() +
+		"Le thé est en train de tremper dans l'eau!" + System.lineSeparator() +
 		"Je vous sers dans une tasse" +  System.lineSeparator() +
         "J'ajoute du citron!" + System.lineSeparator()
 		,this.getOutput());
+    
     }
-
+ 
     @Test
 	public void preparer_cafe() throws Exception {
         Cafe cafe = new Cafe();
