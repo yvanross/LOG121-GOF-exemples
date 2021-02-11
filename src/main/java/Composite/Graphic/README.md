@@ -1,4 +1,12 @@
 # Patron Composite: Graphic
+
+## Patorn composite
+|Nom dans le <br>modèle de conception | Nom actuel |
+|-|-|
+|Primitive|  |
+|Composite|  |
+|Leaf| |
+|method()|  |
 ## Diagramme de classe
 
 

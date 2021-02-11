@@ -1,7 +1,13 @@
 # Patron composite
 inclus le patron visiteur
 
-
+## Patorn composite
+|Nom dans le <br>modèle de conception | Nom actuel |
+|-|-|
+|Primitive|  |
+|Composite|  |
+|Leaf| |
+|method()|  |
 
 # Diagramme de classe
 ![diagramme de classe](README/Diagramme%20de%20classe.svg)
