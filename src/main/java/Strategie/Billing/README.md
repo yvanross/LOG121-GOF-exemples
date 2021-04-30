@@ -3,7 +3,7 @@
 |Nom dans le <br>modèle de conception | Nom actuel |
 |-|-|
 |Context| drinks |
-|Strategy| BillinStrategy |
+|Strategy| BillingStrategy |
 |ConcreteStrategy| normalStrategy(), happyHourStrategy() |
 |doWork()| Opération polymorphe|
 

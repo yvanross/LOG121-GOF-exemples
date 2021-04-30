@@ -10,7 +10,8 @@ class Animal{
     + Flys : flyingType;
 
     + String tryToFly()
-    + void setFlyingAbility()
+interface Flys{
+    + void setFlyingAbility(Flys)
 }
 
 class AnimalExample{
