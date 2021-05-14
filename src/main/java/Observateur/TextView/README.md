@@ -1,7 +1,7 @@
 # Chat with multiple dialog using Observer pattern
 # Table de correspondance
 
-
+    
 |Nom dans le modèle de conception | Nom actuel |
 |-|-|
 |Sujet| TextModel|            

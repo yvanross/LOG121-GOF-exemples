@@ -1,7 +1,7 @@
 package Iterateur.Name;
 
 public class NameRepository implements Container {
-    public String names[] = {"Robert" , "John" ,"Julie" , "Lora"};
+    public String names[] = {"Robert" , "John" ,"Juliette" , "laury"};
  
     @Override
     public Iterator getIterator() {
