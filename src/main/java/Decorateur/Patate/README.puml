@@ -1,0 +1,10 @@
+@startuml diagramme de classe
+interface IPatate {
+    Double getCost(); 
+    String getDescription(); 
+}
+class Patate implements IPatate 
+abstract class PatateDecorator implements IPatate 
+class Sauce extends PatateDecorator 
+class Fromage extends PatateDecorator 
+@enduml
