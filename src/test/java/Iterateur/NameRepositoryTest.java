@@ -24,8 +24,10 @@ public class NameRepositoryTest {
 
 	// 0 - Mettre le diagramme de classe à jour, ajouter les tests
 	// 1-afficher par ordre alphabétique
+
+
 	// 2-Afficher par ordre alphabétique inversé en utilisant un itérateur qui parcours les donées à l'inverse
-	// 3-Ajouter un nombre variable d'observateurs qui sont identifé par leur nom et qui affichent les nom des personnes dans la console à chaque fois qu'il sont utilisés par l'itérateur dans la fonction next ou previous. 
+	// 3-Ajouter plusieurs instance d'un même observateur qui sont identifé par leur nom et qui affichent les nom des personnes dans la console à chaque fois qu'il sont utilisés par l'itérateur dans la fonction next ou previous. 
 	// Vous devez faire deux version de la méthode update en utilisant la surcharge
 	// une version avec parametre
 	// une version sans parametre

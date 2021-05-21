@@ -89,3 +89,62 @@ IteratorPatternDemo -> NameIterator : hasNext = hasNext()
         IteratorPatternDemo -> NameIterator : hasNext = hasNext()
     end
 @enduml
+
+
+
+@startuml Diagramme de classe exercice
+skinparam style strictuml
+interface Container <<Interface>> {
+  getIterator(): Iterator
+}
+interface Iterator <<Interface>> {
+  hasNext(): boolen
+  next(): Object
+}
+class NameRepository <<ConcreteSubject>>{
+  name: String[]
+  getIterator(): Iterator
+  setSortStrategy(strategy:Comparator)
+  - getNames() : Array<String>
+}
+
+class IObservable <<sujet>> #Green{
+  add(observer:Observer)
+  notifyAll();
+  notifyAll(name:String);
+}
+class IObserver #Green{
+  update()
+  update(name:String)
+}
+
+
+Interface Comparator<String> #Green{
+    compare(o1:String, o2:String): int
+}
+
+Class NameComparateur #Green implements Comparator {
+     compare(o1:String, o2:String): int
+}
+note left of NameIterator: while(it.hasNext()){\n   name = it.next()\n   notifyAll(name);\n   notifyAll();\n}
+
+class NameIterator{
+  hasNext(): boolean
+  next(): Object
+}
+class NameRepositoryTest{
+}
+class NameRepository implements Container 
+class NameIterator implements Iterator  
+class ExternalObserver1 implements IObserver
+class ExternalObserver2 implements IObserver
+
+
+NameIterator ..|> IObservable
+IObservable "1"-l->"*" IObserver: notify
+NameRepository -r-> Comparator: use
+NameRepository .left-> NameIterator : depend on
+NameRepository <-left- NameIterator : internal
+NameRepositoryTest -left-> Iterator : uses
+Container <-left- NameRepositoryTest : uses
+@enduml

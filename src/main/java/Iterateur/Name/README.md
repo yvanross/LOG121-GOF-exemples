@@ -15,5 +15,20 @@
 ![Diagramme de classe](README/Diagramme%20de%20classe.svg)
 
 # Diagramme de séquence
-![Diagramme de classe](https://www.plantuml.com/plantuml/png/VPI_KiCm3CPtFuMkKrgk38m-odLWOUb0Hux1buZMX-C4MuRsaNWENWpPRVu7bYIoVfA-p_Pbwqav2gM1Ggk3KsM9K23ud--FW3P78VoxjhNY3EpfR3X5JkUnGf0cZX_dwrHEbODIQIkucdIkQsK95bQLw9-nhhncu2nt77VX0fI74J9JBrcBq_RGuLD8ZX0O8fhGfU5F_A5uJWBZgX1HDQmVna9WjG8vMTo0nIyOsiYMmnvS-MTJcOPocmDIeuNhnnXN9Yvfq8d3u7hJUxK9N4zdJPioatH9S4Z1sQwpwBOXjPEWza5_nhtRm57v7Pwe7TNOb41A6xuK6p1e3tGKoX1asXPuWljhSYa0MeNNwUG22ZGU8OlFEUHDSKAWBOIfgXgoHavaHqfzAzHUL3RT9bxk1cO0ajms6LUwqiOYnsLi7SENPEsrnytjQCdv_yrTMHkCYIoRx4obovkElUUBrth8_knvocqLYAcQhprbVhexZO7B-sRSPNenPqyyYXDRVl8lu1S0)
 ![](README/Diagramme%20de%20sequence.svg)
+
+
+# exercice à réaliser
+- a partir du fichier NameRepositoryTest.java
+	
+1. Mettre le diagramme de classe à jour, ajouter les tests
+1. Afficher par ordre alphabétique
+1. Afficher par ordre alphabétique inversé en utilisant un itérateur qui parcours les donées à l'inverse
+1. Ajouter plusieurs instance d'un même observateur qui sont identifé par leur nom et qui affichent les nom des personnes dans la console à chaque fois qu'il sont utilisés par l'itérateur dans la fonction next ou previous. 
+   1. Vous devez faire deux version de la méthode update en utilisant la surcharge
+       1. une version avec parametre
+       2.  une version sans parametre
+   2. dans les deux cas la sortie devrait correspondre à:
+      1. observer1 next Robert  -> update avec les paramêtres
+      2. observer1 next Robert  -> update sans paramètres
+      3. observer2 next Robert 
